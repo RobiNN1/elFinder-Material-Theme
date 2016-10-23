@@ -1,7 +1,7 @@
 # elFinder-Material-Theme
 Theme for elFinder
 
-![preview](http://rncdn.ml/cdn/preview.png)
+![preview](https://raw.githubusercontent.com/RobiNN1/elFinder-Material-Theme/master/preview.png)
 
 # Usage
 * Copy the `/Material` folder from this repository to the `/themes` folder of your
