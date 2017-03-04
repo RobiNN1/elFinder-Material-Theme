@@ -12,3 +12,8 @@ load the `theme.css` file from the `/Material/` folder:
     ```html
     <link rel="stylesheet" type="text/css" media="screen" href="themes/Material/theme.css">
     ```
+    or Gray Theme
+
+    ```html
+    <link rel="stylesheet" type="text/css" media="screen" href="themes/Material/theme-gray.css">
+    ```
