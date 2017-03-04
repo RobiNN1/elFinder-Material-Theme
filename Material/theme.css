@@ -13,7 +13,7 @@
 }
 
 /**
- * Custom icon fonts
+ * Custom Icon Fonts
  */
 @font-face {
   font-family: 'icons';
@@ -504,7 +504,7 @@ input[type="checkbox"]:checked:after {
           box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
 }
 .ui-dialog-titlebar {
-  background: #2c3e50;
+  background: #0f1f2f;
   border: 0 !important;
   -webkit-border-radius: 0 !important;
           border-radius: 0 !important;
