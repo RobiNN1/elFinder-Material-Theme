@@ -17,3 +17,7 @@ load the `theme.css` file from the `/Material/` folder:
     ```html
     <link rel="stylesheet" type="text/css" media="screen" href="themes/Material/theme-gray.css">
     ```
+
+    - Clone the repo: `git clone https://github.com/RobiNN1/elFinder-Material-Theme.git`
+    - Install with [npm](https://www.npmjs.com): `npm install elfinder-material-theme`
+    - Install with [Bower](https://bower.io): `bower install elfinder-material-theme`
