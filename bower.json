@@ -1,0 +1,17 @@
+{
+  "name": "elFinder Material Theme",
+  "homepage": "https://github.com/RobiNN1/elFinder-Material-Theme",
+  "authors": [
+    "RobiNN1"
+  ],
+  "description": "Theme for elFinder",
+  "main": "Material/theme.css",
+  "keywords": [
+    "elFinder",
+    "Material",
+    "theme",
+    "material-theme",
+    "material-design"
+  ],
+  "license": "MIT"
+}
