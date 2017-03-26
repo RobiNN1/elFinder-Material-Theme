@@ -1,0 +1,26 @@
+{
+  "name": "elfinder-material-theme",
+  "version": "2.0.0",
+  "description": "Theme for elFinder",
+  "main": "Material/theme.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobiNN1/elFinder-Material-Theme.git"
+  },
+  "keywords": [
+    "elFinder",
+    "Material",
+    "theme",
+    "material-theme",
+    "material-design"
+  ],
+  "author": "RobiNN1",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RobiNN1/elFinder-Material-Theme/issues"
+  },
+  "homepage": "https://github.com/RobiNN1/elFinder-Material-Theme#readme"
+}
