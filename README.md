@@ -10,14 +10,16 @@ elFinder installation (create the folder if it doesn't exist)
 load the `theme.css` file from the `/Material/` folder:
 
     ```html
-    <link rel="stylesheet" type="text/css" media="screen" href="themes/Material/theme.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="themes/Material/css/theme.css">
     ```
     or Gray Theme
 
     ```html
-    <link rel="stylesheet" type="text/css" media="screen" href="themes/Material/theme-gray.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="themes/Material/css/theme-gray.css">
     ```
 
-    - Clone the repo: `git clone https://github.com/RobiNN1/elFinder-Material-Theme.git`
-    - Install with [npm](https://www.npmjs.com): `npm install elfinder-material-theme`
-    - Install with [Bower](https://bower.io): `bower install elfinder-material-theme`
+    Install guide for new versions: [Theme load](https://github.com/Studio-42/elFinder/wiki/How-to-load-CSS-with-RequireJS%3F)
+
+    - Clone the repo: `$ git clone https://github.com/RobiNN1/elFinder-Material-Theme.git`
+    - Install with [npm](https://www.npmjs.com): `$ npm install elfinder-material-theme`
+    - Install with [Bower](https://bower.io): `$ bower install elfinder-material-theme`
