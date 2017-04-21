@@ -5,7 +5,7 @@
     "RobiNN1"
   ],
   "description": "Theme for elFinder",
-  "main": "Material/theme.css",
+  "main": "Material/css/theme.css",
   "keywords": [
     "elFinder",
     "Material",
