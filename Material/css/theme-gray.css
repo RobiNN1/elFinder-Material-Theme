@@ -13,16 +13,16 @@
 }
 
 /**
- * Custom Icon Fonts
+ * Custom icon fonts
  */
 @font-face {
   font-family: 'icons';
-  src: url('icons/icons.eot?95252737');
-  src: url('icons/icons.eot?95252737#iefix') format('embedded-opentype'),
-       url('icons/icons.woff2?95252737') format('woff2'),
-       url('icons/icons.woff?95252737') format('woff'),
-       url('icons/icons.ttf?95252737') format('truetype'),
-       url('icons/icons.svg?95252737#icons') format('svg');
+  src: url('../icons/icons.eot?95252737');
+  src: url('../icons/icons.eot?95252737#iefix') format('embedded-opentype'),
+       url('../icons/icons.woff2?95252737') format('woff2'),
+       url('../icons/icons.woff?95252737') format('woff'),
+       url('../icons/icons.ttf?95252737') format('truetype'),
+       url('../icons/icons.svg?95252737#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,7 +48,7 @@
  * Toolbar
  */
 .elfinder-toolbar {
-  background: #061325;
+  background: #3b4047;
   border: 0;
   -webkit-border-radius: 0 !important;
           border-radius: 0 !important;
@@ -97,7 +97,7 @@
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
           box-sizing: content-box;
-  background: rgba(22, 43, 76, 0.75);
+  background: #44494f;
   border: 0 !important;
   -webkit-border-radius: 2px !important;
           border-radius: 2px !important;
@@ -129,7 +129,7 @@
  * Workzone
  */
 .elfinder-workzone {
-  background: #0e1827;
+  background: #cdcfd4;
 }
 .ui-state-hover,
 .ui-widget-content .ui-state-hover,
@@ -140,7 +140,7 @@
 .ui-button:hover,
 .ui-button:focus,
 .ui-selected {
-  background: #1E88E5;
+  background: #343d42;
   color: #e6e6e6;
 }
 .ui-button.ui-state-hover {
@@ -151,8 +151,8 @@
 /**
  * Navbar
  */
-.elfinder-navbar {
-  background: #2a384d !important;
+.elfinder .elfinder-navbar {
+  background: #535e64 !important;
   border: 0 !important;
   -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
           box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
@@ -171,12 +171,13 @@
   position: relative;
   float: right;
   left: -50px !important;
+  font-size: 20px !important;
 }
 .elfinder-navbar-dir.ui-state-hover,
 .elfinder-navbar-dir.ui-state-active,
 .elfinder-navbar-dir .ui-state-hover,
 .elfinder-navbar-dir .ui-state-active {
-  background-color: #1b2533 !important;
+  background-color: #41494e !important;
 }
 .elfinder-navbar .ui-resizable-handle {
   background: inherit;
@@ -239,11 +240,14 @@
  * Wrapper
  */
 .elfinder-cwd-wrapper {
-  color: #e6e6e6;
+  color: #3c3b3b;
 }
 .elfinder-cwd table {
   padding: 0;
   margin: 0;
+}
+.elfinder-cwd table tr:nth-child(odd) {
+  background-color: inherit;
 }
 .elfinder-cwd-view-list tr td {
   background: transparent !important;
@@ -255,9 +259,12 @@
 .elfinder-cwd-wrapper-list tr td .ui-icon-grip-dotted-vertical {
   background: none !important;
 }
+.elfinder-cwd-wrapper-list.elfinder-cwd-fixheader {
+  color: #ddd;
+}
 .elfinder-cwd-wrapper-list.elfinder-cwd-fixheader:before {
   height: inherit;
-  background: #010e21;
+  background: #353b42;
 }
 .elfinder-cwd-view-list tr .elfinder-cwd-file-wrapper .elfinder-perms {
   position: relative;
@@ -269,7 +276,7 @@
 .elfinder-cwd-file.ui-selected,
 .elfinder-cwd-file .ui-state-hover,
 .elfinder-cwd-file .ui-selected {
-  background-color: #1a283c;
+  background-color: #8c8d8e !important;
 }
 .elfinder-cwd-filename {
   -webkit-border-radius: 4px !important;
@@ -281,8 +288,8 @@
   width: 85%;
 }
 .ui-selectable-helper {
-  border: 1px solid #022861;
-  background-color: rgba(3, 62, 150, 0.38);
+  border: 1px solid #3b4047;
+  background-color: rgba(104, 111, 121, 0.5);
 }
 
 /**
@@ -352,8 +359,8 @@
  * Status Bar
  */
 .elfinder-statusbar {
-  background: #061325;
-  color: #cfd2d4;
+  background: #3b4047;
+  color: #cfd2d4 !important;
   border: 0;
   -webkit-border-radius: 0 !important;
           border-radius: 0 !important;
@@ -504,7 +511,7 @@ input[type="checkbox"]:checked:after {
           box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
 }
 .ui-dialog-titlebar {
-  background: #0f1f2f;
+  background: #353b44;
   border: 0 !important;
   -webkit-border-radius: 0 !important;
           border-radius: 0 !important;
@@ -580,7 +587,7 @@ input[type="checkbox"]:checked:after {
   background: inherit;
   color: #524949;
   font: normal normal normal 14px/1 icons;
-  font-size: 40px;
+  font-size: 37px;
 }
 .elfinder-help *,
 .elfinder-help a {
@@ -744,8 +751,8 @@ input[type="checkbox"]:checked:after {
 /**
  * Mimetypes Icons
  */
-.elfinder-cwd-view-list td .elfinder-cwd-icon {background-image: url("images/icons-small.png");}
-.elfinder-cwd-icon                   {background: url("images/icons-big.png") 0 0 no-repeat;}
+.elfinder-cwd-view-list td .elfinder-cwd-icon {background-image: url("../images/icons-small.png");}
+.elfinder-cwd-icon                   {background: url("../images/icons-big.png") 0 0 no-repeat;}
 .elfinder-cwd-icon-directory         {background-position: 0 -48px;}
 .elfinder-cwd .elfinder-droppable-active .elfinder-cwd-icon {background-position: 0 -96px;}
 .elfinder-cwd-icon-application       {background-position: 0 -144px;}
@@ -886,7 +893,7 @@ input[type="checkbox"]:checked:after {
 .elfinder-info-spinner,
 .elfinder-navbar-spinner,
 .elfinder-button-icon-spinner {
-  background: url("images/loading.svg") center center no-repeat !important;
+  background: url("../images/loading.svg") center center no-repeat !important;
   width: 16px;
   height: 16px;
 }
@@ -951,7 +958,7 @@ input[type="checkbox"]:checked:after {
   font-family: 'Noto Sans', sans-serif;
   -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6) !important;
           box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6) !important;
-  background-color: #1d2736 !important;
+  background-color: #42474d !important;
   color: #e6e6e6 !important;
 }
 #ace_settingsmenu,
@@ -962,7 +969,7 @@ input[type="checkbox"]:checked:after {
   padding: 5px 10px;
 }
 .ace_optionsMenuEntry:hover {
-  background-color: rgb(17, 23, 33);
+  background-color: rgba(33, 43, 53, 0.62);
 }
 .ace_optionsMenuEntry label {
   font-size: 13px;
@@ -974,7 +981,7 @@ input[type="checkbox"]:checked:after {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   border: 0;
-  background: rgba(9, 53, 121, 0.75);
+  background: rgb(39, 50, 64);
   color: white;
 }
 .ui-icon-gear {margin: -12px !important;font-size: 20px !important;}
