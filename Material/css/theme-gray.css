@@ -13,7 +13,7 @@
 }
 
 /**
- * Custom icon fonts
+ * Custom Icon Fonts
  */
 @font-face {
   font-family: 'icons';
@@ -151,7 +151,7 @@
 /**
  * Navbar
  */
-.elfinder .elfinder-navbar {
+.elfinder-navbar {
   background: #535e64 !important;
   border: 0 !important;
   -webkit-box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
@@ -219,6 +219,7 @@
 .elfinder-navbar-root-googledrive .elfinder-navbar-icon:before {content: '\e843';}
 .elfinder-navbar-root-onedrive .elfinder-navbar-icon:before    {content: '\e844';}
 .elfinder-navbar-root-box .elfinder-navbar-icon:before         {content: '\e845';}
+.elfinder-navbar-root-trash .elfinder-navbar-icon:before       {content: '\e819';}
 
 .elfinder-navbar-arrow {
   background-image: inherit !important;
@@ -241,6 +242,9 @@
  */
 .elfinder-cwd-wrapper {
   color: #3c3b3b;
+}
+.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash {
+  color: #888;
 }
 .elfinder-cwd table {
   padding: 0;
@@ -312,6 +316,9 @@
   color: #141414;
   background-color: #f5f4f4;
 }
+.elfinder-contextmenu .ui-state-hover .elfinder-contextmenu-arrow {
+  background-image: inherit !important;
+}
 .elfinder .elfinder-contextmenu-separator {
   border-top: 1px solid #e5e5e5;
 }
@@ -346,6 +353,10 @@
 .elfinder .elfinder-contextmenu-extra-icon a {
   padding: 5px;
   margin: -16px;
+}
+.elfinder-contextmenu-extra-icon.elfinder-button-icon-rm {
+  font-size: 20px !important;
+  margin-top: -10px;
 }
 .elfinder .elfinder-contextmenu-arrow {
   font: normal normal normal 14px/1 icons;
@@ -446,58 +457,6 @@ select.elfinder-tabstop.ui-state-hover {
 select.elfinder-tabstop,
 select.elfinder-tabstop.ui-state-hover {
   width: 100%;
-}
-
-/**
- * Checkbox
- */
-input[type="checkbox"] {
-  position: relative;
-  border: 0;
-  -webkit-appearance: none;
-          -moz-appearance: none;
-       appearance: none;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-  margin-bottom: 10px;
-}
-input[type="checkbox"]:after,
-input[type="checkbox"]:focus:after {
-  content: "";
-  display: block;
-  width: 15px;
-  height: 15px;
-  margin-top: -2px;
-  margin-bottom: -6px;
-  border: 2px solid #2196f3;
-  -webkit-border-radius: 2px;
-          border-radius: 2px;
-  -webkit-transition: 240ms;
-       -o-transition: 240ms;
-          transition: 240ms;
-}
-input[type="checkbox"]:checked:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 6px;
-  display: table;
-  width: 6px;
-  height: 12px;
-  border: 2px solid #fff;
-  border-top-width: 0;
-  border-left-width: 0;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-       -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-input[type="checkbox"]:checked:after {
-  background-color: #2196f3;
-  border-color: #2196f3;
 }
 
 /**
@@ -695,7 +654,9 @@ input[type="checkbox"]:checked:after {
 .elfinder-button-icon-open:before         {content: '\e80f';}
 .elfinder-button-icon-mkdir:before        {content: '\e80b';}
 .elfinder-button-icon-mkfile:before       {content: '\e80c';}
-.elfinder-button-icon-rm:before           {content: '\e819';}
+.elfinder-button-icon-rm:before           {content: '\e828';}
+.elfinder-button-icon-trash:before        {content: '\e819';}
+.elfinder-button-icon-restore:before      {content: '\e851';}
 .elfinder-button-icon-copy:before         {content: '\e82b';}
 .elfinder-button-icon-cut:before          {content: '\e82c';}
 .elfinder-button-icon-paste:before        {content: '\e810';}
@@ -727,6 +688,9 @@ input[type="checkbox"]:checked:after {
 .elfinder-button-icon-colwidth:before     {content: '\e82a';}
 .elfinder-button-icon-fullscreen:before   {content: '\e836';}
 .elfinder-button-icon-unfullscreen:before {content: '\e835';}
+.elfinder-button-icon-empty:before        {content: '\e850';}
+.elfinder-button-icon-theme:before        {content: '\e84e';}
+.elfinder-button-icon-logout:before       {content: '\e84f';}
 
 /**
  * jQuery UI Icons
@@ -874,13 +838,22 @@ input[type="checkbox"]:checked:after {
 /**
  * Other Icons
  */
-.elfinder-ro .elfinder-perms {
-  background-image: inherit;
+.elfinder-lock,
+.elfinder-perms,
+.elfinder-symlink {
   font: normal normal normal 14px/1 icons;
+  background-image: inherit !important;
+}
+.elfinder-ro .elfinder-perms {
   font-size: 25px;
   padding: 5px;
 }
 .elfinder-ro .elfinder-perms:before {content: '\e84c';}
+.elfinder-cwd-view-icons .elfinder-lock {
+  top: 0;
+  right: 1px;
+}
+.elfinder-lock:before {content: '\e802';}
 .ui-icon-gripsmall-diagonal-se {
   background-image: inherit !important;
   color: #ddd;
