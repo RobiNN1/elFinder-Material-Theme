@@ -558,3 +558,10 @@ select.elfinder-tabstop.ui-state-hover {
 .elfinder-dialog-icon-preupload,
 .elfinder-dialog-icon-url,
 .elfinder-dialog-icon-dim         { background-position: 0 -416px !important; }
+
+/**
+* Rename file input box
+*/
+.elfinder-cwd-filename input {
+	color:#000;
+}
