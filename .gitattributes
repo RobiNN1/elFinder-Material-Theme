@@ -1,3 +1,11 @@
-*.css text eol=lf
-*.less text eol=lf
-*.svg text eol=lf
+# Autodetect text files
+* text=auto
+
+# Force LF for all text files
+*.* text eol=lf
+
+# Force images/fonts to be handled as binaries
+*.png binary
+*.ttf binary
+*.eof binary
+*.eot binary
