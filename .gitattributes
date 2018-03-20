@@ -6,6 +6,7 @@
 
 # Force images/fonts to be handled as binaries
 *.png binary
-*.ttf binary
-*.eof binary
 *.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
