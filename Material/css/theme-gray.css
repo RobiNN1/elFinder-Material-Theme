@@ -1,4 +1,27 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese");
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Noto Sans Italic'), local('NotoSans-Italic'), url(https://fonts.gstatic.com/s/notosans/v7/o-0OIpQlx3QUlC5A4PNr4DRF.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'), url(https://fonts.gstatic.com/s/notosans/v7/o-0TIpQlx3QUlC5A4PNr4Az5ZtyE.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v7/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v7/o-0NIpQlx3QUlC5A4PNjXhFlYw.ttf) format('truetype');
+}
 .elfinder {
   color: #546E7A;
   font-family: "Noto Sans", sans-serif;
@@ -23,6 +46,7 @@ select.elfinder-tabstop.ui-state-hover {
   padding: 5px;
   color: #666666;
   background: #fff;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
   font-weight: normal;
   border-color: #888;
@@ -52,6 +76,22 @@ select.elfinder-tabstop.ui-state-hover {
     background-position: 0 0;
   }
 }
+@-moz-keyframes progress-animation {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@-o-keyframes progress-animation {
+  from {
+    background-position: 1rem 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
 @keyframes progress-animation {
   from {
     background-position: 1rem 0;
@@ -71,10 +111,15 @@ select.elfinder-tabstop.ui-state-hover {
 .elfinder-notify-progress,
 .elfinder-resize-spinner {
   background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 1rem 1rem;
+  -o-background-size: 1rem 1rem;
   background-size: 1rem 1rem;
   -webkit-animation: progress-animation 1s linear infinite;
+  -moz-animation: progress-animation 1s linear infinite;
+  -o-animation: progress-animation 1s linear infinite;
   animation: progress-animation 1s linear infinite;
   background-color: #0275d8;
   height: 1rem;
@@ -377,6 +422,9 @@ select.elfinder-tabstop.ui-state-hover {
 }
 .elfinder-button-icon-logout:before {
   content: '\e85a';
+}
+.elfinder-button-icon-opennew:before {
+  content: '\e830';
 }
 .elfinder-button-search .ui-icon.ui-icon-search {
   font-size: 17px;
@@ -797,6 +845,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-drag-helper-move .elfinder-drag-helper-icon-status {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .elfinder-drag-helper-move .elfinder-drag-helper-icon-status:before {
@@ -805,6 +855,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-drag-helper-plus .elfinder-drag-helper-icon-status {
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .elfinder-drag-helper-plus .elfinder-drag-helper-icon-status:before {
@@ -846,6 +898,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   display: block;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 .elfinder-cwd-icon-zip:before,
@@ -1222,8 +1276,10 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover,
 .elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
 .elfinder-disabled .elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
-.elfinder-disabled .elfinder-cwd table td.ui-state-hover {
+.elfinder-disabled .elfinder-cwd table td.ui-state-hover,
+.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-active {
   background: transparent;
+  color: #ddd;
 }
 .elfinder-cwd table {
   padding: 0;
@@ -1297,6 +1353,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
   transition: all 0.4s;
   background: #fff;
   color: #222;
@@ -1417,6 +1474,7 @@ a.ui-button:active .ui-icon,
   border-color: inherit;
   -webkit-transition: 0.2s ease-out;
   -o-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   opacity: 0.8;
   color: #fff;
