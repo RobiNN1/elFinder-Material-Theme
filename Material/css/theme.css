@@ -23,7 +23,7 @@
   src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v7/o-0NIpQlx3QUlC5A4PNjXhFlYw.ttf) format('truetype');
 }
 .elfinder {
-  color: #546E7A;
+  color: #546e7a;
   font-family: "Noto Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,6 +36,9 @@
   border-radius: 0;
   border: 0;
 }
+.elfinder * {
+  outline: 0 !important;
+}
 /**
  * Input & Select
  */
@@ -44,16 +47,14 @@ input.elfinder-tabstop.ui-state-hover,
 select.elfinder-tabstop,
 select.elfinder-tabstop.ui-state-hover {
   padding: 5px;
-  color: #666666;
+  color: #666;
   background: #fff;
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font-weight: normal;
   border-color: #888;
-}
-select.elfinder-tabstop,
-select.elfinder-tabstop.ui-state-hover {
-  width: 100%;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 /**
  * Loading
@@ -174,16 +175,16 @@ select.elfinder-tabstop.ui-state-hover {
   color: #fff;
 }
 .elfinder .elfinder-toast > .toast-info button.ui-button {
-  background-color: #3498DB;
+  background-color: #3498db;
 }
 .elfinder .elfinder-toast > .toast-error button.ui-button {
-  background-color: #F44336;
+  background-color: #f44336;
 }
 .elfinder .elfinder-toast > .toast-success button.ui-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 .elfinder .elfinder-toast > .toast-warning button.ui-button {
-  background-color: #FF9800;
+  background-color: #ff9800;
 }
 .elfinder-toast-msg {
   font-family: "Noto Sans", sans-serif;
@@ -228,15 +229,15 @@ select.elfinder-tabstop.ui-state-hover {
  */
 @font-face {
   font-family: material;
-  src: url("../icons/material.eot?98361579");
-  src: url("../icons/material.eot?98361579#iefix") format("embedded-opentype"), url("../icons/material.woff2?98361579") format("woff2"), url("../icons/material.woff?98361579") format("woff"), url("../icons/material.ttf?98361579") format("truetype"), url("../icons/material.svg?98361579#material") format("svg");
+  src: url("../icons/material.eot?7028746");
+  src: url("../icons/material.eot?7028746#iefix") format("embedded-opentype"), url("../icons/material.woff2?7028746") format("woff2"), url("../icons/material.woff?7028746") format("woff"), url("../icons/material.ttf?7028746") format("truetype"), url("../icons/material.svg?7028746#material") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: material;
-    src: url("../icons/material.svg?98361579#material") format("svg");
+    src: url("../icons/material.svg?7028746#material") format("svg");
   }
 }
 .ui-icon,
@@ -424,7 +425,7 @@ select.elfinder-tabstop.ui-state-hover {
   content: '\e85a';
 }
 .elfinder-button-icon-opennew:before {
-  content: '\e830';
+  content: '\e85b';
 }
 .elfinder-button-search .ui-icon.ui-icon-search {
   font-size: 17px;
@@ -467,6 +468,12 @@ select.elfinder-tabstop.ui-state-hover {
 }
 .elfinder-navbar-root-trash .elfinder-navbar-icon:before {
   content: '\e80b';
+}
+.elfinder-navbar-root-zip .elfinder-navbar-icon:before {
+  content: '\e85c';
+}
+.elfinder-navbar-root-network .elfinder-navbar-icon:before {
+  content: '\e823';
 }
 .elfinder-places .elfinder-navbar-root .elfinder-navbar-icon:before {
   content: '\e825';
@@ -515,7 +522,11 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-view-list .elfinder-navbar-root-box td .elfinder-cwd-icon,
 .elfinder-navbar-root-box .elfinder-cwd-icon,
 .elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon,
-.elfinder-navbar-root-trash .elfinder-cwd-icon {
+.elfinder-navbar-root-trash .elfinder-cwd-icon,
+.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon,
+.elfinder-navbar-root-zip .elfinder-cwd-icon,
+.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon,
+.elfinder-navbar-root-network .elfinder-cwd-icon {
   background-image: inherit;
 }
 .elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon:before,
@@ -533,7 +544,11 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-view-list .elfinder-navbar-root-box td .elfinder-cwd-icon:before,
 .elfinder-navbar-root-box .elfinder-cwd-icon:before,
 .elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-trash .elfinder-cwd-icon:before {
+.elfinder-navbar-root-trash .elfinder-cwd-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon:before,
+.elfinder-navbar-root-zip .elfinder-cwd-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon:before,
+.elfinder-navbar-root-network .elfinder-cwd-icon:before {
   font-family: material;
   background-color: transparent;
   color: #525252;
@@ -574,6 +589,14 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon:before,
 .elfinder-navbar-root-trash .elfinder-cwd-icon:before {
   content: '\e80b';
+}
+.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon:before,
+.elfinder-navbar-root-zip .elfinder-cwd-icon:before {
+  content: '\e85c';
+}
+.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon:before,
+.elfinder-navbar-root-network .elfinder-cwd-icon:before {
+  content: '\e823';
 }
 .elfinder-dialog-icon {
   font: normal normal normal 14px/1 material;
@@ -821,19 +844,19 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder .elfinder-toast > .toast-info:before {
   content: '\e817';
-  color: #3498DB;
+  color: #3498db;
 }
 .elfinder .elfinder-toast > .toast-error:before {
   content: '\e855';
-  color: #F44336;
+  color: #f44336;
 }
 .elfinder .elfinder-toast > .toast-success:before {
   content: '\e84e';
-  color: #4CAF50;
+  color: #4caf50;
 }
 .elfinder .elfinder-toast > .toast-warning:before {
   content: '\e856';
-  color: #FF9800;
+  color: #ff9800;
 }
 .elfinder-drag-helper-icon-status {
   font: normal normal normal 14px/1 material;
@@ -1175,7 +1198,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   margin-top: 5px;
 }
 .elfinder-button-menu-item {
-  color: #666666;
+  color: #666;
   padding: 6px 19px;
 }
 .elfinder-button-menu-item.ui-state-hover {
@@ -1370,7 +1393,7 @@ a.ui-button:active,
 .ui-button:focus,
 .ui-button.ui-state-hover,
 .ui-button.ui-state-active {
-  background: #3498DB;
+  background: #3498db;
   color: #fff;
   border: none;
 }
@@ -1419,7 +1442,7 @@ a.ui-button:active .ui-icon,
   color: #141414;
 }
 .elfinder .elfinder-contextmenu-item.ui-state-active {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: #fff;
 }
 /**
@@ -1460,9 +1483,18 @@ a.ui-button:active .ui-icon,
 .elfinder .elfinder-dialog .ui-tabs-nav .ui-tabs-selected a,
 .elfinder .elfinder-dialog .ui-tabs-nav .ui-state-active a,
 .elfinder .elfinder-dialog .ui-tabs-nav li:hover a {
-  -webkit-box-shadow: inset 0 -2px 0 #3498DB;
-  box-shadow: inset 0 -2px 0 #3498DB;
-  color: #3498DB;
+  -webkit-box-shadow: inset 0 -2px 0 #3498db;
+  box-shadow: inset 0 -2px 0 #3498db;
+  color: #3498db;
+}
+.elfinder .elfinder-dialog .ui-tabs .elfinder-tabstop.ui-state-hover {
+  background: transparent;
+  -webkit-box-shadow: inset 0 -2px 0 #3498db;
+  box-shadow: inset 0 -2px 0 #3498db;
+  color: #3498db;
+}
+.elfinder .elfinder-dialog label.ui-state-hover {
+  background: transparent;
 }
 .std42-dialog .ui-dialog-titlebar {
   background: #0f1f2f;
@@ -1485,15 +1517,15 @@ a.ui-button:active .ui-icon,
 }
 .elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
 .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon {
-  background-color: #F44336;
+  background-color: #f44336;
 }
 .elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full .ui-icon,
 .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full:hover .ui-icon {
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 .elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize .ui-icon,
 .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize:hover .ui-icon {
-  background-color: #FF9800;
+  background-color: #ff9800;
 }
 .elfinder-dialog-title {
   color: #f1f1f1;
@@ -1503,7 +1535,7 @@ a.ui-button:active .ui-icon,
 }
 .ui-widget-content {
   font-family: "Noto Sans", sans-serif;
-  color: #546E7A;
+  color: #546e7a;
 }
 .std42-dialog .ui-dialog-buttonpane button {
   margin: 2px;
@@ -1546,5 +1578,5 @@ a.ui-button:active .ui-icon,
 }
 .elfinder-help *,
 .elfinder-help a {
-  color: #546E7A;
+  color: #546e7a;
 }
