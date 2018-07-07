@@ -1,0 +1,73 @@
+/**
+ * Toolbar
+ */
+.elfinder-toolbar {
+    background: @toolbar-bg;
+    .remove-borders;
+    padding: 5px 0;
+}
+
+.elfinder-buttonset {
+    .remove-borders;
+    margin: 0 5px;
+    height: 24px;
+}
+
+.elfinder .elfinder-button {
+    background: transparent;
+    .border-radius(0);
+    cursor: pointer;
+    color: @toolbar-color;
+}
+
+.elfinder-toolbar-button-separator {
+    border: 0;
+}
+
+.elfinder-button-menu {
+    .border-radius(2px);
+    .box-shadow(0 1px 6px rgba(0, 0, 0, 0.3));
+    border: none;
+    margin-top: 5px;
+
+    &-item {
+        color: #666;
+        padding: 6px 19px;
+
+        &.ui-state-hover {
+            color: #141414;
+            background-color: #f5f4f4;
+        }
+
+        &-separated {
+            border-top: 1px solid #e5e5e5;
+
+            &.ui-state-hover {
+                border-top: 1px solid #e5e5e5;
+            }
+        }
+    }
+}
+
+.elfinder .elfinder-button-search {
+    margin: 0 10px;
+    min-height: inherit;
+    overflow: hidden;
+
+    input {
+        background: @search-bg;
+        .border-radius(2px);
+        .box-sizing(content-box);
+        border: 0;
+        margin: 0;
+        padding: 0 23px;
+        height: 24px;
+        color: #fff;
+    }
+
+    .elfinder-button-menu {
+        margin-top: 4px;
+        border: none;
+        .box-shadow(0 1px 3px rgba(0, 0, 0, .5));
+    }
+}
