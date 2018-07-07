@@ -1,0 +1,148 @@
+/**
+ * Dialogs
+ */
+.elfinder .elfinder-dialog {
+    .remove-borders;
+    .box-shadow(0 1px 30px rgba(0, 0, 0, 0.6));
+
+    .ui-dialog-content[id*="edit-elfinder-elfinder-"] {
+        padding: 0;
+    }
+
+    .ui-tabs {
+        .remove-borders;
+
+        &-nav {
+            .remove-borders;
+            background: transparent;
+            border-bottom: 1px solid #ddd;
+
+            li {
+                border: 0;
+                font-weight: normal;
+                background: transparent;
+                margin: 0;
+                padding: 3px 0;
+
+                &.ui-tabs-active {
+                    padding-bottom: 7px;
+                }
+            }
+
+            .ui-tabs-selected a,
+            .ui-state-active a,
+            li:hover a {
+                .box-shadow(inset 0 -2px 0 @dialog-tab-color);
+                color: @dialog-tab-color;
+            }
+        }
+
+        .elfinder-tabstop.ui-state-hover {
+            background: transparent;
+            .box-shadow(inset 0 -2px 0 @dialog-tab-color);
+            color: @dialog-tab-color;
+        }
+    }
+
+    label.ui-state-hover {
+        background: transparent;
+    }
+}
+
+.std42-dialog .ui-dialog-titlebar {
+    background: @dialog-head-bg;
+    .remove-borders;
+
+    .elfinder-titlebar-button .ui-icon {
+        border-color: inherit;
+        .transition(.2s ease-out);
+        opacity: 0.8;
+        color: #fff;
+        width: auto;
+        height: auto;
+        font-size: 12px;
+        padding: 3px;
+    }
+}
+
+.elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
+.std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon {
+    background-color: @color-error;
+}
+
+.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full .ui-icon,
+.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full:hover .ui-icon {
+    background-color: @color-success;
+}
+
+.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize .ui-icon,
+.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize:hover .ui-icon {
+    background-color: @color-warning;
+}
+
+.elfinder-dialog-title {
+    color: @dialog-head-color;
+}
+
+.std42-dialog .ui-dialog-content {
+    background: #fff;
+}
+
+.ui-widget-content {
+    font-family: @base-font;
+    color: @body-color;
+}
+
+.std42-dialog .ui-dialog-buttonpane {
+    button {
+        margin: 2px;
+        padding: .4em .5em;
+
+        span.ui-icon {
+            padding: 0;
+        }
+    }
+}
+
+.elfinder-upload-dialog-wrapper .elfinder-upload-dirselect {
+    width: inherit;
+    height: inherit;
+    padding: .4em;
+    margin-left: 5px;
+    color: #222;
+
+    &.ui-state-hover {
+        background: #888;
+        color: #fff;
+        outline: none;
+        .border-radius(2px);
+    }
+}
+
+.elfinder-upload-dialog-wrapper .ui-button {
+    padding: .4em 3px;
+    margin: 0 2px;
+}
+
+.elfinder-upload-dialog-wrapper .ui-button {
+    margin-left: 19px;
+    margin-right: -15px;
+}
+
+.elfinder-upload-dropbox {
+    border: 2px dashed #bbb;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.ui-state-hover {
+        background: #f1f1f1;
+        border: 2px dashed #bbb;
+    }
+}
+
+.elfinder-help *,
+.elfinder-help a {
+    color: @body-color;
+}

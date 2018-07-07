@@ -1,0 +1,101 @@
+/**
+ * Workzone
+ */
+.elfinder-workzone {
+    background: @workzone-bg;
+}
+
+.elfinder-cwd-file {
+    color: @cwd-file-color;
+
+    &.ui-state-hover,
+    &.ui-selected.ui-state-hover {
+        background: @cwd-file-hover-bg;
+        color: @cwd-file-hover-color;
+    }
+
+    &.ui-selected {
+        background: darken(@cwd-file-hover-bg, 3%);
+        color: @cwd-file-color;
+        width: 120px !important;
+    }
+}
+
+.elfinder-cwd-filename {
+    input,
+    textarea {
+        padding: 2px;
+        .border-radius(2px) !important;
+        width: 100px !important;
+        background: #fff;
+        color: #222;
+
+        &:focus {
+            outline: none;
+            border: 1px solid #555;
+        }
+    }
+}
+
+.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover,
+.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
+.elfinder-disabled .elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
+.elfinder-disabled .elfinder-cwd table td.ui-state-hover,
+.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-active {
+    background: transparent;
+    color: @cwd-file-hover-color;
+}
+
+.elfinder-cwd table {
+    padding: 0;
+
+    tr {
+        &:nth-child(odd) {
+            background-color: transparent;
+
+            &.ui-state-hover {
+                background-color: @cwd-file-hover-bg;
+            }
+        }
+    }
+}
+
+#elfinder-elfinder-cwd-thead {
+    td {
+        background: @cwd-thead;
+        color: @cwd-thead-color;
+
+        &.ui-state-hover,
+        &.ui-state-active {
+            background: darken(@cwd-thead, 2%);
+        }
+
+        &.ui-state-active.ui-state-hover {
+            background: darken(@cwd-thead, 3%);
+        }
+    }
+}
+
+.ui-selectable-helper {
+    border: 1px solid @selectable-border;
+    background-color: @selectable-bg;
+}
+
+.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash {
+    background-color: @workzone-trash-bg;
+
+    .elfinder-cwd-file {
+        color: @workzone-trash-color;
+
+        &.ui-state-hover,
+        &.ui-selected.ui-state-hover {
+            background: @cwd-file-hover-bg;
+            color: @cwd-file-hover-color;
+        }
+
+        &.ui-selected {
+            background: darken(@cwd-file-hover-bg, 3%);
+            color: @cwd-file-color;
+        }
+    }
+}

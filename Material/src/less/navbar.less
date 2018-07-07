@@ -1,0 +1,29 @@
+/**
+ * Navbar
+ */
+.elfinder .elfinder-navbar {
+    background: @navbar-bg;
+    .box-shadow(0 1px 8px rgba(0, 0, 0, 0.6));
+    border: none;
+}
+
+.elfinder-navbar-dir {
+    color: @navbar-dir-color;
+    cursor: pointer;
+    .border-radius(2px);
+    padding: 5px;
+    border: none;
+
+    &.ui-state-hover,
+    &.ui-state-active.ui-state-hover {
+        background: darken(@navbar-dir-bg-active, 2%);
+        color: @navbar-dir-color;
+        border: none;
+    }
+}
+
+.elfinder-navbar .ui-state-active,
+.elfinder-disabled .elfinder-navbar .ui-state-active {
+    background: @navbar-dir-bg-active;
+    border: none;
+}

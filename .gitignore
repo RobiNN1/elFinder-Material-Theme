@@ -1,3 +1,4 @@
 .idea
 *.config
-src
+Material/src/icons
+Material/src/images

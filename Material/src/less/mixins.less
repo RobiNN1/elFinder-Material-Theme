@@ -1,0 +1,32 @@
+.box-shadow(@value) {
+    -webkit-box-shadow: @value;
+    box-shadow: @value;
+}
+
+.box-sizing(@type) {
+    -webkit-box-sizing: @type;
+    -moz-box-sizing: @type;
+    box-sizing: @type;
+}
+
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+    -o-transition: @transition;
+    transition: @transition;
+}
+
+.transform(@transform) {
+    -webkit-transform: @transform;
+    -ms-transform: @transform;
+    transform: @transform;
+}
+
+.remove-borders() {
+    .border-radius(0);
+    border: 0;
+}

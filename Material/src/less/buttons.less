@@ -1,0 +1,53 @@
+/**
+ * Buttons
+ */
+.ui-button,
+.ui-button:active,
+.ui-button.ui-state-default {
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    .border-radius(3px);
+    text-transform: uppercase;
+    .box-shadow(1px 1px 4px rgba(0, 0, 0, 0.4));
+    .transition(all .4s);
+    background: @buttons-bg;
+    color: @buttons-color;
+    border: none;
+
+    .ui-icon {
+        color: @buttons-color;
+    }
+}
+
+.ui-button:hover,
+a.ui-button:active,
+.ui-button:active,
+.ui-button:focus,
+.ui-button.ui-state-hover,
+.ui-button.ui-state-active {
+    background: @buttons-bg-hover;
+    color: @buttons-color-hover;
+    border: none;
+
+    .ui-icon {
+        color: @buttons-color-hover;
+    }
+}
+
+.ui-button.ui-state-active:hover {
+    background: darken(@buttons-bg-hover, 10%);
+    color: @buttons-color-hover;
+    border: none;
+}
+
+.ui-button:focus {
+    outline: none !important;
+}
+
+.ui-controlgroup-horizontal .ui-button {
+    .remove-borders;
+}
