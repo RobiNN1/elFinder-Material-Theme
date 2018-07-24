@@ -10,3 +10,11 @@
 *.ttf binary
 *.woff binary
 *.woff2 binary
+
+# Files and directories with the attribute export-ignore won’t be added to archive files.
+Material/src export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+LICENSE export-ignore
+preview.png export-ignore
+README.md export-ignore
