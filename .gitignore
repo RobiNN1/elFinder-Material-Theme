@@ -1,4 +1,5 @@
 .idea
 *.config
+.DS_Store
 Material/src/icons
 Material/src/images

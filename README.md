@@ -13,7 +13,3 @@ Theme for elFinder
     ```
     $ npm install elfinder-material-theme
     ```
-- Install with [Bower](https://bower.io):
-    ```
-    $ bower install elfinder-material-theme
-    ```
