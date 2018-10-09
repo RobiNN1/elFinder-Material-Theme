@@ -5,6 +5,12 @@
     background: @toolbar-bg;
     .remove-borders;
     padding: 5px 0;
+
+    .elfinder-button-icon {
+        font-size: 20px;
+        color: @toolbar-icon-color;
+        margin-top: -2px;
+    }
 }
 
 .elfinder-buttonset {
@@ -69,5 +75,9 @@
         margin-top: 4px;
         border: none;
         .box-shadow(0 1px 3px rgba(0, 0, 0, .5));
+    }
+
+    &-menu {
+        .border-radius(0);
     }
 }

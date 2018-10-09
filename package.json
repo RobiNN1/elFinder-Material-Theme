@@ -1,6 +1,6 @@
 {
   "name": "elfinder-material-theme",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "Theme for elFinder",
   "main": "Material/css/theme.css",
   "scripts": {
@@ -17,7 +17,7 @@
     "material-theme",
     "material-design"
   ],
-  "author": "RobiNN1",
+  "author": "Róbert Kelčák {RobiNN}",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/RobiNN1/elFinder-Material-Theme/issues"

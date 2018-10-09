@@ -1,5 +1,6 @@
 .idea
 *.config
+*.db
 .DS_Store
 Material/src/icons
 Material/src/images
