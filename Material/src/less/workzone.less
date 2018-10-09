@@ -17,7 +17,6 @@
     &.ui-selected {
         background: darken(@cwd-file-hover-bg, 3%);
         color: @cwd-file-color;
-        width: 120px !important;
     }
 }
 
@@ -46,18 +45,30 @@
     color: @cwd-file-hover-color;
 }
 
-.elfinder-cwd table {
-    padding: 0;
+.elfinder-cwd {
+    table {
+        padding: 0;
 
-    tr {
-        &:nth-child(odd) {
-            background-color: transparent;
+        tr {
+            border: 0 !important;
 
-            &.ui-state-hover {
-                background-color: @cwd-file-hover-bg;
+            &:nth-child(odd) {
+                background-color: transparent;
+
+                &.ui-state-hover {
+                    background-color: @cwd-file-hover-bg;
+                }
             }
         }
     }
+
+    &.elfinder-table-header-sticky table {
+        border: 0;
+    }
+}
+
+.elfinder-cwd-view-list thead td .ui-resizable-handle {
+    top: 3px;
 }
 
 #elfinder-elfinder-cwd-thead {

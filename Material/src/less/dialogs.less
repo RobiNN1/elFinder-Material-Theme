@@ -11,6 +11,7 @@
 
     .ui-tabs {
         .remove-borders;
+        padding: 0;
 
         &-nav {
             .remove-borders;
@@ -49,19 +50,39 @@
     }
 }
 
-.std42-dialog .ui-dialog-titlebar {
-    background: @dialog-head-bg;
-    .remove-borders;
+.std42-dialog {
+    .ui-dialog-titlebar {
+        background: @dialog-head-bg;
+        .remove-borders;
 
-    .elfinder-titlebar-button .ui-icon {
-        border-color: inherit;
-        .transition(.2s ease-out);
-        opacity: 0.8;
-        color: #fff;
-        width: auto;
-        height: auto;
-        font-size: 12px;
-        padding: 3px;
+        .elfinder-titlebar-button .ui-icon {
+            border-color: inherit;
+            .transition(.2s ease-out);
+            opacity: 0.8;
+            color: #fff;
+            width: auto;
+            height: auto;
+            font-size: 12px;
+            padding: 3px;
+        }
+    }
+
+    &,
+    .ui-dialog-content,
+    &.elfinder-bg-translucent,
+    &.elfinder-bg-translucent .ui-widget-content {
+        background-color: #fff;
+    }
+
+    .ui-dialog-buttonpane {
+        button {
+            margin: 2px;
+            padding: .4em .5em;
+
+            span.ui-icon {
+                padding: 0;
+            }
+        }
     }
 }
 
@@ -84,24 +105,9 @@
     color: @dialog-head-color;
 }
 
-.std42-dialog .ui-dialog-content {
-    background: #fff;
-}
-
 .ui-widget-content {
     font-family: @base-font;
     color: @body-color;
-}
-
-.std42-dialog .ui-dialog-buttonpane {
-    button {
-        margin: 2px;
-        padding: .4em .5em;
-
-        span.ui-icon {
-            padding: 0;
-        }
-    }
 }
 
 .elfinder-upload-dialog-wrapper .elfinder-upload-dirselect {
@@ -121,12 +127,7 @@
 
 .elfinder-upload-dialog-wrapper .ui-button {
     padding: .4em 3px;
-    margin: 0 2px;
-}
-
-.elfinder-upload-dialog-wrapper .ui-button {
-    margin-left: 19px;
-    margin-right: -15px;
+    margin: 0 -15px 0 19px;
 }
 
 .elfinder-upload-dropbox {
@@ -142,7 +143,39 @@
     }
 }
 
-.elfinder-help *,
-.elfinder-help a {
-    color: @body-color;
+.elfinder-help {
+    * {
+        color: @body-color;
+    }
+
+    a {
+        color: @color-info;
+
+        &:hover {
+            color: darken(@color-info, 10%);
+        }
+    }
+}
+
+.ui-slider {
+    &.ui-slider-horizontal {
+        height: 2px;
+        border: 0;
+        background-color: #bababa !important;
+    }
+
+    .ui-slider-handle {
+        background-image: none;
+        background-color: #5d5858;
+        .border-radius(50%);
+        border: 0;
+        margin-top: -3px;
+
+        &.ui-state-hover {
+            background: #5d5858 !important;
+            box-shadow: none !important;
+            .border-radius(50%);
+            cursor: pointer;
+        }
+    }
 }
