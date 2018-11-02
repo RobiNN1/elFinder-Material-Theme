@@ -1,32 +1,9 @@
 /*!
- * elFinder-Material-Theme v2.1.3 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * elFinder-Material-Theme (Gray) v2.1.4 (https://github.com/RobiNN1/elFinder-Material-Theme)
  * Copyright 2016-2018 Róbert Kelčák {RobiNN}
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Noto Sans Italic'), local('NotoSans-Italic'), url(https://fonts.gstatic.com/s/notosans/v7/o-0OIpQlx3QUlC5A4PNr4DRF.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'), url(https://fonts.gstatic.com/s/notosans/v7/o-0TIpQlx3QUlC5A4PNr4Az5ZtyE.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Noto Sans'), local('NotoSans'), url(https://fonts.gstatic.com/s/notosans/v7/o-0IIpQlx3QUlC5A4PNb4g.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Noto Sans Bold'), local('NotoSans-Bold'), url(https://fonts.gstatic.com/s/notosans/v7/o-0NIpQlx3QUlC5A4PNjXhFlYw.ttf) format('truetype');
-}
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=cyrillic,cyrillic-ext,devanagari,greek,greek-ext,latin-ext,vietnamese");
 .elfinder {
   color: #546e7a;
   font-family: "Noto Sans", sans-serif;
@@ -233,15 +210,15 @@ select.elfinder-tabstop.ui-state-hover {
  */
 @font-face {
   font-family: material;
-  src: url("../icons/material.eot?23150239");
-  src: url("../icons/material.eot?23150239#iefix") format("embedded-opentype"), url("../icons/material.woff2?23150239") format("woff2"), url("../icons/material.woff?23150239") format("woff"), url("../icons/material.ttf?23150239") format("truetype"), url("../icons/material.svg?23150239#material") format("svg");
+  src: url("../icons/material.eot?91804974");
+  src: url("../icons/material.eot?91804974#iefix") format("embedded-opentype"), url("../icons/material.woff2?91804974") format("woff2"), url("../icons/material.woff?91804974") format("woff"), url("../icons/material.ttf?91804974") format("truetype"), url("../icons/material.svg?91804974#material") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: material;
-    src: url("../icons/material.svg?23150239#material") format("svg");
+    src: url("../icons/material.svg?91804974#material") format("svg");
   }
 }
 .ui-icon,
@@ -416,9 +393,6 @@ select.elfinder-tabstop.ui-state-hover {
 }
 .elfinder-button-icon-selectinvert:before {
   content: '\e833';
-}
-.elfinder-button-icon-theme:before {
-  content: '\e859';
 }
 .elfinder-button-icon-logout:before {
   content: '\e85a';
@@ -824,7 +798,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   content: '\e800';
 }
 .elfinder-lock:before {
-  content: '\e834';
+  content: '\e84d';
 }
 .elfinder-symlink:before {
   content: '\e837';
@@ -1255,6 +1229,12 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
   border: none;
 }
+.elfinder .elfinder-navbar .elfinder-lock,
+.elfinder .elfinder-navbar .elfinder-perms,
+.elfinder .elfinder-navbar .elfinder-symlink {
+  color: #1d1d1d;
+  opacity: .8;
+}
 .elfinder-navbar-dir {
   color: #e6e6e6;
   cursor: pointer;
@@ -1317,6 +1297,9 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd table {
   padding: 0;
 }
+.elfinder-cwd table thead td {
+  padding: 5px 14px;
+}
 .elfinder-cwd table tr {
   border: 0 !important;
 }
@@ -1329,8 +1312,25 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd.elfinder-table-header-sticky table {
   border: 0;
 }
+.elfinder-cwd .elfinder-lock,
+.elfinder-cwd .elfinder-perms,
+.elfinder-cwd .elfinder-symlink {
+  color: #4d4d4d;
+}
+.elfinder-cwd-view-icons .elfinder-lock {
+  top: 0;
+}
 .elfinder-cwd-view-list thead td .ui-resizable-handle {
   top: 3px;
+}
+.elfinder-cwd-view-list .elfinder-lock,
+.elfinder-cwd-view-list .elfinder-perms,
+.elfinder-cwd-view-list .elfinder-symlink {
+  font-size: 14px;
+  opacity: .7;
+}
+.elfinder-cwd-view-list .elfinder-perms {
+  left: inherit;
 }
 #elfinder-elfinder-cwd-thead td {
   background: #353b42;
@@ -1338,7 +1338,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 #elfinder-elfinder-cwd-thead td.ui-state-hover,
 #elfinder-elfinder-cwd-thead td.ui-state-active {
-  background: #30363c;
+  background: #2a2e34;
 }
 #elfinder-elfinder-cwd-thead td.ui-state-active.ui-state-hover {
   background: #2e333a;
@@ -1391,8 +1391,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   text-transform: uppercase;
-  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4) !important;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
@@ -1412,8 +1412,8 @@ a.ui-button:active,
 .ui-button:focus,
 .ui-button.ui-state-hover,
 .ui-button.ui-state-active {
-  background: #3498db;
-  color: #fff;
+  background: #3498db !important;
+  color: #fff !important;
   border: none;
 }
 .ui-button:hover .ui-icon,
@@ -1515,6 +1515,9 @@ a.ui-button:active .ui-icon,
 }
 .elfinder .elfinder-dialog label.ui-state-hover {
   background: transparent;
+}
+.elfinder .elfinder-dialog .ui-resizable-se {
+  display: none;
 }
 .std42-dialog .ui-dialog-titlebar {
   background: #353b44;
