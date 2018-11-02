@@ -49,6 +49,12 @@
     table {
         padding: 0;
 
+        thead {
+            td {
+                padding: 5px 14px;
+            }
+        }
+
         tr {
             border: 0 !important;
 
@@ -65,10 +71,35 @@
     &.elfinder-table-header-sticky table {
         border: 0;
     }
+
+    .elfinder-lock,
+    .elfinder-perms,
+    .elfinder-symlink {
+        color: @cwd-icons-color;
+    }
 }
 
-.elfinder-cwd-view-list thead td .ui-resizable-handle {
-    top: 3px;
+.elfinder-cwd-view-icons {
+    .elfinder-lock {
+        top: 0;
+    }
+}
+
+.elfinder-cwd-view-list {
+    thead td .ui-resizable-handle {
+        top: 3px;
+    }
+
+    .elfinder-lock,
+    .elfinder-perms,
+    .elfinder-symlink {
+        font-size: 14px/1;
+        opacity: .7;
+    }
+
+    .elfinder-perms {
+        left: inherit;
+    }
 }
 
 #elfinder-elfinder-cwd-thead {
@@ -78,7 +109,7 @@
 
         &.ui-state-hover,
         &.ui-state-active {
-            background: darken(@cwd-thead, 2%);
+            background: darken(@cwd-thead, 5%);
         }
 
         &.ui-state-active.ui-state-hover {

@@ -12,7 +12,7 @@
     white-space: nowrap;
     .border-radius(3px);
     text-transform: uppercase;
-    .box-shadow(1px 1px 4px rgba(0, 0, 0, 0.4));
+    .box-shadow(1px 1px 4px rgba(0, 0, 0, 0.4)) !important;
     .transition(all .4s);
     background: @buttons-bg;
     color: @buttons-color;
@@ -29,8 +29,8 @@ a.ui-button:active,
 .ui-button:focus,
 .ui-button.ui-state-hover,
 .ui-button.ui-state-active {
-    background: @buttons-bg-hover;
-    color: @buttons-color-hover;
+    background: @buttons-bg-hover !important;
+    color: @buttons-color-hover !important;
     border: none;
 
     .ui-icon {
