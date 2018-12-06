@@ -1,3 +1,4 @@
 Material/src
 .github
 *.config
+.gitattributes
