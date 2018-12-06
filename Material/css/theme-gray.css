@@ -1,5 +1,5 @@
 /*!
- * elFinder-Material-Theme (Gray) v2.1.5 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * elFinder-Material-Theme (Gray) v2.1.6 (https://github.com/RobiNN1/elFinder-Material-Theme)
  * Copyright 2016-2018 Róbert Kelčák {RobiNN}
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
@@ -37,6 +37,37 @@ select.elfinder-tabstop.ui-state-hover {
   border-color: #888;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
+}
+.elfinder input[type="checkbox"] {
+  position: relative;
+}
+.elfinder input[type="checkbox"]:after,
+.elfinder input[type="checkbox"]:focus:after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #707070;
+  background-color: #fff;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+.elfinder input[type="checkbox"]:checked:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 6px;
+  display: table;
+  width: 4px;
+  height: 12px;
+  border: 2px solid #707070;
+  border-top-width: 0;
+  border-left-width: 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 /**
  * Loading
@@ -1362,6 +1393,10 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   background: #455158;
   color: #555;
 }
+.elfinder .elfinder-cwd-view-icons .elfinder-cwd-bgurl:after,
+.elfinder .elfinder-quicklook-info-wrapper .elfinder-cwd-bgurl:after {
+  display: none;
+}
 /**
  * Status Bar
  */
@@ -1546,10 +1581,16 @@ a.ui-button:active .ui-icon,
 }
 .std42-dialog .ui-dialog-buttonpane button {
   margin: 2px;
-  padding: .4em .5em;
 }
 .std42-dialog .ui-dialog-buttonpane button span.ui-icon {
   padding: 0;
+}
+.std42-dialog .ui-dialog-buttonpane .ui-dialog-buttonset.elfinder-edit-extras {
+  margin-top: -4px;
+}
+.std42-dialog,
+.std42-dialog .ui-widget-content {
+  background-color: #fff;
 }
 .elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
 .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon {
