@@ -1,5 +1,5 @@
 /*!
- * elFinder-Material-Theme (Default) v2.1.6 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * elFinder-Material-Theme (Default) v2.1.7 (https://github.com/RobiNN1/elFinder-Material-Theme)
  * Copyright 2016-2018 Róbert Kelčák {RobiNN}
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
@@ -706,7 +706,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder-quicklook-titlebar-icon .ui-icon {
   border: 0;
-  opacity: .8;
+  opacity: 0.8;
   font-size: 15px;
   padding: 1px;
 }
@@ -1236,7 +1236,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder .elfinder-navbar .elfinder-perms,
 .elfinder .elfinder-navbar .elfinder-symlink {
   color: #a9a9a9;
-  opacity: .8;
+  opacity: 0.8;
 }
 .elfinder-navbar-dir {
   color: #e6e6e6;
@@ -1280,7 +1280,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   padding: 2px;
   -webkit-border-radius: 2px !important;
   border-radius: 2px !important;
-  width: 100px !important;
   background: #fff;
   color: #222;
 }
@@ -1330,7 +1329,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-view-list .elfinder-perms,
 .elfinder-cwd-view-list .elfinder-symlink {
   font-size: 14px;
-  opacity: .7;
+  opacity: 0.7;
 }
 .elfinder-cwd-view-list .elfinder-perms {
   left: inherit;
@@ -1584,7 +1583,7 @@ a.ui-button:active .ui-icon,
 .elfinder-upload-dialog-wrapper .elfinder-upload-dirselect {
   width: inherit;
   height: inherit;
-  padding: .4em;
+  padding: 0.4em;
   margin-left: 5px;
   color: #222;
 }
@@ -1596,7 +1595,7 @@ a.ui-button:active .ui-icon,
   border-radius: 2px;
 }
 .elfinder-upload-dialog-wrapper .ui-button {
-  padding: .4em 3px;
+  padding: 0.4em 3px;
   margin: 0 -15px 0 19px;
 }
 .elfinder-upload-dropbox {
