@@ -26,6 +26,12 @@
     transform: @transform;
 }
 
+.transform-origin(@transform) {
+    -webkit-transform-origin: @transform;
+    -ms-transform-origin: @transform;
+    transform-origin: @transform;
+}
+
 .remove-borders() {
     .border-radius(0);
     border: 0;
