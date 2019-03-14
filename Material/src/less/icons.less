@@ -44,61 +44,225 @@
     background: inherit;
 }
 
-.elfinder-button-icon-home:before { content: '\e800'; }
-.elfinder-button-icon-back:before { content: '\e801'; }
-.elfinder-button-icon-forward:before { content: '\e802'; }
-.elfinder-button-icon-up:before { content: '\e803'; }
-.elfinder-button-icon-dir:before { content: '\e804'; }
-.elfinder-button-icon-opendir:before { content: '\e805'; }
-.elfinder-button-icon-reload:before { content: '\e806'; }
-.elfinder-button-icon-open:before { content: '\e807'; }
-.elfinder-button-icon-mkdir:before { content: '\e808'; }
-.elfinder-button-icon-mkfile:before { content: '\e809'; }
-.elfinder-button-icon-rm:before { content: '\e80a'; }
-.elfinder-button-icon-trash:before { content: '\e80b'; }
-.elfinder-button-icon-restore:before { content: '\e80c'; }
-.elfinder-button-icon-copy:before { content: '\e80d'; }
-.elfinder-button-icon-cut:before { content: '\e80e'; }
-.elfinder-button-icon-paste:before { content: '\e80f'; }
-.elfinder-button-icon-getfile:before { content: '\e810'; }
-.elfinder-button-icon-duplicate:before { content: '\e811'; }
-.elfinder-button-icon-rename:before { content: '\e812'; }
-.elfinder-button-icon-edit:before { content: '\e813'; }
-.elfinder-button-icon-quicklook:before { content: '\e814'; }
-.elfinder-button-icon-upload:before { content: '\e815'; }
-.elfinder-button-icon-download:before { content: '\e816'; }
-.elfinder-button-icon-info:before { content: '\e817'; }
-.elfinder-button-icon-extract:before { content: '\e818'; }
-.elfinder-button-icon-archive:before { content: '\e819'; }
-.elfinder-button-icon-view:before { content: '\e81a'; }
-.elfinder-button-icon-view-list:before { content: '\e81b'; }
-.elfinder-button-icon-help:before { content: '\e81c'; }
-.elfinder-button-icon-resize:before { content: '\e81d'; }
-.elfinder-button-icon-link:before { content: '\e81e'; }
-.elfinder-button-icon-search:before { content: '\e81f'; }
-.elfinder-button-icon-sort:before { content: '\e820'; }
-.elfinder-button-icon-rotate-r:before { content: '\e821'; }
-.elfinder-button-icon-rotate-l:before { content: '\e822'; }
-.elfinder-button-icon-netmount:before { content: '\e823'; }
-.elfinder-button-icon-netunmount:before { content: '\e824'; }
-.elfinder-button-icon-places:before { content: '\e825'; }
-.elfinder-button-icon-chmod:before { content: '\e826'; }
-.elfinder-button-icon-accept:before { content: '\e827'; }
-.elfinder-button-icon-menu:before { content: '\e828'; }
-.elfinder-button-icon-colwidth:before { content: '\e829'; }
-.elfinder-button-icon-fullscreen:before { content: '\e82a'; }
-.elfinder-button-icon-unfullscreen:before { content: '\e82b'; }
-.elfinder-button-icon-empty:before { content: '\e82c'; }
-.elfinder-button-icon-undo:before { content: '\e82d'; }
-.elfinder-button-icon-redo:before { content: '\e82e'; }
-.elfinder-button-icon-preference:before { content: '\e82f'; }
-.elfinder-button-icon-mkdirin:before { content: '\e830'; }
-.elfinder-button-icon-selectall:before { content: '\e831'; }
-.elfinder-button-icon-selectnone:before { content: '\e832'; }
-.elfinder-button-icon-selectinvert:before { content: '\e833'; }
-.elfinder-button-icon-logout:before { content: '\e85a'; }
-.elfinder-button-icon-opennew:before { content: '\e85b'; }
-.elfinder-button-icon-hide:before { content: '\e85d'; }
+.elfinder-button-icon-home:before {
+    content: '\e800';
+}
+
+.elfinder-button-icon-back:before {
+    content: '\e801';
+}
+
+.elfinder-button-icon-forward:before {
+    content: '\e802';
+}
+
+.elfinder-button-icon-up:before {
+    content: '\e803';
+}
+
+.elfinder-button-icon-dir:before {
+    content: '\e804';
+}
+
+.elfinder-button-icon-opendir:before {
+    content: '\e805';
+}
+
+.elfinder-button-icon-reload:before {
+    content: '\e806';
+}
+
+.elfinder-button-icon-open:before {
+    content: '\e807';
+}
+
+.elfinder-button-icon-mkdir:before {
+    content: '\e808';
+}
+
+.elfinder-button-icon-mkfile:before {
+    content: '\e809';
+}
+
+.elfinder-button-icon-rm:before {
+    content: '\e80a';
+}
+
+.elfinder-button-icon-trash:before {
+    content: '\e80b';
+}
+
+.elfinder-button-icon-restore:before {
+    content: '\e80c';
+}
+
+.elfinder-button-icon-copy:before {
+    content: '\e80d';
+}
+
+.elfinder-button-icon-cut:before {
+    content: '\e80e';
+}
+
+.elfinder-button-icon-paste:before {
+    content: '\e80f';
+}
+
+.elfinder-button-icon-getfile:before {
+    content: '\e810';
+}
+
+.elfinder-button-icon-duplicate:before {
+    content: '\e811';
+}
+
+.elfinder-button-icon-rename:before {
+    content: '\e812';
+}
+
+.elfinder-button-icon-edit:before {
+    content: '\e813';
+}
+
+.elfinder-button-icon-quicklook:before {
+    content: '\e814';
+}
+
+.elfinder-button-icon-upload:before {
+    content: '\e815';
+}
+
+.elfinder-button-icon-download:before {
+    content: '\e816';
+}
+
+.elfinder-button-icon-info:before {
+    content: '\e817';
+}
+
+.elfinder-button-icon-extract:before {
+    content: '\e818';
+}
+
+.elfinder-button-icon-archive:before {
+    content: '\e819';
+}
+
+.elfinder-button-icon-view:before {
+    content: '\e81a';
+}
+
+.elfinder-button-icon-view-list:before {
+    content: '\e81b';
+}
+
+.elfinder-button-icon-help:before {
+    content: '\e81c';
+}
+
+.elfinder-button-icon-resize:before {
+    content: '\e81d';
+}
+
+.elfinder-button-icon-link:before {
+    content: '\e81e';
+}
+
+.elfinder-button-icon-search:before {
+    content: '\e81f';
+}
+
+.elfinder-button-icon-sort:before {
+    content: '\e820';
+}
+
+.elfinder-button-icon-rotate-r:before {
+    content: '\e821';
+}
+
+.elfinder-button-icon-rotate-l:before {
+    content: '\e822';
+}
+
+.elfinder-button-icon-netmount:before {
+    content: '\e823';
+}
+
+.elfinder-button-icon-netunmount:before {
+    content: '\e824';
+}
+
+.elfinder-button-icon-places:before {
+    content: '\e825';
+}
+
+.elfinder-button-icon-chmod:before {
+    content: '\e826';
+}
+
+.elfinder-button-icon-accept:before {
+    content: '\e827';
+}
+
+.elfinder-button-icon-menu:before {
+    content: '\e828';
+}
+
+.elfinder-button-icon-colwidth:before {
+    content: '\e829';
+}
+
+.elfinder-button-icon-fullscreen:before {
+    content: '\e82a';
+}
+
+.elfinder-button-icon-unfullscreen:before {
+    content: '\e82b';
+}
+
+.elfinder-button-icon-empty:before {
+    content: '\e82c';
+}
+
+.elfinder-button-icon-undo:before {
+    content: '\e82d';
+}
+
+.elfinder-button-icon-redo:before {
+    content: '\e82e';
+}
+
+.elfinder-button-icon-preference:before {
+    content: '\e82f';
+}
+
+.elfinder-button-icon-mkdirin:before {
+    content: '\e830';
+}
+
+.elfinder-button-icon-selectall:before {
+    content: '\e831';
+}
+
+.elfinder-button-icon-selectnone:before {
+    content: '\e832';
+}
+
+.elfinder-button-icon-selectinvert:before {
+    content: '\e833';
+}
+
+.elfinder-button-icon-logout:before {
+    content: '\e85a';
+}
+
+.elfinder-button-icon-opennew:before {
+    content: '\e85b';
+}
+
+.elfinder-button-icon-hide:before {
+    content: '\e85d';
+}
 
 .elfinder-button-search .ui-icon {
     &.ui-icon-search {
@@ -126,17 +290,49 @@
     content: '\e805';
 }
 
-.elfinder-navbar-root-local .elfinder-navbar-icon:before { content: '\e83d'; }
-.elfinder-navbar-root-ftp .elfinder-navbar-icon:before { content: '\e823'; }
-.elfinder-navbar-root-sql .elfinder-navbar-icon:before { content: '\e83e'; }
-.elfinder-navbar-root-dropbox .elfinder-navbar-icon:before { content: '\e83f'; }
-.elfinder-navbar-root-googledrive .elfinder-navbar-icon:before { content: '\e840'; }
-.elfinder-navbar-root-onedrive .elfinder-navbar-icon:before { content: '\e841'; }
-.elfinder-navbar-root-box .elfinder-navbar-icon:before { content: '\e842'; }
-.elfinder-navbar-root-trash .elfinder-navbar-icon:before { content: '\e80b'; }
-.elfinder-navbar-root-zip .elfinder-navbar-icon:before { content: '\e85c'; }
-.elfinder-navbar-root-network .elfinder-navbar-icon:before { content: '\e823'; }
-.elfinder-places .elfinder-navbar-root .elfinder-navbar-icon:before { content: '\e825'; }
+.elfinder-navbar-root-local .elfinder-navbar-icon:before {
+    content: '\e83d';
+}
+
+.elfinder-navbar-root-ftp .elfinder-navbar-icon:before {
+    content: '\e823';
+}
+
+.elfinder-navbar-root-sql .elfinder-navbar-icon:before {
+    content: '\e83e';
+}
+
+.elfinder-navbar-root-dropbox .elfinder-navbar-icon:before {
+    content: '\e83f';
+}
+
+.elfinder-navbar-root-googledrive .elfinder-navbar-icon:before {
+    content: '\e840';
+}
+
+.elfinder-navbar-root-onedrive .elfinder-navbar-icon:before {
+    content: '\e841';
+}
+
+.elfinder-navbar-root-box .elfinder-navbar-icon:before {
+    content: '\e842';
+}
+
+.elfinder-navbar-root-trash .elfinder-navbar-icon:before {
+    content: '\e80b';
+}
+
+.elfinder-navbar-root-zip .elfinder-navbar-icon:before {
+    content: '\e85c';
+}
+
+.elfinder-navbar-root-network .elfinder-navbar-icon:before {
+    content: '\e823';
+}
+
+.elfinder-places .elfinder-navbar-root .elfinder-navbar-icon:before {
+    content: '\e825';
+}
 
 .elfinder-navbar-arrow {
     background-image: inherit !important;
@@ -151,8 +347,13 @@
     color: #fff;
 }
 
-.elfinder-ltr .elfinder-navbar-collapsed .elfinder-navbar-arrow:before { content: '\e857'; }
-.elfinder-rtl .elfinder-navbar-collapsed .elfinder-navbar-arrow:before { content: '\e858'; }
+.elfinder-ltr .elfinder-navbar-collapsed .elfinder-navbar-arrow:before {
+    content: '\e857';
+}
+
+.elfinder-rtl .elfinder-navbar-collapsed .elfinder-navbar-arrow:before {
+    content: '\e858';
+}
 
 .elfinder-ltr .elfinder-navbar-expanded .elfinder-navbar-arrow:before,
 .elfinder-rtl .elfinder-navbar-expanded .elfinder-navbar-arrow:before {
@@ -195,16 +396,45 @@ div.elfinder-cwd-wrapper-list {
     }
 }
 
-.elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon:before, .elfinder-navbar-root-local .elfinder-cwd-icon:before { content: '\e83d'; }
-.elfinder-cwd-view-list .elfinder-navbar-root-ftp td .elfinder-cwd-icon:before, .elfinder-navbar-root-ftp .elfinder-cwd-icon:before { content: '\e823'; }
-.elfinder-cwd-view-list .elfinder-navbar-root-sql td .elfinder-cwd-icon:before, .elfinder-navbar-root-sql .elfinder-cwd-icon:before { content: '\e83e'; }
-.elfinder-cwd-view-list .elfinder-navbar-roor-dropbox td .elfinder-cwd-icon:before, .elfinder-navbar-roor-dropbox .elfinder-cwd-icon:before { content: '\e83f'; }
-.elfinder-cwd-view-list .elfinder-navbar-roor-googledrive td .elfinder-cwd-icon:before, .elfinder-navbar-roor-googledrive .elfinder-cwd-icon:before { content: '\e840'; }
-.elfinder-cwd-view-list .elfinder-navbar-roor-onedrive td .elfinder-cwd-icon:before, .elfinder-navbar-roor-onedrive .elfinder-cwd-icon:before { content: '\e841'; }
-.elfinder-cwd-view-list .elfinder-navbar-roor-box td .elfinder-cwd-icon:before, .elfinder-navbar-roor-box .elfinder-cwd-icon:before { content: '\e842'; }
-.elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon:before, .elfinder-navbar-root-trash .elfinder-cwd-icon:before { content: '\e80b'; }
-.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon:before, .elfinder-navbar-root-zip .elfinder-cwd-icon:before { content: '\e85c'; }
-.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon:before, .elfinder-navbar-root-network .elfinder-cwd-icon:before { content: '\e823'; }
+.elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon:before, .elfinder-navbar-root-local .elfinder-cwd-icon:before {
+    content: '\e83d';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-root-ftp td .elfinder-cwd-icon:before, .elfinder-navbar-root-ftp .elfinder-cwd-icon:before {
+    content: '\e823';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-root-sql td .elfinder-cwd-icon:before, .elfinder-navbar-root-sql .elfinder-cwd-icon:before {
+    content: '\e83e';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-roor-dropbox td .elfinder-cwd-icon:before, .elfinder-navbar-roor-dropbox .elfinder-cwd-icon:before {
+    content: '\e83f';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-roor-googledrive td .elfinder-cwd-icon:before, .elfinder-navbar-roor-googledrive .elfinder-cwd-icon:before {
+    content: '\e840';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-roor-onedrive td .elfinder-cwd-icon:before, .elfinder-navbar-roor-onedrive .elfinder-cwd-icon:before {
+    content: '\e841';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-roor-box td .elfinder-cwd-icon:before, .elfinder-navbar-roor-box .elfinder-cwd-icon:before {
+    content: '\e842';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon:before, .elfinder-navbar-root-trash .elfinder-cwd-icon:before {
+    content: '\e80b';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon:before, .elfinder-navbar-root-zip .elfinder-cwd-icon:before {
+    content: '\e85c';
+}
+
+.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon:before, .elfinder-navbar-root-network .elfinder-cwd-icon:before {
+    content: '\e823';
+}
 
 // Dialog
 .elfinder-dialog-icon {
@@ -214,34 +444,99 @@ div.elfinder-cwd-wrapper-list {
     font-size: 37px;
 }
 
-.elfinder-dialog-icon:before { content: '\e843'; }
-.elfinder-dialog-icon-mkdir:before { content: '\e808'; }
-.elfinder-dialog-icon-mkfile:before { content: '\e809'; }
-.elfinder-dialog-icon-copy:before { content: '\e80d'; }
+.elfinder-dialog-icon:before {
+    content: '\e843';
+}
+
+.elfinder-dialog-icon-mkdir:before {
+    content: '\e808';
+}
+
+.elfinder-dialog-icon-mkfile:before {
+    content: '\e809';
+}
+
+.elfinder-dialog-icon-copy:before {
+    content: '\e80d';
+}
+
 .elfinder-dialog-icon-prepare:before,
-.elfinder-dialog-icon-move:before { content: '\e844'; }
+.elfinder-dialog-icon-move:before {
+    content: '\e844';
+}
+
 .elfinder-dialog-icon-upload:before,
-.elfinder-dialog-icon-chunkmerge:before { content: '\e815'; }
-.elfinder-dialog-icon-rm:before { content: '\e80a'; }
+.elfinder-dialog-icon-chunkmerge:before {
+    content: '\e815';
+}
+
+.elfinder-dialog-icon-rm:before {
+    content: '\e80a';
+}
+
 .elfinder-dialog-icon-open:before,
 .elfinder-dialog-icon-readdir:before,
-.elfinder-dialog-icon-file:before { content: '\e807'; }
-.elfinder-dialog-icon-reload:before { content: '\e806'; }
-.elfinder-dialog-icon-download:before { content: '\e816'; }
-.elfinder-dialog-icon-save:before { content: '\e845'; }
-.elfinder-dialog-icon-rename:before { content: '\e812'; }
+.elfinder-dialog-icon-file:before {
+    content: '\e807';
+}
+
+.elfinder-dialog-icon-reload:before {
+    content: '\e806';
+}
+
+.elfinder-dialog-icon-download:before {
+    content: '\e816';
+}
+
+.elfinder-dialog-icon-save:before {
+    content: '\e845';
+}
+
+.elfinder-dialog-icon-rename:before {
+    content: '\e812';
+}
+
 .elfinder-dialog-icon-zipdl:before,
-.elfinder-dialog-icon-archive:before { content: '\e819'; }
-.elfinder-dialog-icon-extract:before { content: '\e818'; }
-.elfinder-dialog-icon-search:before { content: '\e81f'; }
-.elfinder-dialog-icon-loadimg:before { content: '\e846'; }
-.elfinder-dialog-icon-url:before { content: '\e81e'; }
-.elfinder-dialog-icon-resize:before { content: '\e81d'; }
-.elfinder-dialog-icon-netmount:before { content: '\e823'; }
-.elfinder-dialog-icon-netunmount:before { content: '\e824'; }
-.elfinder-dialog-icon-chmod:before { content: '\e826'; }
+.elfinder-dialog-icon-archive:before {
+    content: '\e819';
+}
+
+.elfinder-dialog-icon-extract:before {
+    content: '\e818';
+}
+
+.elfinder-dialog-icon-search:before {
+    content: '\e81f';
+}
+
+.elfinder-dialog-icon-loadimg:before {
+    content: '\e846';
+}
+
+.elfinder-dialog-icon-url:before {
+    content: '\e81e';
+}
+
+.elfinder-dialog-icon-resize:before {
+    content: '\e81d';
+}
+
+.elfinder-dialog-icon-netmount:before {
+    content: '\e823';
+}
+
+.elfinder-dialog-icon-netunmount:before {
+    content: '\e824';
+}
+
+.elfinder-dialog-icon-chmod:before {
+    content: '\e826';
+}
+
 .elfinder-dialog-icon-preupload:before,
-.elfinder-dialog-icon-dim:before { content: '\e847'; }
+.elfinder-dialog-icon-dim:before {
+    content: '\e847';
+}
 
 // Context Menu
 .elfinder-contextmenu .elfinder-contextmenu-item {
@@ -314,36 +609,103 @@ div.elfinder-cwd-wrapper-list {
     color: #f1f1f1;
 }
 
-.elfinder-quicklook-navbar-icon-prev:before { content: '\e848'; }
-.elfinder-quicklook-navbar-icon-next:before { content: '\e849'; }
-.elfinder-quicklook-navbar-icon-fullscreen:before { content: '\e84a'; }
-.elfinder-quicklook-navbar-icon-fullscreen-off:before { content: '\e84b'; }
-.elfinder-quicklook-navbar-icon-close:before { content: '\e84c'; }
+.elfinder-quicklook-navbar-icon-prev:before {
+    content: '\e848';
+}
+
+.elfinder-quicklook-navbar-icon-next:before {
+    content: '\e849';
+}
+
+.elfinder-quicklook-navbar-icon-fullscreen:before {
+    content: '\e84a';
+}
+
+.elfinder-quicklook-navbar-icon-fullscreen-off:before {
+    content: '\e84b';
+}
+
+.elfinder-quicklook-navbar-icon-close:before {
+    content: '\e84c';
+}
 
 // jQuery UI Icons
 .ui-button-icon {
     background-image: inherit;
 }
 
-.ui-icon-search:before { content: '\e81f'; }
+.ui-icon-search:before {
+    content: '\e81f';
+}
+
 .ui-icon-closethick:before,
-.ui-icon-close:before { content: '\e839'; }
-.ui-icon-circle-close:before { content: '\e84c'; }
-.ui-icon-gear:before { content: '\e82f'; }
-.ui-icon-gripsmall-diagonal-se:before { content: '\e838'; }
-.ui-icon-locked:before { content: '\e834'; }
-.ui-icon-unlocked:before { content: '\e836'; }
-.ui-icon-arrowrefresh-1-n:before { content: '\e821'; }
-.ui-icon-plusthick:before { content: '\e83a'; }
-.ui-icon-arrowreturnthick-1-s:before { content: '\e83b'; }
-.ui-icon-minusthick:before { content: '\e83c'; }
-.ui-icon-pin-s:before { content: '\e84d'; }
-.ui-icon-check:before { content: '\e84e'; }
-.ui-icon-arrowthick-1-s:before { content: '\e84f'; }
-.ui-icon-arrowthick-1-n:before { content: '\e850'; }
-.ui-icon-triangle-1-s:before { content: '\e851'; }
-.ui-icon-triangle-1-n:before { content: '\e852'; }
-.ui-icon-grip-dotted-vertical:before { content: '\e853'; }
+.ui-icon-close:before {
+    content: '\e839';
+}
+
+.ui-icon-circle-close:before {
+    content: '\e84c';
+}
+
+.ui-icon-gear:before {
+    content: '\e82f';
+}
+
+.ui-icon-gripsmall-diagonal-se:before {
+    content: '\e838';
+}
+
+.ui-icon-locked:before {
+    content: '\e834';
+}
+
+.ui-icon-unlocked:before {
+    content: '\e836';
+}
+
+.ui-icon-arrowrefresh-1-n:before {
+    content: '\e821';
+}
+
+.ui-icon-plusthick:before {
+    content: '\e83a';
+}
+
+.ui-icon-arrowreturnthick-1-s:before {
+    content: '\e83b';
+}
+
+.ui-icon-minusthick:before {
+    content: '\e83c';
+}
+
+.ui-icon-pin-s:before {
+    content: '\e84d';
+}
+
+.ui-icon-check:before {
+    content: '\e84e';
+}
+
+.ui-icon-arrowthick-1-s:before {
+    content: '\e84f';
+}
+
+.ui-icon-arrowthick-1-n:before {
+    content: '\e850';
+}
+
+.ui-icon-triangle-1-s:before {
+    content: '\e851';
+}
+
+.ui-icon-triangle-1-n:before {
+    content: '\e852';
+}
+
+.ui-icon-grip-dotted-vertical:before {
+    content: '\e853';
+}
 
 // Permissions and symlink markers
 .elfinder-lock,
@@ -354,12 +716,29 @@ div.elfinder-cwd-wrapper-list {
     color: @cwd-icons-color;
 }
 
-.elfinder-na .elfinder-perms:before { content: '\e824'; }
-.elfinder-ro .elfinder-perms:before { content: '\e835'; }
-.elfinder-wo .elfinder-perms:before { content: '\e854'; }
-.elfinder-group .elfinder-perms:before { content: '\e800'; }
-.elfinder-lock:before { content: '\e84d'; }
-.elfinder-symlink:before { content: '\e837'; }
+.elfinder-na .elfinder-perms:before {
+    content: '\e824';
+}
+
+.elfinder-ro .elfinder-perms:before {
+    content: '\e835';
+}
+
+.elfinder-wo .elfinder-perms:before {
+    content: '\e854';
+}
+
+.elfinder-group .elfinder-perms:before {
+    content: '\e800';
+}
+
+.elfinder-lock:before {
+    content: '\e84d';
+}
+
+.elfinder-symlink:before {
+    content: '\e837';
+}
 
 // Toast Notification
 .elfinder .elfinder-toast > div {
