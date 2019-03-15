@@ -60,6 +60,10 @@
     min-height: inherit;
     overflow: hidden;
 
+    .ui-icon {
+        color: #fff !important;
+    }
+
     input {
         background: @search-bg;
         .border-radius(2px);
@@ -67,7 +71,7 @@
         border: 0;
         margin: 0;
         padding: 0 23px;
-        height: 24px;
+        height: 24px !important;
         color: #fff;
     }
 
@@ -79,5 +83,10 @@
 
     &-menu {
         .border-radius(0);
+        top: 30px !important;
+
+        .ui-button {
+            padding: .4em 1em !important;
+        }
     }
 }

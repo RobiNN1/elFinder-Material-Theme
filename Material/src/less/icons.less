@@ -23,7 +23,7 @@
     }
 }
 
-.ui-icon,
+.elfinder .ui-icon,
 .elfinder-button-icon,
 .ui-widget-header .ui-icon,
 .ui-widget-content .ui-icon {
@@ -32,7 +32,7 @@
     text-indent: inherit;
 }
 
-.ui-button-icon-only .ui-icon {
+.elfinder .ui-button-icon-only .ui-icon {
     font: normal normal normal 14px/1 @font-name;
     background-image: inherit !important;
     text-indent: 0;
@@ -285,53 +285,53 @@
 }
 
 .elfinder-droppable-active .elfinder-navbar-icon:before,
-.ui-state-active .elfinder-navbar-icon:before,
-.ui-state-hover .elfinder-navbar-icon:before {
+.elfinder .ui-state-active .elfinder-navbar-icon:before,
+.elfinder .ui-state-hover .elfinder-navbar-icon:before {
     content: '\e805';
 }
 
 .elfinder-navbar-root-local .elfinder-navbar-icon:before {
-    content: '\e83d';
+    content: '\e83d' !important;
 }
 
 .elfinder-navbar-root-ftp .elfinder-navbar-icon:before {
-    content: '\e823';
+    content: '\e823' !important;
 }
 
 .elfinder-navbar-root-sql .elfinder-navbar-icon:before {
-    content: '\e83e';
+    content: '\e83e' !important;
 }
 
 .elfinder-navbar-root-dropbox .elfinder-navbar-icon:before {
-    content: '\e83f';
+    content: '\e83f' !important;
 }
 
 .elfinder-navbar-root-googledrive .elfinder-navbar-icon:before {
-    content: '\e840';
+    content: '\e840' !important;
 }
 
 .elfinder-navbar-root-onedrive .elfinder-navbar-icon:before {
-    content: '\e841';
+    content: '\e841' !important;
 }
 
 .elfinder-navbar-root-box .elfinder-navbar-icon:before {
-    content: '\e842';
+    content: '\e842' !important;
 }
 
 .elfinder-navbar-root-trash .elfinder-navbar-icon:before {
-    content: '\e80b';
+    content: '\e80b' !important;
 }
 
 .elfinder-navbar-root-zip .elfinder-navbar-icon:before {
-    content: '\e85c';
+    content: '\e85c' !important;
 }
 
 .elfinder-navbar-root-network .elfinder-navbar-icon:before {
-    content: '\e823';
+    content: '\e823' !important;
 }
 
 .elfinder-places .elfinder-navbar-root .elfinder-navbar-icon:before {
-    content: '\e825';
+    content: '\e825' !important;
 }
 
 .elfinder-navbar-arrow {
@@ -343,7 +343,7 @@
     color: #a9a9a9;
 }
 
-.ui-state-active .elfinder-navbar-arrow {
+.elfinder .ui-state-active .elfinder-navbar-arrow {
     color: #fff;
 }
 
@@ -630,81 +630,83 @@ div.elfinder-cwd-wrapper-list {
 }
 
 // jQuery UI Icons
-.ui-button-icon {
-    background-image: inherit;
-}
+.elfinder {
+    .ui-button-icon {
+        background-image: inherit;
+    }
 
-.ui-icon-search:before {
-    content: '\e81f';
-}
+    .ui-icon-search:before {
+        content: '\e81f';
+    }
 
-.ui-icon-closethick:before,
-.ui-icon-close:before {
-    content: '\e839';
-}
+    .ui-icon-closethick:before,
+    .ui-icon-close:before {
+        content: '\e839';
+    }
 
-.ui-icon-circle-close:before {
-    content: '\e84c';
-}
+    .ui-icon-circle-close:before {
+        content: '\e84c';
+    }
 
-.ui-icon-gear:before {
-    content: '\e82f';
-}
+    .ui-icon-gear:before {
+        content: '\e82f';
+    }
 
-.ui-icon-gripsmall-diagonal-se:before {
-    content: '\e838';
-}
+    .ui-icon-gripsmall-diagonal-se:before {
+        content: '\e838';
+    }
 
-.ui-icon-locked:before {
-    content: '\e834';
-}
+    .ui-icon-locked:before {
+        content: '\e834';
+    }
 
-.ui-icon-unlocked:before {
-    content: '\e836';
-}
+    .ui-icon-unlocked:before {
+        content: '\e836';
+    }
 
-.ui-icon-arrowrefresh-1-n:before {
-    content: '\e821';
-}
+    .ui-icon-arrowrefresh-1-n:before {
+        content: '\e821';
+    }
 
-.ui-icon-plusthick:before {
-    content: '\e83a';
-}
+    .ui-icon-plusthick:before {
+        content: '\e83a';
+    }
 
-.ui-icon-arrowreturnthick-1-s:before {
-    content: '\e83b';
-}
+    .ui-icon-arrowreturnthick-1-s:before {
+        content: '\e83b';
+    }
 
-.ui-icon-minusthick:before {
-    content: '\e83c';
-}
+    .ui-icon-minusthick:before {
+        content: '\e83c';
+    }
 
-.ui-icon-pin-s:before {
-    content: '\e84d';
-}
+    .ui-icon-pin-s:before {
+        content: '\e84d';
+    }
 
-.ui-icon-check:before {
-    content: '\e84e';
-}
+    .ui-icon-check:before {
+        content: '\e84e';
+    }
 
-.ui-icon-arrowthick-1-s:before {
-    content: '\e84f';
-}
+    .ui-icon-arrowthick-1-s:before {
+        content: '\e84f';
+    }
 
-.ui-icon-arrowthick-1-n:before {
-    content: '\e850';
-}
+    .ui-icon-arrowthick-1-n:before {
+        content: '\e850';
+    }
 
-.ui-icon-triangle-1-s:before {
-    content: '\e851';
-}
+    .ui-icon-triangle-1-s:before {
+        content: '\e851';
+    }
 
-.ui-icon-triangle-1-n:before {
-    content: '\e852';
-}
+    .ui-icon-triangle-1-n:before {
+        content: '\e852';
+    }
 
-.ui-icon-grip-dotted-vertical:before {
-    content: '\e853';
+    .ui-icon-grip-dotted-vertical:before {
+        content: '\e853';
+    }
 }
 
 // Permissions and symlink markers

@@ -18,53 +18,6 @@
 }
 
 /**
- * Input & Select
- */
-input.elfinder-tabstop,
-input.elfinder-tabstop.ui-state-hover,
-select.elfinder-tabstop,
-select.elfinder-tabstop.ui-state-hover {
-    padding: 5px;
-    color: #666;
-    background: #fff;
-    border-radius: 3px;
-    font-weight: normal;
-    border-color: #888;
-    .box-shadow(none) !important;
-}
-
-.elfinder {
-    input[type="checkbox"] {
-        position: relative;
-    }
-
-    input[type="checkbox"]:after,
-    input[type="checkbox"]:focus:after {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        border: 1px solid #707070;
-        background-color: #fff;
-        .border-radius(2px);
-    }
-
-    input[type="checkbox"]:checked:before {
-        content: "";
-        position: absolute;
-        top: -3px;
-        left: 6px;
-        display: table;
-        width: 4px;
-        height: 12px;
-        border: 2px solid #707070;
-        border-top-width: 0;
-        border-left-width: 0;
-        .transform(rotate(45deg));
-    }
-}
-
-/**
  * Loading
  */
 .elfinder-info-spinner,
@@ -113,44 +66,6 @@ select.elfinder-tabstop.ui-state-hover {
     animation: progress-animation 1s linear infinite;
     background-color: #0275d8;
     height: 1rem;
-}
-
-/**
- * Quick Look
- */
-.elfinder-quicklook {
-    background: #232323;
-    .border-radius(2px);
-}
-
-.elfinder-quicklook-titlebar {
-    background: inherit;
-}
-
-.elfinder-quicklook-fullscreen .elfinder-quicklook-navbar {
-    border: inherit;
-    opacity: inherit;
-    .border-radius(4px);
-    background: rgba(66, 66, 66, 0.73);
-}
-
-.elfinder .elfinder-navdock {
-    border: 0;
-}
-
-.std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon,
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
-.elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-close:hover,
-.elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-close,
-.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize:hover .ui-icon,
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize .ui-icon,
-.elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-minimize:hover,
-.elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-minimize,
-.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full:hover .ui-icon,
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full .ui-icon,
-.elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-full:hover,
-.elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-full {
-    background-image: none;
 }
 
 /**
@@ -233,5 +148,5 @@ select.elfinder-tabstop.ui-state-hover {
     .border-radius(3px);
     border: 0;
     background: rgba(9, 53, 121, 0.75);
-    color: white;
+    color: white !important;
 }

@@ -12,6 +12,7 @@
 
 .elfinder-cwd-icon {
     background: url("@{images}icons-big.svg") 0 0 no-repeat;
+    .border-radius(0);
 
     &:before {
         font-size: 10px;
@@ -39,6 +40,8 @@
     background-position: 0 -200px;
 }
 
+.elfinder-cwd-icon-rtf,
+.elfinder-cwd-icon-rtfd,
 .elfinder-cwd-icon-text {
     background-position: 0 -250px;
 }
@@ -117,6 +120,7 @@
     }
 }
 
+.elfinder-cwd-icon-vnd-oasis-opendocument-base,
 .elfinder-cwd-icon-vnd-oasis-opendocument-chart,
 .elfinder-cwd-icon-vnd-oasis-opendocument-database,
 .elfinder-cwd-icon-vnd-oasis-opendocument-formula,
@@ -181,9 +185,12 @@
     background-position: 0 -1150px;
 }
 
-.elfinder-cwd-icon-rtf,
-.elfinder-cwd-icon-rtfd {
+.elfinder-cwd-icon-vnd-android-package-archive {
     background-position: 0 -1200px;
+
+    &:before {
+        content: none !important;
+    }
 }
 
 .elfinder-cwd-icon-x-c,
@@ -258,21 +265,15 @@
 }
 
 .elfinder-cwd-icon-sql,
-.elfinder-cwd-icon-x-sql {
+.elfinder-cwd-icon-x-sql,
+.elfinder-cwd-icon-x-sqlite3 {
     background-position: 0 -1850px;
-
-    &:before {
-        content: none !important;
-    }
 }
 
+.elfinder-cwd-icon-x-eps,
 .elfinder-cwd-icon-svg,
 .elfinder-cwd-icon-svg-xml {
     background-position: 0 -1900px;
-
-    &:before {
-        content: none !important;
-    }
 }
 
 .elfinder-cwd-icon-xml:after,
