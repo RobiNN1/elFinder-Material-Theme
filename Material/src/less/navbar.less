@@ -9,7 +9,7 @@
     .elfinder-lock,
     .elfinder-perms,
     .elfinder-symlink {
-        color: @navbar-icons-color;
+        color: @navbar-perms-icon-color;
         opacity: .8;
     }
 }
@@ -21,16 +21,29 @@
     padding: 5px;
     border: none;
 
+    .elfinder-navbar-icon {
+        color: @navbar-dir-icon-color;
+    }
+
     &.ui-state-hover,
     &.ui-state-active.ui-state-hover {
         background: darken(@navbar-dir-bg-active, 2%);
         color: @navbar-dir-color-hover;
         border: none;
+
+        .elfinder-navbar-icon {
+            color: @navbar-dir-icon-color-hover;
+        }
     }
 }
 
 .elfinder-navbar .ui-state-active,
 .elfinder-disabled .elfinder-navbar .ui-state-active {
     background: @navbar-dir-bg-active;
+    color: @navbar-dir-color-active !important;
     border: none;
+
+    &.elfinder-navbar-dir .elfinder-navbar-icon {
+        color: @navbar-dir-color-active !important;
+    }
 }
