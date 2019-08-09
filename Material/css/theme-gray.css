@@ -1,5 +1,5 @@
 /*!
- * elFinder-Material-Theme (Gray) v2.1.9 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * elFinder-Material-Theme (Gray) v2.1.10 (https://github.com/RobiNN1/elFinder-Material-Theme)
  * Copyright 2016-2019 Róbert Kelčák {RobiNN}
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
@@ -1081,6 +1081,10 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-radius: 0;
   cursor: pointer;
   color: #efefef;
+}
+.elfinder .elfinder-button-text {
+  top: -3px;
+  margin-left: 6px;
 }
 .elfinder-toolbar-button-separator {
   border: 0;
