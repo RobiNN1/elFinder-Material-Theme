@@ -3,7 +3,7 @@
  */
 .elfinder .elfinder-dialog {
     .remove-borders;
-    .box-shadow(0 1px 30px rgba(0, 0, 0, 0.6));
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
 
     .ui-dialog-content[id*="edit-elfinder-elfinder-"] {
         padding: 0;
@@ -33,14 +33,14 @@
             .ui-tabs-selected a,
             .ui-state-active a,
             li:hover a {
-                .box-shadow(inset 0 -2px 0 @dialog-tab-color);
+                box-shadow: inset 0 -2px 0 @dialog-tab-color;
                 color: @dialog-tab-color;
             }
         }
 
         .elfinder-tabstop.ui-state-hover {
             background: transparent;
-            .box-shadow(inset 0 -2px 0 @dialog-tab-color);
+            box-shadow: inset 0 -2px 0 @dialog-tab-color;
             color: @dialog-tab-color;
         }
     }
@@ -61,7 +61,7 @@
 
         .elfinder-titlebar-button .ui-icon {
             border-color: inherit;
-            .transition(.2s ease-out);
+            transition: .2s ease-out;
             opacity: 0.8;
             color: #fff;
             width: auto;
@@ -131,10 +131,10 @@
     padding: 7px;
     margin-left: 5px;
     color: #222;
-    .box-shadow(1px 1px 4px rgba(0, 0, 0, 0.4));
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     background: #fff;
     bottom: 4px;
-    .border-radius(2px);
+    border-radius: 2px;
 
     &.ui-state-hover {
         background: @buttons-bg-hover !important;
@@ -194,14 +194,14 @@
     .ui-slider-handle {
         background-image: none;
         background-color: #5d5858;
-        .border-radius(50%);
+        border-radius: 50%;
         border: 0;
         margin-top: -3px;
 
         &.ui-state-hover {
             background: #5d5858 !important;
             box-shadow: none !important;
-            .border-radius(50%);
+            border-radius: 50%;
             cursor: pointer;
         }
     }
@@ -212,12 +212,13 @@
  */
 .elfinder-quicklook {
     background: #232323;
-    .border-radius(2px);
+    border-radius: 2px;
 }
 
 .elfinder-quicklook-titlebar {
     background: inherit;
 
+    &-icon,
     &-icon .ui-icon {
         background: transparent;
         color: #fff;
@@ -227,7 +228,7 @@
 .elfinder-quicklook-fullscreen .elfinder-quicklook-navbar {
     border: inherit;
     opacity: inherit;
-    .border-radius(4px);
+    border-radius: 4px;
     background: rgba(66, 66, 66, 0.73);
 }
 

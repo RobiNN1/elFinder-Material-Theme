@@ -24,7 +24,7 @@
     input,
     textarea {
         padding: 2px;
-        .border-radius(2px) !important;
+        border-radius: 2px !important;
         background: #fff;
         color: #222;
 
@@ -50,19 +50,21 @@
 
         thead {
             td {
-                padding: 5px 14px;
+                padding: 5px 14px !important;
             }
         }
 
         tr {
             border: 0 !important;
 
-            &:nth-child(odd) {
-                background-color: transparent;
+            &.ui-state-default,
+            &.ui-widget-content .ui-state-default {
+                background: none;
+            }
 
-                &.ui-state-hover {
-                    background-color: @cwd-file-hover-bg;
-                }
+            .ui-state-hover {
+                background: @cwd-file-hover-bg;
+                color: @cwd-file-hover-color;
             }
         }
     }
@@ -101,18 +103,20 @@
     }
 }
 
-#elfinder-elfinder-cwd-thead {
+#elfinder-elfinder-cwd-thead,
+.elfinder-cwd-wrapper-empty .elfinder-cwd-view-list {
     td {
         background: @cwd-thead;
-        color: @cwd-thead-color;
+        color: @cwd-thead-color !important;
+        height: 18px;
 
         &.ui-state-hover,
         &.ui-state-active {
-            background: darken(@cwd-thead, 5%);
+            background: darken(@cwd-thead, 5%) !important;
         }
 
         &.ui-state-active.ui-state-hover {
-            background: darken(@cwd-thead, 3%);
+            background: darken(@cwd-thead, 3%) !important;
         }
     }
 }
@@ -170,7 +174,7 @@
     left: 50% !important;
     position: relative !important;
     display: block !important;
-    .transform(translateX(-50%));
+    transform: translateX(-50%);
     max-width: 52px;
     color: #fff;
 }
@@ -182,15 +186,15 @@
 
 .elfinder-cwd-size1 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
     top: 53px;
-    .transform(scale(1.32) translateX(-50%));
+    transform: scale(1.32) translateX(-50%);
 }
 
 .elfinder-cwd-size2 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
     top: 74px;
-    .transform(scale(1.53) translateX(-50%));
+    transform: scale(1.53) translateX(-50%);
 }
 
 .elfinder-cwd-size3 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
     top: 87px;
-    .transform(scale(2.22) translateX(-50%));
+    transform: scale(2.22) translateX(-50%);
 }

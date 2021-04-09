@@ -1,7 +1,7 @@
 # elFinder-Material-Theme
 Theme for elFinder
 
-![Version](https://img.shields.io/badge/Version-2.1.10-blue.svg)
+![Version](https://img.shields.io/badge/Version-2.1.11-blue.svg)
 
 | Default | Gray | Light |
 |:---:|:---:|:---:|
