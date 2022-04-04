@@ -1,6 +1,6 @@
 {
   "name": "elfinder-material-theme",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "description": "Theme for elFinder",
   "main": "Material/css/theme.css",
   "scripts": {
