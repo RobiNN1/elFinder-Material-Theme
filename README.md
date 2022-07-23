@@ -4,6 +4,10 @@
 
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=RobiNN1.elFinder-Material-Theme)
 
-| Default                                     | Gray                                  | Light                                   |
-|---------------------------------------------|---------------------------------------|-----------------------------------------|
-| ![Default](.github/img/preview-default.png) | ![Gray](.github/img/preview-gray.png) | ![Light](.github/img/preview-light.png) |
+<table>
+  <tr>
+    <td><img alt="Default" src=".github/img/preview-default.png"></td>
+    <td><img alt="Gray" src=".github/img/preview-gray.png"></td>
+    <td><img alt="Light" src=".github/img/preview-light.png"></td>
+  </tr>
+</table>
