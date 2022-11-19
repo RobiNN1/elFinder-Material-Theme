@@ -1,7 +1,7 @@
 {
   "name": "elfinder-material-theme",
   "version": "2.1.14",
-  "description": "Theme for elFinder",
+  "description": "A theme for the elFinder web file manager inspired by Google Material design.",
   "main": "Material/css/theme.css",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
