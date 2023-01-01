@@ -1,6 +1,6 @@
 /*!
- * elFinder-Material-Theme (Light) v2.1.14 (https://github.com/RobiNN1/elFinder-Material-Theme)
- * Copyright 2016-2022 Róbert Kelčák
+ * elFinder-Material-Theme (Light) v2.1.15 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * Copyright 2016-2023 Róbert Kelčák
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
 .elfinder {
@@ -56,7 +56,6 @@
 }
 .elfinder-notify-progress,
 .elfinder-resize-spinner {
-  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem;
   -webkit-animation: progress-animation 1s linear infinite;
@@ -764,7 +763,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder-drag-helper-move .elfinder-drag-helper-icon-status {
   -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 .elfinder-drag-helper-move .elfinder-drag-helper-icon-status:before {
@@ -772,7 +770,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder-drag-helper-plus .elfinder-drag-helper-icon-status {
   -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 .elfinder-drag-helper-plus .elfinder-drag-helper-icon-status:before {
@@ -1310,7 +1307,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   position: relative !important;
   display: block !important;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   max-width: 52px;
   color: #fff;
@@ -1322,19 +1318,16 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-size1 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
   top: 53px;
   -webkit-transform: scale(1.32) translateX(-50%);
-      -ms-transform: scale(1.32) translateX(-50%);
           transform: scale(1.32) translateX(-50%);
 }
 .elfinder-cwd-size2 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
   top: 74px;
   -webkit-transform: scale(1.53) translateX(-50%);
-      -ms-transform: scale(1.53) translateX(-50%);
           transform: scale(1.53) translateX(-50%);
 }
 .elfinder-cwd-size3 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
   top: 87px;
   -webkit-transform: scale(2.22) translateX(-50%);
-      -ms-transform: scale(2.22) translateX(-50%);
           transform: scale(2.22) translateX(-50%);
 }
 /**
@@ -1395,7 +1388,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-top-width: 0;
   border-left-width: 0;
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 /**
@@ -1413,7 +1405,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-radius: 3px;
   text-transform: uppercase;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4) !important;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   background: #fff;
   color: #222;
@@ -1540,7 +1531,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-button .ui-icon {
   border-color: inherit;
-  -webkit-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   opacity: 0.8;
   color: #fff;
