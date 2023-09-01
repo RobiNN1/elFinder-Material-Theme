@@ -7,8 +7,8 @@ const rename = require('gulp-rename');
 const package_json = require('./package.json');
 
 const paths = {
-    less: 'Material/src/less/*.less',
-    src: 'Material/src/less/theme*.less',
+    less: 'src/less/*.less',
+    src: 'src/less/theme*.less',
     dest: 'Material/css/'
 };
 
