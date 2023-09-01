@@ -2,8 +2,6 @@
 
 A theme for the elFinder web file manager inspired by Google Material design.
 
-[Install guide](https://github.com/Studio-42/elFinder/wiki/How-to-load-CSS-with-RequireJS%3F)
-
 ![Visitor Badge](https://visitor-badge.laobi.icu/badge?page_id=RobiNN1.elFinder-Material-Theme)
 
 <table>
@@ -13,3 +11,18 @@ A theme for the elFinder web file manager inspired by Google Material design.
     <td><img alt="Light" src=".github/img/preview-light.png"></td>
   </tr>
 </table>
+
+## Installation
+
+[Install guide](https://github.com/Studio-42/elFinder/wiki/How-to-load-CSS-with-RequireJS%3F)
+
+Or with manifest in elFinder client options
+
+```javascript
+themes : {
+    'mt-darkblue' : 'https://robinn1.github.io/elFinder-Material-Theme/manifests/darkblue.json', 
+    'mt-gray'     : 'https://robinn1.github.io/elFinder-Material-Theme/manifests/gray.json', 
+    'mt-light'    : 'https://robinn1.github.io/elFinder-Material-Theme/manifests/light.json',
+},
+theme : 'mt-darkblue',
+```
