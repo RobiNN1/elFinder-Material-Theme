@@ -14,9 +14,7 @@ A theme for the elFinder web file manager inspired by Google Material design.
 
 ## Installation
 
-[Install guide](https://github.com/Studio-42/elFinder/wiki/How-to-load-CSS-with-RequireJS%3F)
-
-Or with manifest in elFinder client options
+Simply paste this code into the elFinder client options
 
 ```javascript
 themes : {
@@ -26,3 +24,5 @@ themes : {
 },
 theme : 'mt-darkblue',
 ```
+
+Read more details in the [installation guide](https://github.com/Studio-42/elFinder/wiki/How-to-load-CSS-with-RequireJS%3F).
