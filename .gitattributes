@@ -12,8 +12,9 @@
 *.woff2 binary
 
 # Files and directories with the attribute export-ignore won’t be added to archive files.
-src export-ignore
 .github export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
 .npmignore export-ignore
+src export-ignore
+gulpfile.js export-ignore

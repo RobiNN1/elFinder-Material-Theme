@@ -1,3 +1,4 @@
-src
 .github
 .gitattributes
+src export-ignore
+gulpfile.js export-ignore
