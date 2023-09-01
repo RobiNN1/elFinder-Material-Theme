@@ -4,6 +4,7 @@
 .elfinder .elfinder-dialog {
     .remove-borders;
     box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
+    background-color: @dialog-body-bg;
 
     .ui-dialog-content[id*="edit-elfinder-elfinder-"] {
         padding: 0;
@@ -12,11 +13,11 @@
     .ui-tabs {
         .remove-borders;
         padding: 0;
+        background-color: transparent;
 
         &-nav {
             .remove-borders;
             background: transparent;
-            border-bottom: 1px solid #ddd;
 
             li {
                 border: 0;
@@ -47,10 +48,15 @@
 
     label.ui-state-hover {
         background: transparent;
+        color: @dialog-body-color;
     }
 
     .ui-resizable-se {
         display: none;
+    }
+
+    .elfinder-info-tb {
+        margin: 0;
     }
 }
 
@@ -71,11 +77,8 @@
         }
     }
 
-    &,
-    .ui-dialog-content,
-    &.elfinder-bg-translucent,
-    &.elfinder-bg-translucent .ui-widget-content {
-        background-color: #fff;
+    .elfinder-cwd-icon:before {
+        color: @dialog-icon-color;
     }
 
     .ui-dialog-buttonpane {
@@ -116,14 +119,18 @@
 }
 
 .elfinder .ui-widget-content {
-    font-family: @base-font;
-    color: @body-color;
+    background: @dialog-body-bg;
+    color: @dialog-body-color;
+
+    a {
+        color: @dialog-body-link-color;
+    }
 }
 
 .elfinder-upload-dialog-wrapper .elfinder-upload-dirselect {
     width: inherit;
     height: inherit;
-    padding: 7px;
+    padding: 5px;
     margin-left: 5px;
     color: #222;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
@@ -135,6 +142,10 @@
         background: @buttons-bg-hover !important;
         color: @buttons-color-hover !important;
         outline: none;
+    }
+
+    .elfinder-button-icon {
+        font-size: 1em;
     }
 }
 
@@ -151,7 +162,7 @@
     }
 
     &.ui-state-hover {
-        background: #f1f1f1;
+        background: @dialog-upload-dropbox-bg-hover;
         border: 2px dashed #bbb;
     }
 }
@@ -166,16 +177,9 @@
 }
 
 .elfinder-help {
-    * {
-        color: @body-color;
-    }
-
-    a {
-        color: @color-info;
-
-        &:hover {
-            color: darken(@color-info, 10%);
-        }
+    .elfinder-help-shortcuts {
+        border: 0;
+        background-color: transparent;
     }
 }
 

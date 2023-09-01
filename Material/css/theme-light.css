@@ -1,9 +1,10 @@
 /*!
- * elFinder-Material-Theme (Light) v2.1.15 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * elFinder-Material-Theme (Light) v2.1.16 (https://github.com/RobiNN1/elFinder-Material-Theme)
  * Copyright 2016-2023 Róbert Kelčák
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
 .elfinder {
+  color-scheme: light;
   color: #546e7a;
   font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -495,7 +496,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-dialog-icon {
   font: normal normal normal 14px/1 material;
   background: inherit;
-  color: #524949;
+  color: #525252;
   font-size: 37px;
 }
 .elfinder-dialog-icon:before {
@@ -830,6 +831,9 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-pdf {
   background-position: 0 -500px;
 }
+.elfinder-cwd-icon-pdf:before {
+  content: none !important;
+}
 .elfinder-cwd-icon-vnd-ms-office {
   background-position: 0 -550px;
 }
@@ -956,8 +960,14 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-css {
   background-position: 0 -1300px;
 }
+.elfinder-cwd-icon-css:before {
+  content: none !important;
+}
 .elfinder-cwd-icon-html {
   background-position: 0 -1350px;
+}
+.elfinder-cwd-icon-html:before {
+  content: none !important;
 }
 .elfinder-cwd-icon-x-jar,
 .elfinder-cwd-icon-x-java,
@@ -972,6 +982,10 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-javascript,
 .elfinder-cwd-icon-x-javascript {
   background-position: 0 -1450px;
+}
+.elfinder-cwd-icon-javascript:before,
+.elfinder-cwd-icon-x-javascript:before {
+  content: none !important;
 }
 .elfinder-cwd-icon-json {
   background-position: 0 -1500px;
@@ -990,19 +1004,36 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-x-perl {
   background-position: 0 -1600px;
 }
+.elfinder-cwd-icon-x-perl:before {
+  content: none !important;
+}
 .elfinder-cwd-icon-x-php {
   background-position: 0 -1650px;
+}
+.elfinder-cwd-icon-x-php:before {
+  content: none !important;
 }
 .elfinder-cwd-icon-x-python:after,
 .elfinder-cwd-icon-x-python {
   background-position: 0 -1700px;
 }
+.elfinder-cwd-icon-x-python:after:before,
+.elfinder-cwd-icon-x-python:before {
+  content: none !important;
+}
 .elfinder-cwd-icon-x-ruby {
   background-position: 0 -1750px;
+}
+.elfinder-cwd-icon-x-ruby:before {
+  content: none !important;
 }
 .elfinder-cwd-icon-x-sh,
 .elfinder-cwd-icon-x-shellscript {
   background-position: 0 -1800px;
+}
+.elfinder-cwd-icon-x-sh:before,
+.elfinder-cwd-icon-x-shellscript:before {
+  content: none !important;
 }
 .elfinder-cwd-icon-sql,
 .elfinder-cwd-icon-x-sql,
@@ -1046,7 +1077,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
  * Toolbar
  */
 .elfinder-toolbar {
-  background: #1E88E5;
+  background: #1e88e5;
   border-radius: 0;
   border: 0;
   padding: 5px 0;
@@ -1056,11 +1087,15 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   color: #fff;
   margin-top: -2px;
 }
+.elfinder-toolbar .ui-state-hover .elfinder-button-icon {
+  color: #ffffff;
+}
 .elfinder-buttonset {
   border-radius: 0;
   border: 0;
   margin: 0 5px;
   height: 24px;
+  background: transparent !important;
 }
 .elfinder .elfinder-button {
   background: transparent;
@@ -1078,30 +1113,35 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-button-menu {
   border-radius: 2px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-  border: none;
+  border: none !important;
   margin-top: 5px;
+  background: #fff;
 }
 .elfinder-button-menu-item {
-  color: #666;
+  color: #222;
   padding: 6px 19px;
 }
 .elfinder-button-menu-item.ui-state-hover {
-  color: #141414;
-  background-color: #f5f4f4;
+  color: #141414 !important;
+  background: #efefef !important;
 }
 .elfinder-button-menu-item-separated {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #afafaf;
 }
 .elfinder-button-menu-item-separated.ui-state-hover {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #afafaf;
 }
 .elfinder .elfinder-button-search {
   margin: 0 10px;
   min-height: inherit;
   overflow: hidden;
+  background: transparent !important;
 }
 .elfinder .elfinder-button-search .ui-icon {
   color: #fff !important;
+}
+.elfinder .elfinder-button-search .ui-icon.ui-icon-close {
+  margin-top: -6px !important;
 }
 .elfinder .elfinder-button-search input {
   background: rgba(16, 96, 167, 0.79);
@@ -1147,7 +1187,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border: none;
 }
 .elfinder-navbar-dir .elfinder-navbar-icon {
-  color: #1976D2;
+  color: #1976d2;
 }
 .elfinder-navbar-dir.ui-state-hover,
 .elfinder-navbar-dir.ui-state-active.ui-state-hover {
@@ -1161,7 +1201,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder-navbar .ui-state-active,
 .elfinder-disabled .elfinder-navbar .ui-state-active {
-  background: #1E88E5;
+  background: #1e88e5;
   color: #fff !important;
   border: none;
 }
@@ -1180,7 +1220,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder-cwd-file.ui-state-hover,
 .elfinder-cwd-file.ui-selected.ui-state-hover {
-  background: #42A5F5;
+  background: #42a5f5;
   color: #ddd;
 }
 .elfinder-cwd-file.ui-selected {
@@ -1221,7 +1261,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   background: none;
 }
 .elfinder-cwd table tr .ui-state-hover {
-  background: #42A5F5;
+  background: #42a5f5;
   color: #ddd;
 }
 .elfinder-cwd.elfinder-table-header-sticky table {
@@ -1236,12 +1276,12 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   top: 0;
 }
 .elfinder-cwd-view-list thead td .ui-resizable-handle {
-  top: 3px;
+  top: 6px;
 }
 .elfinder-cwd-view-list .elfinder-lock,
 .elfinder-cwd-view-list .elfinder-perms,
 .elfinder-cwd-view-list .elfinder-symlink {
-  font-size: 14px;
+  font-size: 14px/1;
   opacity: 0.7;
 }
 .elfinder-cwd-view-list .elfinder-perms {
@@ -1249,7 +1289,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 #elfinder-elfinder-cwd-thead td,
 .elfinder-cwd-wrapper-empty .elfinder-cwd-view-list td {
-  background: #1976D2;
+  background: #1976d2;
   color: #fff !important;
   height: 18px;
 }
@@ -1264,18 +1304,18 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   background: #176ec4 !important;
 }
 .elfinder .ui-selectable-helper {
-  border: 1px solid #2196F3;
+  border: 1px solid #2196f3;
   background-color: rgba(33, 138, 232, 0.5);
 }
 .elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash {
-  background-color: #eee;
+  background-color: #f2f2f2;
 }
 .elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file {
   color: #333;
 }
 .elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file.ui-state-hover,
 .elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file.ui-selected.ui-state-hover {
-  background: #42A5F5;
+  background: #42a5f5;
   color: #ddd;
 }
 .elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file.ui-selected {
@@ -1334,7 +1374,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
  * Status Bar
  */
 .elfinder .elfinder-statusbar {
-  background: #2196F3;
+  background: #2196f3;
   border-radius: 0;
   border: 0;
   color: #fff;
@@ -1458,17 +1498,18 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-radius: 2px;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
   border: none;
+  background-color: #fff;
 }
 .elfinder .elfinder-contextmenu-separator,
 .elfinder .elfinder-contextmenu-sub-separator {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #afafaf;
 }
 .elfinder .elfinder-contextmenu-item {
-  color: #666;
+  color: #222;
   padding: 5px 30px;
 }
 .elfinder .elfinder-contextmenu-item.ui-state-hover {
-  background-color: #f5f4f4;
+  background-color: #efefef;
   color: #141414;
 }
 .elfinder .elfinder-contextmenu-item.ui-state-active {
@@ -1482,6 +1523,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-radius: 0;
   border: 0;
   box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
+  background-color: #fff;
 }
 .elfinder .elfinder-dialog .ui-dialog-content[id*="edit-elfinder-elfinder-"] {
   padding: 0;
@@ -1490,12 +1532,12 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-radius: 0;
   border: 0;
   padding: 0;
+  background-color: transparent;
 }
 .elfinder .elfinder-dialog .ui-tabs-nav {
   border-radius: 0;
   border: 0;
   background: transparent;
-  border-bottom: 1px solid #ddd;
 }
 .elfinder .elfinder-dialog .ui-tabs-nav li {
   border: 0;
@@ -1520,12 +1562,16 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder .elfinder-dialog label.ui-state-hover {
   background: transparent;
+  color: #546e7a;
 }
 .elfinder .elfinder-dialog .ui-resizable-se {
   display: none;
 }
+.elfinder .elfinder-dialog .elfinder-info-tb {
+  margin: 0;
+}
 .std42-dialog .ui-dialog-titlebar {
-  background: #1565C0;
+  background: #1565c0;
   border-radius: 0;
   border: 0;
 }
@@ -1539,11 +1585,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   font-size: 12px;
   padding: 3px;
 }
-.std42-dialog,
-.std42-dialog .ui-dialog-content,
-.std42-dialog.elfinder-bg-translucent,
-.std42-dialog.elfinder-bg-translucent .ui-widget-content {
-  background-color: #fff;
+.std42-dialog .elfinder-cwd-icon:before {
+  color: #525252;
 }
 .std42-dialog .ui-dialog-buttonpane button {
   margin: -1px 2px 2px;
@@ -1554,10 +1597,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .std42-dialog .ui-dialog-buttonpane .ui-dialog-buttonset.elfinder-edit-extras select {
   margin-top: 0;
-}
-.std42-dialog,
-.std42-dialog .ui-widget-content {
-  background-color: #fff;
 }
 .elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
 .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon {
@@ -1575,13 +1614,16 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   color: #f1f1f1;
 }
 .elfinder .ui-widget-content {
-  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  background: #fff;
   color: #546e7a;
+}
+.elfinder .ui-widget-content a {
+  color: #5c7986;
 }
 .elfinder-upload-dialog-wrapper .elfinder-upload-dirselect {
   width: inherit;
   height: inherit;
-  padding: 7px;
+  padding: 5px;
   margin-left: 5px;
   color: #222;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
@@ -1594,6 +1636,9 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   color: #fff !important;
   outline: none;
 }
+.elfinder-upload-dialog-wrapper .elfinder-upload-dirselect .elfinder-button-icon {
+  font-size: 1em;
+}
 .elfinder-upload-dialog-wrapper .ui-button {
   padding: 0.4em 3px;
   margin: 0 -15px 0 19px;
@@ -1605,7 +1650,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   outline: none;
 }
 .elfinder-upload-dropbox.ui-state-hover {
-  background: #f1f1f1;
+  background: #ffffff;
   border: 2px dashed #bbb;
 }
 .elfinder-dialog-resize .elfinder-resize-control-panel {
@@ -1615,14 +1660,9 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   height: inherit;
   margin-bottom: 5px;
 }
-.elfinder-help * {
-  color: #546e7a;
-}
-.elfinder-help a {
-  color: #3498db;
-}
-.elfinder-help a:hover {
-  color: #217dbb;
+.elfinder-help .elfinder-help-shortcuts {
+  border: 0;
+  background-color: transparent;
 }
 .elfinder .ui-slider.ui-slider-horizontal {
   height: 2px;

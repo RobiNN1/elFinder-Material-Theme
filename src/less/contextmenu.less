@@ -6,19 +6,20 @@
     border-radius: 2px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
     border: none;
+    background-color: @context-menu-bg;
 
     &-separator {
-        border-top: 1px solid #e5e5e5;
+        border-top: 1px solid @context-menu-separator;
     }
 }
 
 .elfinder .elfinder-contextmenu-item {
-    color: #666;
+    color: @context-menu-item-color;
     padding: 5px 30px;
 
     &.ui-state-hover {
-        background-color: #f5f4f4;
-        color: #141414;
+        background-color: @context-menu-item-bg-hover;
+        color: @context-menu-item-color-hover;
     }
 
     &.ui-state-active {

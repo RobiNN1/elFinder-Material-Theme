@@ -9,6 +9,7 @@
 @color-success: #4caf50;
 @color-warning: #ff9800;
 @body-color: #546e7a;
+@color-scheme: light;
 
 // Fonts
 // ----------------------------------------------
@@ -41,7 +42,7 @@
 // Workzone
 // ----------------------------------------------
 @workzone-bg: #fff;
-@workzone-trash-bg: #eee;
+@workzone-trash-bg: darken(@workzone-bg, 5%);
 @workzone-trash-color: #333;
 @selectable-border: #2196f3;
 @selectable-bg: rgba(33, 138, 232, 0.5);
@@ -69,3 +70,24 @@
 @dialog-head-bg: #1565c0;
 @dialog-head-color: #f1f1f1;
 @dialog-tab-color: @color-info;
+@dialog-body-bg: #fff;
+@dialog-body-color: @body-color;
+@dialog-body-link-color: lighten(@dialog-body-color, 4%);
+@dialog-icon-color: #525252;
+@dialog-upload-dropbox-bg-hover: lighten(@dialog-body-bg, 5%);
+
+// Context menu
+// ----------------------------------------------
+@context-menu-bg: #fff;
+@context-menu-separator: #afafaf;
+@context-menu-item-color: #222;
+@context-menu-item-bg-hover: #efefef;
+@context-menu-item-color-hover: #141414;
+
+// Button menu
+// ----------------------------------------------
+@button-menu-bg: #fff;
+@button-menu-separator: #afafaf;
+@button-menu-item-color: #222;
+@button-menu-item-bg-hover: #efefef;
+@button-menu-item-color-hover: #141414;
