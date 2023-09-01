@@ -8,7 +8,7 @@ A theme for the elFinder web file manager inspired by Google Material design.
 
 <table>
   <tr>
-    <td><img alt="Default" src=".github/img/preview-default.png"></td>
+    <td><img alt="Dark Blue" src=".github/img/preview-darkblue.png"></td>
     <td><img alt="Gray" src=".github/img/preview-gray.png"></td>
     <td><img alt="Light" src=".github/img/preview-light.png"></td>
   </tr>

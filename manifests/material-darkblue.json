@@ -1,10 +1,10 @@
 {
-  "name": "Material Default",
+  "name": "Material Dark Blue",
   "cssurls": "https://cdn.jsdelivr.net/gh/RobiNN1/elFinder-Material-Theme/Material/css/theme.min.css",
   "author": "Róbert Kelčák",
-  "email": "",
+  "email": "robo@kelcak.com",
   "license": "MIT",
   "link": "https://github.com/RobiNN1/elFinder-Material-Theme",
-  "image": "https://raw.githubusercontent.com/RobiNN1/elFinder-Material-Theme/master/.github/img/preview-default.png",
+  "image": "https://raw.githubusercontent.com/RobiNN1/elFinder-Material-Theme/master/.github/img/preview-darkblue.png",
   "description": "Material Theme for elFinder."
 }

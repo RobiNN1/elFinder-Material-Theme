@@ -1,6 +1,7 @@
 .idea
-*.config
 *.db
 .DS_Store
+node_modules
+package-lock.json
 Material/src/icons
 Material/src/images
