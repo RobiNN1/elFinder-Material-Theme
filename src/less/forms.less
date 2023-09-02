@@ -3,49 +3,74 @@
  */
 .elfinder {
     input,
-    select {
+    select,
+    textarea {
         padding: 4px;
         color: #666;
         background: #fff;
-        border-radius: 3px;
+        border-radius: 0;
         font-weight: normal;
-        border-color: #888;
+        border: 0;
         box-shadow: none !important;
 
-        &.ui-state-hover {
+        &.ui-state-hover,
+        &:focus {
             background: #fff !important;
             color: #666 !important;
+            border: 0 !important;
         }
     }
 
     input[type="checkbox"] {
+        background: transparent;
         position: relative;
-        height: initial;
-    }
+        border: none;
+        appearance: none;
+        cursor: pointer;
+        padding: 0;
+        margin: -2px 3px 0 0;
+        vertical-align: middle;
 
-    input[type="checkbox"]:after,
-    input[type="checkbox"]:focus:after {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        border: 1px solid #707070;
-        background-color: #fff;
-        border-radius: 2px;
-    }
+        &.ui-state-hover {
+            background: none !important;
+        }
 
-    input[type="checkbox"]:checked:before {
-        content: "";
-        position: absolute;
-        top: -3px;
-        left: 6px;
-        display: table;
-        width: 4px;
-        height: 12px;
-        border: 2px solid #707070;
-        border-top-width: 0;
-        border-left-width: 0;
-        transform: rotate(45deg);
+        &:focus {
+            outline: none;
+
+            &:after {
+                border-color: #2196f3;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #666;
+            border-radius: 2px;
+            transition: 240ms;
+        }
+
+        &:checked:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 4px;
+            display: table;
+            width: 3px;
+            height: 9px;
+            border: 2px solid #fff;
+            border-top-width: 0;
+            border-left-width: 0;
+            transform: rotate(45deg);
+        }
+
+        &:checked:after {
+            background-color: #2196f3;
+            border-color: #2196f3;
+        }
     }
 }
 

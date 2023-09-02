@@ -17,6 +17,7 @@ const build = () => {
         .pipe(less())
         .pipe(autoprefixer())
         .pipe(replace('{version}', package_json.version))
+        .pipe(replace('{year}', String(new Date().getFullYear())))
         .pipe(gulp.dest(paths.dest))
         // Create *.min.css versions
         .pipe(clean_css())

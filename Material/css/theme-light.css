@@ -6,12 +6,12 @@
 .elfinder {
   color-scheme: light;
   color: #546e7a;
-  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .elfinder.ui-widget.ui-widget-content {
-  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
   border-radius: 0;
   border: 0;
@@ -77,6 +77,12 @@
 .elfinder .elfinder-toast > div button.ui-button {
   color: #fff;
 }
+.elfinder .elfinder-toast > div:before {
+  font-size: 37px;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
 .elfinder .elfinder-toast > .toast-info button.ui-button {
   background-color: #3498db;
 }
@@ -90,14 +96,14 @@
   background-color: #ff9800;
 }
 .elfinder-toast-msg {
-  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
   font-size: 17px;
 }
 /**
  * For Ace Editor
  */
 #ace_settingsmenu {
-  font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
   box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6) !important;
   background-color: #1d2736 !important;
   color: #e6e6e6 !important;
@@ -727,12 +733,6 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder .elfinder-toast > div {
   font: normal normal normal 14px/1 material;
 }
-.elfinder .elfinder-toast > div:before {
-  font-size: 45px;
-  position: absolute;
-  left: 5px;
-  top: 15px;
-}
 .elfinder .elfinder-toast > .toast-info,
 .elfinder .elfinder-toast > .toast-error,
 .elfinder .elfinder-toast > .toast-success,
@@ -1303,7 +1303,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-wrapper-empty .elfinder-cwd-view-list td.ui-state-active.ui-state-hover {
   background: #176ec4 !important;
 }
-.elfinder .ui-selectable-helper {
+.ui-selectable-helper {
   border: 1px solid #2196f3;
   background-color: rgba(33, 138, 232, 0.5);
 }
@@ -1388,47 +1388,73 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
  * Input & Select
  */
 .elfinder input,
-.elfinder select {
+.elfinder select,
+.elfinder textarea {
   padding: 4px;
   color: #666;
   background: #fff;
-  border-radius: 3px;
+  border-radius: 0;
   font-weight: normal;
-  border-color: #888;
+  border: 0;
   box-shadow: none !important;
 }
 .elfinder input.ui-state-hover,
-.elfinder select.ui-state-hover {
+.elfinder select.ui-state-hover,
+.elfinder textarea.ui-state-hover,
+.elfinder input:focus,
+.elfinder select:focus,
+.elfinder textarea:focus {
   background: #fff !important;
   color: #666 !important;
+  border: 0 !important;
 }
 .elfinder input[type="checkbox"] {
+  background: transparent;
   position: relative;
-  height: initial;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  padding: 0;
+  margin: -2px 3px 0 0;
+  vertical-align: middle;
 }
-.elfinder input[type="checkbox"]:after,
+.elfinder input[type="checkbox"].ui-state-hover {
+  background: none !important;
+}
+.elfinder input[type="checkbox"]:focus {
+  outline: none;
+}
 .elfinder input[type="checkbox"]:focus:after {
+  border-color: #2196f3;
+}
+.elfinder input[type="checkbox"]:after {
   content: "";
   display: block;
-  width: 12px;
-  height: 12px;
-  border: 1px solid #707070;
-  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #666;
   border-radius: 2px;
+  transition: 240ms;
 }
 .elfinder input[type="checkbox"]:checked:before {
   content: "";
   position: absolute;
-  top: -3px;
-  left: 6px;
+  top: 0;
+  left: 4px;
   display: table;
-  width: 4px;
-  height: 12px;
-  border: 2px solid #707070;
+  width: 3px;
+  height: 9px;
+  border: 2px solid #fff;
   border-top-width: 0;
   border-left-width: 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+.elfinder input[type="checkbox"]:checked:after {
+  background-color: #2196f3;
+  border-color: #2196f3;
 }
 /**
  * Buttons
@@ -1565,7 +1591,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   color: #546e7a;
 }
 .elfinder .elfinder-dialog .ui-resizable-se {
-  display: none;
+  color: #666666 !important;
 }
 .elfinder .elfinder-dialog .elfinder-info-tb {
   margin: 0;
