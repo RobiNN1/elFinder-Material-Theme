@@ -1564,6 +1564,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   border-radius: 0;
   border: 0;
   background: transparent;
+  padding: 4px 2px;
 }
 .elfinder .elfinder-dialog .ui-tabs-nav li {
   border: 0;
@@ -1573,11 +1574,11 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   padding: 0;
 }
 .elfinder .elfinder-dialog .ui-tabs-nav li a {
-  padding: 7px 9px;
+  padding: 3px 5px;
 }
 .elfinder .elfinder-dialog .ui-tabs-nav .ui-tabs-selected a,
 .elfinder .elfinder-dialog .ui-tabs-nav .ui-state-active a,
-.elfinder .elfinder-dialog .ui-tabs-nav li:hover a {
+.elfinder .elfinder-dialog .ui-tabs-nav .ui-state-hover a {
   box-shadow: inset 0 -2px 0 #3498db;
   color: #3498db;
 }
@@ -1595,6 +1596,9 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder .elfinder-dialog .elfinder-info-tb {
   margin: 0;
+}
+.elfinder .elfinder-dialog .elfinder-info-title {
+  margin-bottom: 5px;
 }
 .std42-dialog .ui-dialog-titlebar {
   background: #1565c0;
@@ -1748,4 +1752,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-full:hover,
 .elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-full {
   background-image: none;
+}
+.elfinder-preference-checkboxes label {
+  margin: 4px;
 }
