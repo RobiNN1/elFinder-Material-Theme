@@ -1391,8 +1391,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder select,
 .elfinder textarea {
   padding: 4px;
-  color: #666;
-  background: #fff;
+  color: #ddd;
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 0;
   font-weight: normal;
   border: 0;
@@ -1404,8 +1404,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder input:focus,
 .elfinder select:focus,
 .elfinder textarea:focus {
-  background: #fff !important;
-  color: #666 !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  color: #ddd !important;
   border: 0 !important;
 }
 .elfinder input[type="checkbox"] {
@@ -1755,4 +1755,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 }
 .elfinder-preference-checkboxes label {
   margin: 4px;
+}
+.elfinder-notify-cancel .ui-state-hover {
+  background: transparent;
+  color: #fff;
 }
