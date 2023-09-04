@@ -1,6 +1,6 @@
 {
   "name": "elfinder-material-theme",
-  "version": "2.1.16",
+  "version": "2.1.17",
   "description": "A theme for the elFinder web file manager inspired by Google Material design.",
   "scripts": {
     "build": "gulp build",
