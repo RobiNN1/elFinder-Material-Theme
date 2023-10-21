@@ -4,107 +4,75 @@
 .elfinder-toolbar {
     background: @toolbar-bg;
     .remove-borders;
-    padding: 5px 0;
-
-    .elfinder-button-icon {
-        font-size: 20px;
-        color: @toolbar-icon-color;
-        margin-top: -2px;
-    }
-
-    .ui-state-hover {
-        .elfinder-button-icon {
-            color: lighten(@toolbar-icon-color, 10%);
-        }
-    }
+    padding: 3px 20px;
 }
 
 .elfinder-buttonset {
     .remove-borders;
-    margin: 0 5px;
-    height: 24px;
-    background: transparent !important;
-}
-
-.elfinder .elfinder-button {
+    margin: 0 3px;
     background: transparent;
-    border-radius: 0;
-    cursor: pointer;
-    color: @toolbar-color;
+    height: unset;
+
+    &:nth-child(2) {
+        margin-left: 0;
+    }
 }
 
-.elfinder .elfinder-button-text {
+.elfinder .elfinder-button:not(.elfinder-button-search) {
+    padding: 6px 4px 3px;
+    background: transparent;
+    overflow: unset;
+
+    &.ui-state-hover {
+        .elfinder-button-icon {
+            color: lighten(@toolbar-bg, 70%);
+        }
+    }
+}
+
+.elfinder-button-icon {
+    background: none;
+    font-size: 20px !important;
+    color: lighten(@toolbar-bg, 80%);
+    overflow: unset;
+}
+
+.elfinder-button-text {
+    margin: 0 0 0 1px;
     top: -3px;
-    margin-left: 6px;
+    color: lighten(@toolbar-bg, 85%);
 }
 
 .elfinder-toolbar-button-separator {
     border: 0;
-}
-
-.elfinder-button-menu {
-    border-radius: 2px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-    border: none !important;
-    margin-top: 5px;
-    background: @button-menu-bg;
-
-    &-item {
-        color: @button-menu-item-color;
-        padding: 6px 19px;
-
-        &.ui-state-hover {
-            color: @button-menu-item-color-hover !important;
-            background: @button-menu-item-bg-hover !important;
-        }
-
-        &-separated {
-            border-top: 1px solid @button-menu-separator;
-
-            &.ui-state-hover {
-                border-top: 1px solid @button-menu-separator;
-            }
-        }
-    }
+    height: unset;
 }
 
 .elfinder .elfinder-button-search {
-    margin: 0 10px;
-    min-height: inherit;
-    overflow: hidden;
-    background: transparent !important;
+    margin: 3px 0;
+    height: unset;
+    min-height: unset;
+
+    input[type=text] {
+        border-radius: 2px;
+        border: 0;
+        background: @search-bg;
+        font-size: .71em;
+        line-height: unset;
+        height: unset;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
     .ui-icon {
-        color: #fff !important;
-
-        &.ui-icon-close {
-            margin-top: -6px !important;
-        }
+        color: lighten(@search-bg, 80%);
+        margin: -6px 4px 0;
     }
+}
 
-    input {
-        background: @search-bg;
-        border-radius: 2px;
-        box-sizing: content-box;
-        border: 0;
-        margin: 0;
-        padding: 0 23px;
-        height: 24px !important;
-        color: #fff;
-    }
-
-    .elfinder-button-menu {
-        margin-top: 4px;
-        border: none;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-    }
-
-    &-menu {
-        border-radius: 0;
-        top: 30px !important;
-
-        .ui-button {
-            padding: .4em 1em !important;
-        }
+.elfinder-button-search-menu {
+    .ui-button {
+        margin-left: 2px;
+        margin-right: 2px;
     }
 }

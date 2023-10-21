@@ -1,45 +1,47 @@
 /**
- * Input & Select
+ * Forms
  */
 .elfinder {
-    input,
+    label.ui-state-hover {
+        background: none;
+        color: inherit;
+    }
+
+    input:not([type="checkbox"]),
     select,
     textarea {
-        padding: 4px;
-        color: #ddd;
-        background: rgba(0, 0, 0, .80);
-        border-radius: 0;
-        font-weight: normal;
+        color: @input-color;
+        background: @input-bg;
+        border-radius: 2px;
         border: 0;
-        box-shadow: none !important;
+        padding: 5px 4px;
+        vertical-align: middle;
 
         &.ui-state-hover,
         &:focus {
-            background: rgba(0, 0, 0, .80) !important;
-            color: #ddd !important;
-            border: 0 !important;
+            background: @input-bg;
+            color: @input-color;
+            border: 0;
+        }
+
+        &::placeholder {
+            color: @input-color;
         }
     }
 
     input[type="checkbox"] {
         background: transparent;
         position: relative;
-        border: none;
+        border: 0;
         appearance: none;
-        cursor: pointer;
-        padding: 0;
         margin: -2px 3px 0 0;
         vertical-align: middle;
-
-        &.ui-state-hover {
-            background: none !important;
-        }
 
         &:focus {
             outline: none;
 
             &:after {
-                border-color: #2196f3;
+                border-color: @checkbox-bg;
             }
         }
 
@@ -48,7 +50,7 @@
             display: block;
             width: 10px;
             height: 10px;
-            border: 2px solid #666;
+            border: 2px solid @checkbox-border;
             border-radius: 2px;
             transition: 240ms;
         }
@@ -56,82 +58,51 @@
         &:checked:before {
             content: "";
             position: absolute;
-            top: 0;
             left: 4px;
-            display: table;
             width: 3px;
             height: 9px;
-            border: 2px solid #fff;
+            border: 2px solid @checkbox-icon;
             border-top-width: 0;
             border-left-width: 0;
             transform: rotate(45deg);
         }
 
         &:checked:after {
-            background-color: #2196f3;
-            border-color: #2196f3;
+            background-color: @checkbox-bg;
+            border-color: @checkbox-bg;
         }
     }
-}
 
-/**
- * Buttons
- */
-.elfinder {
-    .ui-button,
-    .ui-button:active,
-    .ui-button.ui-state-default {
-        display: inline-block;
-        font-weight: normal;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        white-space: nowrap;
-        border-radius: 3px;
+    button,
+    .ui-button {
+        border-radius: 2px;
+        border: 0;
         text-transform: uppercase;
-        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4) !important;
-        transition: all .4s;
-        background: @buttons-bg;
-        color: @buttons-color;
-        border: none;
-        padding: 7px 6px;
+        background: @button-bg;
+        color: @button-color;
+        padding: 5px 7px;
 
-        .ui-icon {
-            color: @buttons-color;
+        &:hover,
+        &.ui-state-hover {
+            background: darken(@button-bg, 4%);
+            color: @button-color;
+            border: 0;
+        }
+
+        &.ui-state-active {
+            background: lighten(@button-bg, 10%);
         }
     }
 
-    .ui-button:hover,
-    a.ui-button:active,
-    .ui-button:active,
-    .ui-button:focus,
-    .ui-button.ui-state-hover,
-    .ui-button.ui-state-active {
-        background: @buttons-bg-hover !important;
-        color: @buttons-color-hover !important;
-        border: none;
+    .ui-slider-horizontal {
+        height: 3px;
+        background-color: @slider-bg !important;
 
-        .ui-icon {
-            color: @buttons-color-hover;
+        .ui-slider-handle {
+            background-color: @slider-handle-bg;
+            border-radius: 100%;
+            border: 0;
+            margin-top: -3px;
         }
-    }
-
-    .ui-button.ui-state-active:hover {
-        background: darken(@buttons-bg-hover, 10%);
-        color: @buttons-color-hover;
-        border: none;
-    }
-
-    .ui-button:focus {
-        outline: none !important;
-    }
-
-    .ui-controlgroup-horizontal .ui-button {
-        .remove-borders;
-    }
-
-    input:not([type="checkbox"]),
-    .elfinder-resize-preset-container .ui-button {
-        height: 21px;
     }
 }

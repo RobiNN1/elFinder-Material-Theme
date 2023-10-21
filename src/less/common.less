@@ -1,13 +1,24 @@
 //
-// Common variables used in all themes
+// Variables and files used in all themes
 //
 
 // Fonts
 // ----------------------------------------------
-@base-font: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-@font-name: material; // This is for custom icon pack
+@base-font: Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', -apple-system, 'Segoe UI', sans-serif;
+
+@icon-font: material;
 
 // Paths
 // ----------------------------------------------
-@icons: '../icons/';
+@font: '../font/';
 @images: '../images/';
+
+@import 'core';
+@import 'icons';
+@import 'toolbar';
+@import 'navbar';
+@import 'workzone';
+@import 'statusbar';
+@import 'forms';
+@import 'contextmenu';
+@import 'dialogs';

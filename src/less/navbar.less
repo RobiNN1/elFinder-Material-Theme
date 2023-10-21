@@ -3,14 +3,18 @@
  */
 .elfinder .elfinder-navbar {
     background: @navbar-bg;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-    border: none;
+    .remove-borders;
 
-    .elfinder-lock,
-    .elfinder-perms,
-    .elfinder-symlink {
-        color: @navbar-perms-icon-color;
-        opacity: .8;
+    .ui-resizable-handle {
+        background-image: none;
+        font-size: 12px;
+        color: @navbar-dir-color;
+
+        &:before {
+            position: absolute;
+            top: 50% !important;
+            transform: translateX(-50%);
+        }
     }
 }
 
@@ -18,32 +22,30 @@
     color: @navbar-dir-color;
     cursor: pointer;
     border-radius: 2px;
+    border: 0;
     padding: 5px;
-    border: none;
-
-    .elfinder-navbar-icon {
-        color: @navbar-dir-icon-color;
-    }
 
     &.ui-state-hover,
-    &.ui-state-active.ui-state-hover {
-        background: darken(@navbar-dir-bg-active, 2%);
+    &.ui-state-active {
+        background: @navbar-dir-bg;
         color: @navbar-dir-color-hover;
-        border: none;
-
-        .elfinder-navbar-icon {
-            color: @navbar-dir-icon-color-hover;
-        }
+        border: 0;
     }
 }
 
-.elfinder-navbar .ui-state-active,
-.elfinder-disabled .elfinder-navbar .ui-state-active {
-    background: @navbar-dir-bg-active;
-    color: @navbar-dir-color-active !important;
-    border: none;
+.elfinder-navbar-icon {
+    background-image: none !important;
+    font-size: 16px;
+    margin-top: -10px;
+}
 
-    &.elfinder-navbar-dir .elfinder-navbar-icon {
-        color: @navbar-dir-color-active !important;
-    }
+.elfinder-tree .elfinder-spinner {
+    margin: -10px 0 0;
+}
+
+.elfinder-navbar-arrow {
+    background-image: none !important;
+    font-size: 10px;
+    padding-top: 2px;
+    padding-left: 2px;
 }

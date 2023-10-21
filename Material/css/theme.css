@@ -1,33 +1,89 @@
 /*!
- * elFinder-Material-Theme (Dark Blue) v2.1.16 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * elFinder-Material-Theme (Dark Blue) v3.0.0 (https://github.com/RobiNN1/elFinder-Material-Theme)
  * Copyright 2016-2023 Róbert Kelčák
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
 .elfinder {
   color-scheme: dark;
-  color: #546e7a;
-  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  color: #c2d7f9;
+  font-family: Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', -apple-system, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.elfinder.ui-widget.ui-widget-content {
-  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-  border-radius: 0;
-  border: 0;
 }
 .elfinder * {
   outline: 0 !important;
 }
+.elfinder .ui-button,
+.elfinder .ui-icon,
+.elfinder .ui-widget-overlay,
+.elfinder .ui-widget-shadow,
+.elfinder .ui-widget-header,
+.elfinder .ui-widget-header .ui-icon,
+.elfinder .ui-widget-content,
+.elfinder .ui-widget-content .ui-icon,
+.elfinder .ui-state-default,
+.elfinder .ui-state-default .ui-icon,
+.elfinder .ui-widget-header .ui-state-default,
+.elfinder .ui-widget-content .ui-state-default,
+.elfinder .ui-state-hover,
+.elfinder .ui-state-hover .ui-icon,
+.elfinder .ui-widget-header .ui-state-hover,
+.elfinder .ui-widget-content .ui-state-hover,
+.elfinder .ui-state-active,
+.elfinder .ui-state-active .ui-icon,
+.elfinder .ui-widget-header .ui-state-active,
+.elfinder .ui-widget-content .ui-state-active,
+.elfinder .ui-state-focus,
+.elfinder .ui-state-focus .ui-icon,
+.elfinder .ui-widget-header .ui-state-focus,
+.elfinder .ui-widget-content .ui-state-focus,
+.ace_optionsMenuEntry button {
+  background-image: none;
+}
+.elfinder.ui-widget.ui-widget-content {
+  font-family: Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', -apple-system, 'Segoe UI', sans-serif;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 0;
+  border: 0;
+}
+.elfinder fieldset {
+  border-color: rgba(0, 0, 0, 0.4) !important;
+}
 /**
  * Loading
  */
+@-webkit-keyframes rotate-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotate-animation {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .elfinder-info-spinner,
 .elfinder-navbar-spinner,
 .elfinder-button-icon-spinner {
-  background: url("../images/loading.svg") center center no-repeat !important;
-  width: 16px;
-  height: 16px;
+  font-size: 16px;
+  background: none;
+}
+.elfinder-info-spinner:before,
+.elfinder-navbar-spinner:before,
+.elfinder-button-icon-spinner:before {
+  display: inline-block;
+  -webkit-animation: rotate-animation 1s linear infinite;
+          animation: rotate-animation 1s linear infinite;
 }
 /**
  * Progress Bar
@@ -49,18 +105,17 @@
   }
 }
 .elfinder-notify-progressbar {
-  border: 0;
-}
-.elfinder-notify-progress,
-.elfinder-notify-progressbar {
   border-radius: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
-.elfinder-notify-progress,
-.elfinder-resize-spinner {
+.elfinder-notify-progress {
+  border-radius: 0;
+  border: 0;
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem;
   -webkit-animation: progress-animation 1s linear infinite;
-  animation: progress-animation 1s linear infinite;
+          animation: progress-animation 1s linear infinite;
   background-color: #0275d8;
   height: 1rem;
 }
@@ -68,112 +123,94 @@
  * Toast Notification
  */
 .elfinder .elfinder-toast > div {
-  background-color: #323232 !important;
-  color: #d6d6d6;
   box-shadow: none;
-  opacity: inherit;
-  padding: 10px 60px;
-}
-.elfinder .elfinder-toast > div button.ui-button {
+  opacity: unset;
   color: #fff;
 }
 .elfinder .elfinder-toast > div:before {
-  font-size: 37px;
+  font-size: 24px;
   position: absolute;
-  left: 5px;
-  top: 0;
+  left: 10px;
+  line-height: 20px;
+}
+.elfinder .elfinder-toast > .toast-info {
+  background-image: none !important;
+  background-color: #0d47a1;
 }
 .elfinder .elfinder-toast > .toast-info button.ui-button {
-  background-color: #3498db;
+  background-color: #1366e8;
+}
+.elfinder .elfinder-toast > .toast-error {
+  background-image: none !important;
+  background-color: #b71c1c;
 }
 .elfinder .elfinder-toast > .toast-error button.ui-button {
-  background-color: #f44336;
+  background-color: #e13e3e;
+}
+.elfinder .elfinder-toast > .toast-success {
+  background-image: none !important;
+  background-color: #1b5e20;
 }
 .elfinder .elfinder-toast > .toast-success button.ui-button {
-  background-color: #4caf50;
+  background-color: #2c9934;
+}
+.elfinder .elfinder-toast > .toast-warning {
+  background-image: none !important;
+  background-color: #f57f17;
 }
 .elfinder .elfinder-toast > .toast-warning button.ui-button {
-  background-color: #ff9800;
-}
-.elfinder-toast-msg {
-  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-  font-size: 17px;
-}
-/**
- * For Ace Editor
- */
-#ace_settingsmenu {
-  font-family: -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
-  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6) !important;
-  background-color: #1d2736 !important;
-  color: #e6e6e6 !important;
-}
-#ace_settingsmenu,
-#kbshortcutmenu {
-  padding: 0;
-}
-.ace_optionsMenuEntry {
-  padding: 5px 10px;
-}
-.ace_optionsMenuEntry:hover {
-  background-color: #111721;
-}
-.ace_optionsMenuEntry label {
-  font-size: 13px;
-}
-#ace_settingsmenu input[type="text"],
-#ace_settingsmenu select {
-  margin: 1px 2px 2px;
-  padding: 2px 5px;
-  border-radius: 3px;
-  border: 0;
-  background: rgba(9, 53, 121, 0.75);
-  color: white !important;
+  background-color: #f8a760;
 }
 /**
  * Icons
  */
 @font-face {
   font-family: material;
-  src: url("../icons/material.eot?91804974");
-  src: url("../icons/material.eot?91804974#iefix") format("embedded-opentype"), url("../icons/material.woff2?91804974") format("woff2"), url("../icons/material.woff?91804974") format("woff"), url("../icons/material.ttf?91804974") format("truetype"), url("../icons/material.svg?91804974#material") format("svg");
+  src: url("../font/material.eot?1697925435667");
+  src: url("../font/material.eot?1697925435667#iefix") format("embedded-opentype"), url("../font/material.woff2?1697925435667") format("woff2"), url("../font/material.woff?1697925435667") format("woff"), url("../font/material.ttf?1697925435667") format("truetype"), url("../font/material.svg?1697925435667#material") format("svg");
   font-weight: normal;
   font-style: normal;
 }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: material;
-    src: url("../icons/material.svg?91804974#material") format("svg");
-  }
-}
 .elfinder .ui-icon,
 .elfinder-button-icon,
-.ui-widget-header .ui-icon,
-.ui-widget-content .ui-icon {
-  font: normal normal normal 14px/1 material;
-  background-image: inherit;
-  text-indent: inherit;
-}
-.elfinder .ui-button-icon-only .ui-icon {
-  font: normal normal normal 14px/1 material;
-  background-image: inherit !important;
+.elfinder-navbar .ui-resizable-handle,
+.elfinder-quicklook-navbar-icon,
+.elfinder-navbar-icon,
+.elfinder-navbar-arrow,
+.elfinder-contextmenu-arrow,
+.elfinder-dialog-icon,
+.elfinder-cwd-icon {
+  font-family: material;
+  font-size: 14px;
   text-indent: 0;
-  font-size: 16px;
 }
-.elfinder-button-icon {
-  background: inherit;
+.elfinder .ui-icon:before,
+.elfinder-button-icon:before,
+.elfinder-navbar .ui-resizable-handle:before,
+.elfinder-quicklook-navbar-icon:before,
+.elfinder-navbar-icon:before,
+.elfinder-navbar-arrow:before,
+.elfinder-contextmenu-arrow:before,
+.elfinder-dialog-icon:before,
+.elfinder-cwd-icon:before {
+  display: inline-block;
+}
+.elfinder-cwd-icon:before {
+  font-family: material;
 }
 .elfinder-button-icon-home:before {
   content: '\e800';
 }
 .elfinder-button-icon-back:before {
-  content: '\e801';
+  content: '\e802';
+  rotate: 180deg;
 }
 .elfinder-button-icon-forward:before {
   content: '\e802';
 }
 .elfinder-button-icon-up:before {
-  content: '\e803';
+  content: '\e802';
+  rotate: -90deg;
 }
 .elfinder-button-icon-dir:before {
   content: '\e804';
@@ -266,7 +303,9 @@
   content: '\e821';
 }
 .elfinder-button-icon-rotate-l:before {
-  content: '\e822';
+  content: '\e821';
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 .elfinder-button-icon-netmount:before {
   content: '\e823';
@@ -302,7 +341,9 @@
   content: '\e82d';
 }
 .elfinder-button-icon-redo:before {
-  content: '\e82e';
+  content: '\e82d';
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 .elfinder-button-icon-preference:before {
   content: '\e82f';
@@ -319,24 +360,27 @@
 .elfinder-button-icon-selectinvert:before {
   content: '\e833';
 }
-.elfinder-button-icon-logout:before {
-  content: '\e85a';
-}
 .elfinder-button-icon-opennew:before {
   content: '\e85b';
 }
 .elfinder-button-icon-hide:before {
   content: '\e85d';
 }
-.elfinder-button-search .ui-icon.ui-icon-search {
-  font-size: 17px;
+.elfinder-button-icon-text:before {
+  content: '\e859';
 }
-.elfinder-button-search .ui-icon:hover {
-  opacity: 1;
+.elfinder-spinner,
+.elfinder-info-spinner,
+.elfinder-navbar-spinner,
+.elfinder-button-icon-spinner {
+  background-image: none;
+  font-family: material;
 }
-.elfinder-navbar-icon {
-  font: normal normal normal 16px/1 material;
-  background-image: inherit !important;
+.elfinder-spinner:before,
+.elfinder-info-spinner:before,
+.elfinder-navbar-spinner:before,
+.elfinder-button-icon-spinner:before {
+  content: '\e846';
 }
 .elfinder-navbar-icon:before {
   content: '\e804';
@@ -346,49 +390,70 @@
 .elfinder .ui-state-hover .elfinder-navbar-icon:before {
   content: '\e805';
 }
-.elfinder-navbar-root-local .elfinder-navbar-icon:before {
-  content: '\e83d' !important;
+[class*='elfinder-navbar-root-'] .elfinder-cwd-icon,
+.elfinder-cwd [class*='elfinder-navbar-root-'].elfinder-droppable-active .elfinder-cwd-icon,
+.elfinder-cwd-view-list [class*='elfinder-navbar-root-'] td .elfinder-cwd-icon {
+  background-image: none;
 }
-.elfinder-navbar-root-ftp .elfinder-navbar-icon:before {
-  content: '\e823' !important;
+[class*='elfinder-navbar-root-'] .elfinder-cwd-icon:before,
+.elfinder-cwd [class*='elfinder-navbar-root-'].elfinder-droppable-active .elfinder-cwd-icon:before,
+.elfinder-cwd-view-list [class*='elfinder-navbar-root-'] td .elfinder-cwd-icon:before {
+  font-family: material;
+  font-size: 55px;
+  top: -10px;
 }
-.elfinder-navbar-root-sql .elfinder-navbar-icon:before {
-  content: '\e83e' !important;
+.elfinder-navbar-root-local .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-local .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon:before {
+  content: '\e83d';
 }
-.elfinder-navbar-root-dropbox .elfinder-navbar-icon:before {
-  content: '\e83f' !important;
+.elfinder-navbar-root-ftp .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-ftp .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-ftp td .elfinder-cwd-icon:before {
+  content: '\e801';
 }
-.elfinder-navbar-root-googledrive .elfinder-navbar-icon:before {
-  content: '\e840' !important;
+.elfinder-navbar-root-sql .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-sql .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-sql td .elfinder-cwd-icon:before {
+  content: '\e83e';
 }
-.elfinder-navbar-root-onedrive .elfinder-navbar-icon:before {
-  content: '\e841' !important;
+.elfinder-navbar-root-dropbox .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-dropbox .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-dropbox td .elfinder-cwd-icon:before {
+  content: '\e83f';
 }
-.elfinder-navbar-root-box .elfinder-navbar-icon:before {
-  content: '\e842' !important;
+.elfinder-navbar-root-googledrive .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-googledrive .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-googledrive td .elfinder-cwd-icon:before {
+  content: '\e840';
 }
-.elfinder-navbar-root-trash .elfinder-navbar-icon:before {
-  content: '\e80b' !important;
+.elfinder-navbar-root-onedrive .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-onedrive .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-onedrive td .elfinder-cwd-icon:before {
+  content: '\e841';
 }
-.elfinder-navbar-root-zip .elfinder-navbar-icon:before {
-  content: '\e85c' !important;
+.elfinder-navbar-root-box .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-box .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-box td .elfinder-cwd-icon:before {
+  content: '\e842';
 }
-.elfinder-navbar-root-network .elfinder-navbar-icon:before {
-  content: '\e823' !important;
+.elfinder-navbar-root-trash .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-trash .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon:before {
+  content: '\e80b';
+}
+.elfinder-navbar-root-zip .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-zip .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon:before {
+  content: '\e85c';
+}
+.elfinder-navbar-root-network .elfinder-cwd-icon:before,
+.elfinder-tree .elfinder-navbar-root-network .elfinder-navbar-icon:before,
+.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon:before {
+  content: '\e823';
 }
 .elfinder-places .elfinder-navbar-root .elfinder-navbar-icon:before {
-  content: '\e825' !important;
-}
-.elfinder-navbar-arrow {
-  background-image: inherit !important;
-  font: normal normal normal 14px/1 material;
-  font-size: 10px;
-  padding-top: 3px;
-  padding-left: 2px;
-  color: #a9a9a9;
-}
-.elfinder .ui-state-active .elfinder-navbar-arrow {
-  color: #fff;
+  content: '\e825';
 }
 .elfinder-ltr .elfinder-navbar-collapsed .elfinder-navbar-arrow:before {
   content: '\e857';
@@ -400,113 +465,17 @@
 .elfinder-rtl .elfinder-navbar-expanded .elfinder-navbar-arrow:before {
   content: '\e851';
 }
-div.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
-  font-size: 8px;
-  margin-top: 5px;
-  margin-right: 5px;
-}
-div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
-  margin: 2px;
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon,
-.elfinder-navbar-root-local .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-ftp td .elfinder-cwd-icon,
-.elfinder-navbar-root-ftp .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-sql td .elfinder-cwd-icon,
-.elfinder-navbar-root-sql .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-dropbox td .elfinder-cwd-icon,
-.elfinder-navbar-root-dropbox .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-googledrive td .elfinder-cwd-icon,
-.elfinder-navbar-root-googledrive .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-onedrive td .elfinder-cwd-icon,
-.elfinder-navbar-root-onedrive .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-box td .elfinder-cwd-icon,
-.elfinder-navbar-root-box .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon,
-.elfinder-navbar-root-trash .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon,
-.elfinder-navbar-root-zip .elfinder-cwd-icon,
-.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon,
-.elfinder-navbar-root-network .elfinder-cwd-icon {
-  background-image: inherit;
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-local .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-ftp td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-ftp .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-sql td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-sql .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-dropbox td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-dropbox .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-googledrive td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-googledrive .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-onedrive td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-onedrive .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-box td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-box .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-trash .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-zip .elfinder-cwd-icon:before,
-.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-network .elfinder-cwd-icon:before {
-  font-family: material;
-  background-color: transparent;
-  color: #525252;
-  font-size: 55px;
-  position: relative;
-  top: -10px !important;
-  padding: 0;
-  display: contents !important;
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-local td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-local .elfinder-cwd-icon:before {
-  content: '\e83d';
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-ftp td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-ftp .elfinder-cwd-icon:before {
-  content: '\e823';
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-sql td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-sql .elfinder-cwd-icon:before {
-  content: '\e83e';
-}
-.elfinder-cwd-view-list .elfinder-navbar-roor-dropbox td .elfinder-cwd-icon:before,
-.elfinder-navbar-roor-dropbox .elfinder-cwd-icon:before {
-  content: '\e83f';
-}
-.elfinder-cwd-view-list .elfinder-navbar-roor-googledrive td .elfinder-cwd-icon:before,
-.elfinder-navbar-roor-googledrive .elfinder-cwd-icon:before {
-  content: '\e840';
-}
-.elfinder-cwd-view-list .elfinder-navbar-roor-onedrive td .elfinder-cwd-icon:before,
-.elfinder-navbar-roor-onedrive .elfinder-cwd-icon:before {
-  content: '\e841';
-}
-.elfinder-cwd-view-list .elfinder-navbar-roor-box td .elfinder-cwd-icon:before,
-.elfinder-navbar-roor-box .elfinder-cwd-icon:before {
-  content: '\e842';
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-trash td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-trash .elfinder-cwd-icon:before {
-  content: '\e80b';
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-zip td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-zip .elfinder-cwd-icon:before {
-  content: '\e85c';
-}
-.elfinder-cwd-view-list .elfinder-navbar-root-network td .elfinder-cwd-icon:before,
-.elfinder-navbar-root-network .elfinder-cwd-icon:before {
-  content: '\e823';
-}
-.elfinder-dialog-icon {
-  font: normal normal normal 14px/1 material;
-  background: inherit;
-  color: #e3e3e3;
-  font-size: 37px;
-}
 .elfinder-dialog-icon:before {
-  content: '\e843';
+  content: '\e817';
+}
+.elfinder-dialog-icon-open:before,
+.elfinder-dialog-icon-readdir:before,
+.elfinder-dialog-icon-file:before,
+.elfinder-dialog-icon-chkdir:before {
+  content: '\e805';
+}
+.elfinder-dialog-icon-reload:before {
+  content: '\e846';
 }
 .elfinder-dialog-icon-mkdir:before {
   content: '\e808';
@@ -514,27 +483,23 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-dialog-icon-mkfile:before {
   content: '\e809';
 }
-.elfinder-dialog-icon-copy:before {
+.elfinder-dialog-icon-copy:before,
+.elfinder-dialog-icon-prepare:before {
   content: '\e80d';
 }
-.elfinder-dialog-icon-prepare:before,
 .elfinder-dialog-icon-move:before {
-  content: '\e844';
+  content: '\e837';
 }
-.elfinder-dialog-icon-upload:before,
-.elfinder-dialog-icon-chunkmerge:before {
+.elfinder-dialog-icon-chunkmerge:before,
+.elfinder-dialog-icon-preupload:before,
+.elfinder-dialog-icon-upload:before {
   content: '\e815';
 }
 .elfinder-dialog-icon-rm:before {
+  content: '\e80b';
+}
+.elfinder-dialog-icon-trash:before {
   content: '\e80a';
-}
-.elfinder-dialog-icon-open:before,
-.elfinder-dialog-icon-readdir:before,
-.elfinder-dialog-icon-file:before {
-  content: '\e807';
-}
-.elfinder-dialog-icon-reload:before {
-  content: '\e806';
 }
 .elfinder-dialog-icon-download:before {
   content: '\e816';
@@ -545,24 +510,21 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-dialog-icon-rename:before {
   content: '\e812';
 }
-.elfinder-dialog-icon-zipdl:before,
 .elfinder-dialog-icon-archive:before {
   content: '\e819';
 }
+.elfinder-dialog-icon-zipdl:before,
 .elfinder-dialog-icon-extract:before {
   content: '\e818';
 }
 .elfinder-dialog-icon-search:before {
   content: '\e81f';
 }
-.elfinder-dialog-icon-loadimg:before {
-  content: '\e846';
-}
-.elfinder-dialog-icon-url:before {
-  content: '\e81e';
-}
 .elfinder-dialog-icon-resize:before {
   content: '\e81d';
+}
+.elfinder-dialog-icon-loadimg:before {
+  content: '\e846';
 }
 .elfinder-dialog-icon-netmount:before {
   content: '\e823';
@@ -570,73 +532,37 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-dialog-icon-netunmount:before {
   content: '\e824';
 }
+.elfinder-dialog-icon-url:before {
+  content: '\e81e';
+}
 .elfinder-dialog-icon-chmod:before {
   content: '\e826';
 }
-.elfinder-dialog-icon-preupload:before,
-.elfinder-dialog-icon-dim:before {
-  content: '\e847';
+.elfinder-dialog-icon-restore:before {
+  content: '\e80c';
 }
-.elfinder-contextmenu .elfinder-contextmenu-item span.elfinder-contextmenu-icon {
-  font-size: 16px;
+.elfinder-dialog-icon-undo:before {
+  content: '\e82d';
 }
-.elfinder-contextmenu .elfinder-contextmenu-item .elfinder-contextsubmenu-item .ui-icon {
-  font-size: 15px;
+.elfinder-dialog-icon-redo:before {
+  content: '\e82d';
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
-.elfinder-contextmenu .elfinder-contextmenu-item .elfinder-button-icon-link:before {
-  content: '\e837';
-}
-.elfinder .elfinder-contextmenu-extra-icon {
-  margin-top: -6px;
-}
-.elfinder .elfinder-contextmenu-extra-icon a {
-  padding: 5px;
-  margin: -16px;
-}
-.elfinder-button-icon-link:before {
-  content: '\e81e' !important;
-}
-.elfinder .elfinder-contextmenu-arrow {
-  font: normal normal normal 14px/1 material;
-  background-image: inherit;
-  font-size: 10px !important;
-  padding-top: 3px;
+.elfinder-contextmenu .elfinder-contextmenu-item .elfinder-contextmenu-icon {
+  background-image: none;
+  font-family: material;
 }
 .elfinder .elfinder-contextmenu-arrow:before {
   content: '\e857';
-}
-.elfinder-contextmenu .ui-state-hover .elfinder-contextmenu-arrow {
-  background-image: inherit;
-}
-.elfinder-quicklook .ui-resizable-se {
-  background: inherit;
-}
-.elfinder-quicklook-navbar-icon {
-  background: transparent;
-  font: normal normal normal 14px/1 material;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-  color: #fff;
-}
-.elfinder-quicklook-titlebar-icon {
-  margin-top: -8px;
-}
-.elfinder-quicklook-titlebar-icon .ui-icon {
-  border: 0;
-  opacity: 0.8;
-  font-size: 15px;
-  padding: 1px;
-}
-.elfinder-quicklook-titlebar .ui-icon-circle-close,
-.elfinder-quicklook .ui-icon-gripsmall-diagonal-se {
-  color: #f1f1f1;
 }
 .elfinder-quicklook-navbar-icon-prev:before {
   content: '\e848';
 }
 .elfinder-quicklook-navbar-icon-next:before {
-  content: '\e849';
+  content: '\e848';
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 .elfinder-quicklook-navbar-icon-fullscreen:before {
   content: '\e84a';
@@ -647,8 +573,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-quicklook-navbar-icon-close:before {
   content: '\e84c';
 }
-.elfinder .ui-button-icon {
-  background-image: inherit;
+.elfinder .ui-icon {
+  background-image: none;
 }
 .elfinder .ui-icon-search:before {
   content: '\e81f';
@@ -691,7 +617,8 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   content: '\e84e';
 }
 .elfinder .ui-icon-arrowthick-1-s:before {
-  content: '\e84f';
+  content: '\e850';
+  rotate: 180deg;
 }
 .elfinder .ui-icon-arrowthick-1-n:before {
   content: '\e850';
@@ -700,17 +627,20 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
   content: '\e851';
 }
 .elfinder .ui-icon-triangle-1-n:before {
-  content: '\e852';
+  content: '\e851';
+  rotate: 180deg;
 }
+.elfinder .ui-resizable-handle.ui-resizable-e:before,
 .elfinder .ui-icon-grip-dotted-vertical:before {
   content: '\e853';
 }
 .elfinder-lock,
 .elfinder-perms,
 .elfinder-symlink {
-  background-image: inherit;
-  font: normal normal normal 18px/1 material;
-  color: #d8d8d8;
+  background-image: none;
+  font-family: material;
+  font-size: 15px;
+  opacity: 0.9;
 }
 .elfinder-na .elfinder-perms:before {
   content: '\e824';
@@ -730,34 +660,25 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-symlink:before {
   content: '\e837';
 }
-.elfinder .elfinder-toast > div {
-  font: normal normal normal 14px/1 material;
-}
-.elfinder .elfinder-toast > .toast-info,
-.elfinder .elfinder-toast > .toast-error,
-.elfinder .elfinder-toast > .toast-success,
-.elfinder .elfinder-toast > .toast-warning {
-  background-image: inherit !important;
+.elfinder .elfinder-toast > div:before {
+  font-family: material;
 }
 .elfinder .elfinder-toast > .toast-info:before {
   content: '\e817';
-  color: #3498db;
 }
 .elfinder .elfinder-toast > .toast-error:before {
   content: '\e855';
-  color: #f44336;
 }
 .elfinder .elfinder-toast > .toast-success:before {
   content: '\e84e';
-  color: #4caf50;
 }
 .elfinder .elfinder-toast > .toast-warning:before {
   content: '\e856';
-  color: #ff9800;
 }
 .elfinder-drag-helper-icon-status {
-  font: normal normal normal 14px/1 material;
-  background: inherit;
+  font-family: material;
+  font-size: 14px;
+  background-image: none;
 }
 .elfinder-drag-helper-icon-status:before {
   content: '\e824';
@@ -776,72 +697,91 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-drag-helper-plus .elfinder-drag-helper-icon-status:before {
   content: '\e84c';
 }
-/**
- * MIME Types
- */
-.elfinder-cwd-view-list td .elfinder-cwd-icon {
-  background-image: url("../images/icons-small.svg");
-}
 .elfinder-cwd-icon {
-  background: url("../images/icons-big.svg") 0 0 no-repeat;
-  border-radius: 0;
+  color: #0d47a1;
 }
-.elfinder-cwd-icon:before {
-  font-size: 10px;
-  position: relative;
-  top: 27px;
-  left: inherit;
-  padding: 1px;
-  background-color: transparent;
+.elfinder-cwd-icon:not(.elfinder-cwd-bgurl):before {
+  content: '\e803';
 }
-.elfinder-cwd-icon-directory {
-  background-position: 0 -50px;
+.elfinder-cwd-icon.elfinder-cwd-bgurl:after {
+  content: none !important;
 }
-.elfinder-cwd .elfinder-droppable-active .elfinder-cwd-icon {
-  background-position: 0 -100px;
+.elfinder-cwd-icon.elfinder-cwd-icon-directory:before {
+  content: '\e804';
 }
-.elfinder-cwd-icon-group {
-  background-position: 0 -150px;
+.elfinder-cwd-icon.elfinder-cwd-icon-group:before {
+  content: '\e82e';
+}
+.elfinder-cwd .elfinder-droppable-active .elfinder-cwd-icon:before {
+  content: '\e805';
 }
 .elfinder-cwd-icon-application {
-  background-position: 0 -200px;
+  color: #478fcc;
+}
+.elfinder-cwd-icon-application:after {
+  content: '\e843' !important;
+}
+.elfinder-cwd-icon-text,
+.elfinder-cwd-icon-plain,
+.elfinder-cwd-icon-x-empty {
+  color: #42a5f5;
+}
+.elfinder-cwd-icon-text:after,
+.elfinder-cwd-icon-plain:after,
+.elfinder-cwd-icon-x-empty:after {
+  content: '\e84f' !important;
 }
 .elfinder-cwd-icon-rtf,
-.elfinder-cwd-icon-rtfd,
-.elfinder-cwd-icon-text {
-  background-position: 0 -250px;
+.elfinder-cwd-icon-rtfd {
+  color: #81c784;
+}
+.elfinder-cwd-icon-rtf:after,
+.elfinder-cwd-icon-rtfd:after {
+  content: '\e87c' !important;
 }
 .elfinder-cwd-icon-image {
-  background-position: 0 -300px;
+  color: #4caf50;
+}
+.elfinder-cwd-icon-image:after {
+  content: '\e847' !important;
 }
 .elfinder-cwd-icon-audio {
-  background-position: 0 -350px;
+  color: #ef5350;
+}
+.elfinder-cwd-icon-audio:after {
+  content: '\e85a' !important;
 }
 .elfinder-cwd-icon-video,
 .elfinder-cwd-icon-flash-video,
 .elfinder-cwd-icon-dash-xml,
 .elfinder-cwd-icon-vnd-apple-mpegurl,
 .elfinder-cwd-icon-x-mpegurl {
-  background-position: 0 -400px;
+  color: #f44336;
 }
-.elfinder-cwd-icon-plain,
-.elfinder-cwd-icon-x-empty {
-  background-position: 0 -450px;
+.elfinder-cwd-icon-video:after,
+.elfinder-cwd-icon-flash-video:after,
+.elfinder-cwd-icon-dash-xml:after,
+.elfinder-cwd-icon-vnd-apple-mpegurl:after,
+.elfinder-cwd-icon-x-mpegurl:after {
+  content: '\e849' !important;
 }
 .elfinder-cwd-icon-pdf {
-  background-position: 0 -500px;
+  color: #d50a0a;
 }
-.elfinder-cwd-icon-pdf:before {
-  content: none !important;
+.elfinder-cwd-icon-pdf:after {
+  content: '\e852' !important;
 }
 .elfinder-cwd-icon-vnd-ms-office {
-  background-position: 0 -550px;
+  color: #ea3e23;
+}
+.elfinder-cwd-icon-vnd-ms-office:after {
+  content: '\e85e' !important;
 }
 .elfinder-cwd-icon-x-msaccess {
-  background-position: 0 -600px;
+  color: #af2031;
 }
-.elfinder-cwd-icon-x-msaccess:before {
-  content: none !important;
+.elfinder-cwd-icon-x-msaccess:after {
+  content: '\e85f' !important;
 }
 .elfinder-cwd-icon-ms-excel,
 .elfinder-cwd-icon-vnd-ms-excel,
@@ -849,15 +789,15 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-vnd-ms-excel-sheet-binary-macroEnabled-12,
 .elfinder-cwd-icon-vnd-ms-excel-sheet-macroEnabled-12,
 .elfinder-cwd-icon-vnd-ms-excel-template-macroEnabled-12 {
-  background-position: 0 -650px;
+  color: #107c41;
 }
-.elfinder-cwd-icon-ms-excel:before,
-.elfinder-cwd-icon-vnd-ms-excel:before,
-.elfinder-cwd-icon-vnd-ms-excel-addin-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-excel-sheet-binary-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-excel-sheet-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-excel-template-macroEnabled-12:before {
-  content: none !important;
+.elfinder-cwd-icon-ms-excel:after,
+.elfinder-cwd-icon-vnd-ms-excel:after,
+.elfinder-cwd-icon-vnd-ms-excel-addin-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-excel-sheet-binary-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-excel-sheet-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-excel-template-macroEnabled-12:after {
+  content: '\e860' !important;
 }
 .elfinder-cwd-icon-vnd-ms-powerpoint,
 .elfinder-cwd-icon-vnd-ms-powerpoint-addin-macroEnabled-12,
@@ -865,51 +805,43 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-vnd-ms-powerpoint-slide-macroEnabled-12,
 .elfinder-cwd-icon-vnd-ms-powerpoint-slideshow-macroEnabled-12,
 .elfinder-cwd-icon-vnd-ms-powerpoint-template-macroEnabled-12 {
-  background-position: 0 -700px;
+  color: #c43e1c;
 }
-.elfinder-cwd-icon-vnd-ms-powerpoint:before,
-.elfinder-cwd-icon-vnd-ms-powerpoint-addin-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-powerpoint-presentation-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-powerpoint-slide-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-powerpoint-slideshow-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-powerpoint-template-macroEnabled-12:before {
-  content: none !important;
+.elfinder-cwd-icon-vnd-ms-powerpoint:after,
+.elfinder-cwd-icon-vnd-ms-powerpoint-addin-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-powerpoint-presentation-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-powerpoint-slide-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-powerpoint-slideshow-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-powerpoint-template-macroEnabled-12:after {
+  content: '\e861' !important;
 }
 .elfinder-cwd-icon-msword,
 .elfinder-cwd-icon-vnd-ms-word,
 .elfinder-cwd-icon-vnd-ms-word-document-macroEnabled-12,
 .elfinder-cwd-icon-vnd-ms-word-template-macroEnabled-12 {
-  background-position: 0 -750px;
+  color: #185abd;
 }
-.elfinder-cwd-icon-msword:before,
-.elfinder-cwd-icon-vnd-ms-word:before,
-.elfinder-cwd-icon-vnd-ms-word-document-macroEnabled-12:before,
-.elfinder-cwd-icon-vnd-ms-word-template-macroEnabled-12:before {
-  content: none !important;
+.elfinder-cwd-icon-msword:after,
+.elfinder-cwd-icon-vnd-ms-word:after,
+.elfinder-cwd-icon-vnd-ms-word-document-macroEnabled-12:after,
+.elfinder-cwd-icon-vnd-ms-word-template-macroEnabled-12:after {
+  content: '\e862' !important;
 }
-.elfinder-cwd-icon-vnd-oasis-opendocument-base,
 .elfinder-cwd-icon-vnd-oasis-opendocument-chart,
-.elfinder-cwd-icon-vnd-oasis-opendocument-database,
 .elfinder-cwd-icon-vnd-oasis-opendocument-formula,
 .elfinder-cwd-icon-vnd-oasis-opendocument-graphics,
 .elfinder-cwd-icon-vnd-oasis-opendocument-graphics-template,
 .elfinder-cwd-icon-vnd-oasis-opendocument-image,
 .elfinder-cwd-icon-vnd-openofficeorg-extension {
-  background-position: 0 -800px;
+  color: #0e85cd;
 }
-.elfinder-cwd-icon-vnd-oasis-opendocument-spreadsheet,
-.elfinder-cwd-icon-vnd-oasis-opendocument-spreadsheet-template,
-.elfinder-cwd-icon-vnd-openxmlformats-officedocument-spreadsheetml-sheet,
-.elfinder-cwd-icon-vnd-openxmlformats-officedocument-spreadsheetml-template {
-  background-position: 0 -850px;
-}
-.elfinder-cwd-icon-vnd-oasis-opendocument-presentation,
-.elfinder-cwd-icon-vnd-oasis-opendocument-presentation-template,
-.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-presentation,
-.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-slide,
-.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-slideshow,
-.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-template {
-  background-position: 0 -900px;
+.elfinder-cwd-icon-vnd-oasis-opendocument-chart:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-formula:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-graphics:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-graphics-template:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-image:after,
+.elfinder-cwd-icon-vnd-openofficeorg-extension:after {
+  content: '\e863' !important;
 }
 .elfinder-cwd-icon-vnd-oasis-opendocument-text,
 .elfinder-cwd-icon-vnd-oasis-opendocument-text-master,
@@ -917,7 +849,201 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-vnd-oasis-opendocument-text-web,
 .elfinder-cwd-icon-vnd-openxmlformats-officedocument-wordprocessingml-document,
 .elfinder-cwd-icon-vnd-openxmlformats-officedocument-wordprocessingml-template {
-  background-position: 0 -950px;
+  color: #2196f3;
+}
+.elfinder-cwd-icon-vnd-oasis-opendocument-text:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-text-master:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-text-template:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-text-web:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-wordprocessingml-document:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-wordprocessingml-template:after {
+  content: '\e864' !important;
+}
+.elfinder-cwd-icon-vnd-oasis-opendocument-presentation,
+.elfinder-cwd-icon-vnd-oasis-opendocument-presentation-template,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-presentation,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-slide,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-slideshow,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-template {
+  color: #ff6d00;
+}
+.elfinder-cwd-icon-vnd-oasis-opendocument-presentation:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-presentation-template:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-presentation:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-slide:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-slideshow:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-presentationml-template:after {
+  content: '\e865' !important;
+}
+.elfinder-cwd-icon-csv,
+.elfinder-cwd-icon-vnd-oasis-opendocument-spreadsheet,
+.elfinder-cwd-icon-vnd-oasis-opendocument-spreadsheet-template,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-spreadsheetml-sheet,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-spreadsheetml-template {
+  color: #43a047;
+}
+.elfinder-cwd-icon-csv:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-spreadsheet:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-spreadsheet-template:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-spreadsheetml-sheet:after,
+.elfinder-cwd-icon-vnd-openxmlformats-officedocument-spreadsheetml-template:after {
+  content: '\e866' !important;
+}
+.elfinder-cwd-icon-sql,
+.elfinder-cwd-icon-x-sql,
+.elfinder-cwd-icon-vnd-oasis-opendocument-base,
+.elfinder-cwd-icon-vnd-oasis-opendocument-database {
+  color: #607d8b;
+}
+.elfinder-cwd-icon-sql:after,
+.elfinder-cwd-icon-x-sql:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-base:after,
+.elfinder-cwd-icon-vnd-oasis-opendocument-database:after {
+  content: '\e877' !important;
+}
+.elfinder-cwd-icon-vnd-adobe-photoshop {
+  color: #001e36;
+}
+.elfinder-cwd-icon-vnd-adobe-photoshop:after {
+  content: '\e868' !important;
+}
+.elfinder-cwd-icon-x-shockwave-flash {
+  color: #d91b22;
+}
+.elfinder-cwd-icon-x-shockwave-flash:after {
+  content: '\e869' !important;
+}
+.elfinder-cwd-icon-vnd-android-package-archive {
+  color: #39cc7a;
+}
+.elfinder-cwd-icon-vnd-android-package-archive:after {
+  content: '\e86a' !important;
+}
+.elfinder-cwd-icon-x-c,
+.elfinder-cwd-icon-x-csrc,
+.elfinder-cwd-icon-x-chdr,
+.elfinder-cwd-icon-x-c--,
+.elfinder-cwd-icon-x-c--src,
+.elfinder-cwd-icon-x-c--hdr {
+  color: #004482;
+}
+.elfinder-cwd-icon-x-c:after,
+.elfinder-cwd-icon-x-csrc:after,
+.elfinder-cwd-icon-x-chdr:after,
+.elfinder-cwd-icon-x-c--:after,
+.elfinder-cwd-icon-x-c--src:after,
+.elfinder-cwd-icon-x-c--hdr:after {
+  content: '\e86b' !important;
+}
+.elfinder-cwd-icon-x-jar,
+.elfinder-cwd-icon-x-java,
+.elfinder-cwd-icon-x-java-source {
+  color: #ed8b00;
+}
+.elfinder-cwd-icon-x-jar:after,
+.elfinder-cwd-icon-x-java:after,
+.elfinder-cwd-icon-x-java-source:after {
+  content: '\e86c' !important;
+}
+.elfinder-cwd-icon-css {
+  color: #1b73ba;
+}
+.elfinder-cwd-icon-css:after {
+  content: '\e86d' !important;
+}
+.elfinder-cwd-icon-html {
+  color: #e34f26;
+}
+.elfinder-cwd-icon-html:after {
+  content: '\e86e' !important;
+}
+.elfinder-cwd-icon-javascript,
+.elfinder-cwd-icon-x-javascript {
+  color: #fbd53b;
+}
+.elfinder-cwd-icon-javascript:after,
+.elfinder-cwd-icon-x-javascript:after {
+  content: '\e86f' !important;
+}
+.elfinder-cwd-icon-json {
+  color: #8bc34a;
+}
+.elfinder-cwd-icon-json:after {
+  content: '\e870' !important;
+}
+.elfinder-cwd-icon-markdown,
+.elfinder-cwd-icon-x-markdown {
+  color: #ea7130;
+}
+.elfinder-cwd-icon-markdown:after,
+.elfinder-cwd-icon-x-markdown:after {
+  content: '\e871' !important;
+}
+.elfinder-cwd-icon-x-perl {
+  color: #3a3c5b;
+}
+.elfinder-cwd-icon-x-perl:after {
+  content: '\e872' !important;
+}
+.elfinder-cwd-icon-x-php {
+  color: #4f5b93;
+}
+.elfinder-cwd-icon-x-php:after {
+  content: '\e873' !important;
+}
+.elfinder-cwd-icon-x-python {
+  color: #306998;
+}
+.elfinder-cwd-icon-x-python:after {
+  content: '\e874' !important;
+}
+.elfinder-cwd-icon-x-ruby {
+  color: #cc342d;
+}
+.elfinder-cwd-icon-x-ruby:after {
+  content: '\e875' !important;
+}
+.elfinder-cwd-icon-x-sh,
+.elfinder-cwd-icon-x-shellscript {
+  color: #3d5afe;
+}
+.elfinder-cwd-icon-x-sh:after,
+.elfinder-cwd-icon-x-shellscript:after {
+  content: '\e876' !important;
+}
+.elfinder-cwd-icon-x-sqlite3 {
+  color: #3965bd;
+}
+.elfinder-cwd-icon-x-sqlite3:after {
+  content: '\e878' !important;
+}
+.elfinder-cwd-icon-svg,
+.elfinder-cwd-icon-svg-xml {
+  color: #ffb13b;
+}
+.elfinder-cwd-icon-svg:after,
+.elfinder-cwd-icon-svg-xml:after {
+  content: '\e879' !important;
+}
+.elfinder-cwd-icon-postscript,
+.elfinder-cwd-icon-x-eps {
+  color: #00796b;
+}
+.elfinder-cwd-icon-postscript:after,
+.elfinder-cwd-icon-x-eps:after {
+  content: '\e87a' !important;
+}
+.elfinder-cwd-icon-xml {
+  color: #005fad;
+}
+.elfinder-cwd-icon-xml:after {
+  content: '\e844' !important;
+}
+.elfinder-cwd-icon-x-yaml {
+  color: #cb171e;
+}
+.elfinder-cwd-icon-x-yaml:after {
+  content: '\e867' !important;
 }
 .elfinder-cwd-icon-zip,
 .elfinder-cwd-icon-x-zip,
@@ -929,505 +1055,336 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder-cwd-icon-x-bzip2,
 .elfinder-cwd-icon-x-rar,
 .elfinder-cwd-icon-x-rar-compressed {
-  background-position: 0 -1000px;
-}
-.elfinder-cwd-icon-postscript {
-  background-position: 0 -1050px;
-}
-.elfinder-cwd-icon-vnd-adobe-photoshop {
-  background-position: 0 -1100px;
-}
-.elfinder-cwd-icon-vnd-adobe-photoshop:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-shockwave-flash {
-  background-position: 0 -1150px;
-}
-.elfinder-cwd-icon-vnd-android-package-archive {
-  background-position: 0 -1200px;
-}
-.elfinder-cwd-icon-vnd-android-package-archive:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-c,
-.elfinder-cwd-icon-x-csrc,
-.elfinder-cwd-icon-x-chdr,
-.elfinder-cwd-icon-x-c--,
-.elfinder-cwd-icon-x-c--src,
-.elfinder-cwd-icon-x-c--hdr {
-  background-position: 0 -1250px;
-}
-.elfinder-cwd-icon-css {
-  background-position: 0 -1300px;
-}
-.elfinder-cwd-icon-css:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-html {
-  background-position: 0 -1350px;
-}
-.elfinder-cwd-icon-html:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-jar,
-.elfinder-cwd-icon-x-java,
-.elfinder-cwd-icon-x-java-source {
-  background-position: 0 -1400px;
-}
-.elfinder-cwd-icon-x-jar:before,
-.elfinder-cwd-icon-x-java:before,
-.elfinder-cwd-icon-x-java-source:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-javascript,
-.elfinder-cwd-icon-x-javascript {
-  background-position: 0 -1450px;
-}
-.elfinder-cwd-icon-javascript:before,
-.elfinder-cwd-icon-x-javascript:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-json {
-  background-position: 0 -1500px;
-}
-.elfinder-cwd-icon-json:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-markdown,
-.elfinder-cwd-icon-x-markdown {
-  background-position: 0 -1550px;
-}
-.elfinder-cwd-icon-markdown:before,
-.elfinder-cwd-icon-x-markdown:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-perl {
-  background-position: 0 -1600px;
-}
-.elfinder-cwd-icon-x-perl:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-php {
-  background-position: 0 -1650px;
-}
-.elfinder-cwd-icon-x-php:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-python:after,
-.elfinder-cwd-icon-x-python {
-  background-position: 0 -1700px;
-}
-.elfinder-cwd-icon-x-python:after:before,
-.elfinder-cwd-icon-x-python:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-ruby {
-  background-position: 0 -1750px;
-}
-.elfinder-cwd-icon-x-ruby:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-x-sh,
-.elfinder-cwd-icon-x-shellscript {
-  background-position: 0 -1800px;
-}
-.elfinder-cwd-icon-x-sh:before,
-.elfinder-cwd-icon-x-shellscript:before {
-  content: none !important;
-}
-.elfinder-cwd-icon-sql,
-.elfinder-cwd-icon-x-sql,
-.elfinder-cwd-icon-x-sqlite3 {
-  background-position: 0 -1850px;
-}
-.elfinder-cwd-icon-x-eps,
-.elfinder-cwd-icon-svg,
-.elfinder-cwd-icon-svg-xml {
-  background-position: 0 -1900px;
-}
-.elfinder-cwd-icon-xml:after,
-.elfinder-cwd-icon-xml {
-  background-position: 0 -1950px;
+  color: #fbc02d;
 }
 .elfinder-cwd-icon-zip:before,
-.elfinder-cwd-icon-x-zip:before {
-  content: 'zip' !important;
-}
-.elfinder-cwd-icon-x-xz:before {
-  content: 'xz' !important;
-}
-.elfinder-cwd-icon-x-7z-compressed:before {
-  content: '7z' !important;
-}
-.elfinder-cwd-icon-x-gzip:before {
-  content: 'gzip' !important;
-}
-.elfinder-cwd-icon-x-tar:before {
-  content: 'tar' !important;
-}
+.elfinder-cwd-icon-x-zip:before,
+.elfinder-cwd-icon-x-xz:before,
+.elfinder-cwd-icon-x-7z-compressed:before,
+.elfinder-cwd-icon-x-gzip:before,
+.elfinder-cwd-icon-x-tar:before,
 .elfinder-cwd-icon-x-bzip:before,
-.elfinder-cwd-icon-x-bzip2:before {
-  content: 'bzip' !important;
-}
+.elfinder-cwd-icon-x-bzip2:before,
 .elfinder-cwd-icon-x-rar:before,
 .elfinder-cwd-icon-x-rar-compressed:before {
-  content: 'rar' !important;
+  content: '\e822' !important;
+}
+.elfinder-cwd-icon-zip:after,
+.elfinder-cwd-icon-x-zip:after,
+.elfinder-cwd-icon-x-xz:after,
+.elfinder-cwd-icon-x-7z-compressed:after,
+.elfinder-cwd-icon-x-gzip:after,
+.elfinder-cwd-icon-x-tar:after,
+.elfinder-cwd-icon-x-bzip:after,
+.elfinder-cwd-icon-x-bzip2:after,
+.elfinder-cwd-icon-x-rar:after,
+.elfinder-cwd-icon-x-rar-compressed:after {
+  content: none !important;
 }
 /**
  * Toolbar
  */
 .elfinder-toolbar {
-  background: #061325;
+  background: #01060d;
   border-radius: 0;
   border: 0;
-  padding: 5px 0;
-}
-.elfinder-toolbar .elfinder-button-icon {
-  font-size: 20px;
-  color: #ddd;
-  margin-top: -2px;
-}
-.elfinder-toolbar .ui-state-hover .elfinder-button-icon {
-  color: #f7f7f7;
+  padding: 3px 20px;
 }
 .elfinder-buttonset {
   border-radius: 0;
   border: 0;
-  margin: 0 5px;
-  height: 24px;
-  background: transparent !important;
-}
-.elfinder .elfinder-button {
+  margin: 0 3px;
   background: transparent;
-  border-radius: 0;
-  cursor: pointer;
-  color: #e4e4e4;
+  height: unset;
 }
-.elfinder .elfinder-button-text {
+.elfinder-buttonset:nth-child(2) {
+  margin-left: 0;
+}
+.elfinder .elfinder-button:not(.elfinder-button-search) {
+  padding: 6px 4px 3px;
+  background: transparent;
+  overflow: unset;
+}
+.elfinder .elfinder-button:not(.elfinder-button-search).ui-state-hover .elfinder-button-icon {
+  color: #80acf3;
+}
+.elfinder-button-icon {
+  background: none;
+  font-size: 20px !important;
+  color: #afcbf8;
+  overflow: unset;
+}
+.elfinder-button-text {
+  margin: 0 0 0 1px;
   top: -3px;
-  margin-left: 6px;
+  color: #c6dafa;
 }
 .elfinder-toolbar-button-separator {
   border: 0;
-}
-.elfinder-button-menu {
-  border-radius: 2px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-  border: none !important;
-  margin-top: 5px;
-  background: #172839;
-}
-.elfinder-button-menu-item {
-  color: #f5f5f5;
-  padding: 6px 19px;
-}
-.elfinder-button-menu-item.ui-state-hover {
-  color: #f5f5f5 !important;
-  background: #1a3346 !important;
-}
-.elfinder-button-menu-item-separated {
-  border-top: 1px solid #141a28;
-}
-.elfinder-button-menu-item-separated.ui-state-hover {
-  border-top: 1px solid #141a28;
+  height: unset;
 }
 .elfinder .elfinder-button-search {
-  margin: 0 10px;
-  min-height: inherit;
-  overflow: hidden;
-  background: transparent !important;
+  margin: 3px 0;
+  height: unset;
+  min-height: unset;
+}
+.elfinder .elfinder-button-search input[type=text] {
+  border-radius: 2px;
+  border: 0;
+  background: rgba(7, 34, 79, 0.75);
+  font-size: 0.71em;
+  line-height: unset;
+  height: unset;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .elfinder .elfinder-button-search .ui-icon {
-  color: #fff !important;
+  color: rgba(240, 245, 254, 0.75);
+  margin: -6px 4px 0;
 }
-.elfinder .elfinder-button-search .ui-icon.ui-icon-close {
-  margin-top: -6px !important;
-}
-.elfinder .elfinder-button-search input {
-  background: rgba(22, 43, 76, 0.75);
-  border-radius: 2px;
-  box-sizing: content-box;
-  border: 0;
-  margin: 0;
-  padding: 0 23px;
-  height: 24px !important;
-  color: #fff;
-}
-.elfinder .elfinder-button-search .elfinder-button-menu {
-  margin-top: 4px;
-  border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-.elfinder .elfinder-button-search-menu {
-  border-radius: 0;
-  top: 30px !important;
-}
-.elfinder .elfinder-button-search-menu .ui-button {
-  padding: 0.4em 1em !important;
+.elfinder-button-search-menu .ui-button {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 /**
  * Navbar
  */
 .elfinder .elfinder-navbar {
-  background: #2a384d;
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
-  border: none;
+  background: #020a17;
+  border-radius: 0;
+  border: 0;
 }
-.elfinder .elfinder-navbar .elfinder-lock,
-.elfinder .elfinder-navbar .elfinder-perms,
-.elfinder .elfinder-navbar .elfinder-symlink {
-  color: #000;
-  opacity: 0.8;
+.elfinder .elfinder-navbar .ui-resizable-handle {
+  background-image: none;
+  font-size: 12px;
+  color: #c2d7f9;
+}
+.elfinder .elfinder-navbar .ui-resizable-handle:before {
+  position: absolute;
+  top: 50% !important;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 .elfinder-navbar-dir {
-  color: #e6e6e6;
+  color: #c2d7f9;
   cursor: pointer;
   border-radius: 2px;
+  border: 0;
   padding: 5px;
-  border: none;
-}
-.elfinder-navbar-dir .elfinder-navbar-icon {
-  color: #fff;
 }
 .elfinder-navbar-dir.ui-state-hover,
-.elfinder-navbar-dir.ui-state-active.ui-state-hover {
-  background: #17202c;
-  color: #e6e6e6;
-  border: none;
+.elfinder-navbar-dir.ui-state-active {
+  background: #04142e;
+  color: #c2d7f9;
+  border: 0;
 }
-.elfinder-navbar-dir.ui-state-hover .elfinder-navbar-icon,
-.elfinder-navbar-dir.ui-state-active.ui-state-hover .elfinder-navbar-icon {
-  color: #fff;
+.elfinder-navbar-icon {
+  background-image: none !important;
+  font-size: 16px;
+  margin-top: -10px;
 }
-.elfinder-navbar .ui-state-active,
-.elfinder-disabled .elfinder-navbar .ui-state-active {
-  background: #1b2533;
-  color: #e8e8e8 !important;
-  border: none;
+.elfinder-tree .elfinder-spinner {
+  margin: -10px 0 0;
 }
-.elfinder-navbar .ui-state-active.elfinder-navbar-dir .elfinder-navbar-icon,
-.elfinder-disabled .elfinder-navbar .ui-state-active.elfinder-navbar-dir .elfinder-navbar-icon {
-  color: #e8e8e8 !important;
+.elfinder-navbar-arrow {
+  background-image: none !important;
+  font-size: 10px;
+  padding-top: 2px;
+  padding-left: 2px;
 }
 /**
  * Workzone
  */
 .elfinder-workzone {
-  background: #0e1827;
+  background: #030e20;
 }
 .elfinder-cwd-file {
-  color: #ddd;
+  color: #c2d7f9;
+}
+.elfinder-cwd-file .elfinder-cwd-file-wrapper,
+.elfinder-cwd-file .elfinder-cwd-filename {
+  background: none;
+  color: #c2d7f9;
+}
+.elfinder-cwd-file .elfinder-cwd-filename textarea {
+  height: 15px !important;
 }
 .elfinder-cwd-file.ui-state-hover,
 .elfinder-cwd-file.ui-selected.ui-state-hover {
-  background: #1a283c;
-  color: #ddd;
+  background: #07224f;
+  color: #c2d7f9;
+}
+.elfinder-cwd-file.ui-state-hover .elfinder-cwd-filename,
+.elfinder-cwd-file.ui-selected.ui-state-hover .elfinder-cwd-filename {
+  color: #c2d7f9;
 }
 .elfinder-cwd-file.ui-selected {
-  background: #152131;
-  color: #ddd;
+  background: #061c41;
 }
-.elfinder-cwd-filename input,
-.elfinder-cwd-filename textarea {
-  padding: 2px;
-  border-radius: 2px !important;
-  background: #fff;
-  color: #222;
+.elfinder-cwd-file.ui-selected .elfinder-cwd-filename {
+  color: #c2d7f9;
 }
-.elfinder-cwd-filename input:focus,
-.elfinder-cwd-filename textarea:focus {
-  outline: none;
-  border: 1px solid #555;
+.elfinder-cwd-file .ui-state-hover,
+.elfinder-cwd-file .ui-state-active {
+  background: none !important;
+  color: #c2d7f9;
 }
-.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover,
-.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
-.elfinder-disabled .elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
-.elfinder-disabled .elfinder-cwd table td.ui-state-hover,
-.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-active {
-  background: transparent;
-  color: #ddd;
+.elfinder-cwd-file .elfinder-lock {
+  color: #4caf50;
+}
+.elfinder-cwd-file .elfinder-perms,
+.elfinder-cwd-file .elfinder-symlink {
+  color: #ffffff;
+  opacity: unset;
 }
 .elfinder-cwd table {
   padding: 0;
+  border: 0 !important;
+}
+.elfinder-cwd table thead tr {
+  background: none !important;
 }
 .elfinder-cwd table thead td {
   padding: 5px 14px !important;
+  background: #04142e;
+  color: #c2d7f9;
 }
-.elfinder-cwd table tr {
-  border: 0 !important;
+.elfinder-cwd table thead td.ui-state-hover,
+.elfinder-cwd table thead td.ui-state-active {
+  background: #000000 !important;
+  color: #c2d7f9;
 }
-.elfinder-cwd table tr.ui-state-default,
-.elfinder-cwd table tr.ui-widget-content .ui-state-default {
-  background: none;
+.elfinder-cwd table .elfinder-lock {
+  margin-top: 0;
+  opacity: unset;
+  font-size: 12px;
 }
-.elfinder-cwd table tr .ui-state-hover {
-  background: #1a283c;
-  color: #ddd;
+.elfinder-cwd table .elfinder-perms,
+.elfinder-cwd table .elfinder-symlink {
+  font-size: 11px;
 }
-.elfinder-cwd.elfinder-table-header-sticky table {
-  border: 0;
+.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
+  font-size: 8px;
+  top: 7px !important;
+  right: 7px !important;
 }
-.elfinder-cwd .elfinder-lock,
-.elfinder-cwd .elfinder-perms,
-.elfinder-cwd .elfinder-symlink {
-  color: #d8d8d8;
+.elfinder-cwd-view-list thead td .ui-resizable-e {
+  font-size: 9px;
+  top: 8px;
+  right: 0;
 }
-.elfinder-cwd-view-icons .elfinder-lock {
-  top: 0;
+.elfinder-cwd-view-icons .elfinder-cwd-file-wrapper {
+  width: unset;
+  height: unset;
 }
-.elfinder-cwd-view-list thead td .ui-resizable-handle {
-  top: 6px;
+.elfinder-cwd-icon {
+  background-image: none;
+  position: relative;
 }
-.elfinder-cwd-view-list .elfinder-lock,
-.elfinder-cwd-view-list .elfinder-perms,
-.elfinder-cwd-view-list .elfinder-symlink {
-  font-size: 14px/1;
-  opacity: 0.7;
+.elfinder-cwd-icon:before {
+  font-size: 48px;
+  line-height: unset;
+  width: 48px;
+  height: 48px;
+  position: relative;
+  padding: unset;
+  margin-top: -7px;
+  display: inline-block !important;
+  top: 50% !important;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
-.elfinder-cwd-view-list .elfinder-perms {
-  left: inherit;
+.elfinder-cwd-icon:after {
+  color: #fff;
+  font-size: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
 }
-#elfinder-elfinder-cwd-thead td,
-.elfinder-cwd-wrapper-empty .elfinder-cwd-view-list td {
-  background: #010e21;
-  color: #ddd !important;
-  height: 18px;
+.elfinder-cwd-icon.elfinder-cwd-bgurl:before {
+  content: none;
 }
-#elfinder-elfinder-cwd-thead td.ui-state-hover,
-.elfinder-cwd-wrapper-empty .elfinder-cwd-view-list td.ui-state-hover,
-#elfinder-elfinder-cwd-thead td.ui-state-active,
-.elfinder-cwd-wrapper-empty .elfinder-cwd-view-list td.ui-state-active {
-  background: #000308 !important;
+.elfinder-cwd-view-list td .elfinder-cwd-icon {
+  background-image: none;
 }
-#elfinder-elfinder-cwd-thead td.ui-state-active.ui-state-hover,
-.elfinder-cwd-wrapper-empty .elfinder-cwd-view-list td.ui-state-active.ui-state-hover {
-  background: #010812 !important;
+.elfinder-cwd-view-list td .elfinder-cwd-icon:before {
+  font-size: 16px;
+  width: 16px;
+  height: 16px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.elfinder-cwd-view-list td .elfinder-cwd-icon:after {
+  font-size: 8.5px;
+  margin-top: 1px;
 }
 .ui-selectable-helper {
-  border: 1px solid #022861;
-  background-color: rgba(3, 62, 150, 0.38);
-}
-.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash {
-  background-color: #15243a;
-}
-.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file {
-  color: #ddd;
-}
-.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file.ui-state-hover,
-.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file.ui-selected.ui-state-hover {
-  background: #1a283c;
-  color: #ddd;
-}
-.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash .elfinder-cwd-file.ui-selected {
-  background: #152131;
-  color: #ddd;
-}
-.elfinder-info-title .elfinder-cwd-icon:before {
-  top: 32px;
-  display: block;
-  margin: 0 auto;
-}
-.elfinder-info-title .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-  background-color: #313131 !important;
-}
-.elfinder-cwd-view-icons .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-  left: inherit;
-  background-color: #313131;
-}
-.elfinder-cwd-icon:before,
-.elfinder-quicklook .elfinder-cwd-icon:before,
-.elfinder-cwd-size1 .elfinder-cwd-icon:before,
-.elfinder-cwd-size2 .elfinder-cwd-icon:before,
-.elfinder-cwd-size3 .elfinder-cwd-icon:before,
-.elfinder-cwd-size1 .elfinder-cwd-icon.elfinder-cwd-bgurl:before,
-.elfinder-cwd-size2 .elfinder-cwd-icon.elfinder-cwd-bgurl:before,
-.elfinder-cwd-size3 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-  top: 35px;
-  left: 50% !important;
-  position: relative !important;
-  display: block !important;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  max-width: 52px;
-  color: #fff;
-}
-.elfinder .elfinder-cwd-view-icons .elfinder-cwd-bgurl:after,
-.elfinder .elfinder-quicklook-info-wrapper .elfinder-cwd-bgurl:after {
-  display: none;
-}
-.elfinder-cwd-size1 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-  top: 53px;
-  -webkit-transform: scale(1.32) translateX(-50%);
-          transform: scale(1.32) translateX(-50%);
-}
-.elfinder-cwd-size2 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-  top: 74px;
-  -webkit-transform: scale(1.53) translateX(-50%);
-          transform: scale(1.53) translateX(-50%);
-}
-.elfinder-cwd-size3 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-  top: 87px;
-  -webkit-transform: scale(2.22) translateX(-50%);
-          transform: scale(2.22) translateX(-50%);
+  background-color: rgba(20, 96, 219, 0.38);
+  border: 1px solid #1460db;
 }
 /**
  * Status Bar
  */
 .elfinder .elfinder-statusbar {
-  background: #061325;
   border-radius: 0;
   border: 0;
-  color: #cfd2d4;
-  padding-top: 5px;
-}
-.elfinder-path,
-.elfinder-stat-size {
-  margin: 0 15px;
+  background: #01060d;
+  color: #c2d7f9;
+  padding: 5px 20px;
+  border-bottom: 1px solid #01060d;
 }
 /**
- * Input & Select
+ * Forms
  */
-.elfinder input,
+.elfinder label.ui-state-hover {
+  background: none;
+  color: inherit;
+}
+.elfinder input:not([type="checkbox"]),
 .elfinder select,
 .elfinder textarea {
-  padding: 4px;
-  color: #ddd;
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 0;
-  font-weight: normal;
+  color: #f1f1f1;
+  background: #367bec;
+  border-radius: 2px;
   border: 0;
-  box-shadow: none !important;
+  padding: 5px 4px;
+  vertical-align: middle;
 }
-.elfinder input.ui-state-hover,
+.elfinder input:not([type="checkbox"]).ui-state-hover,
 .elfinder select.ui-state-hover,
 .elfinder textarea.ui-state-hover,
-.elfinder input:focus,
+.elfinder input:not([type="checkbox"]):focus,
 .elfinder select:focus,
 .elfinder textarea:focus {
-  background: rgba(0, 0, 0, 0.8) !important;
-  color: #ddd !important;
-  border: 0 !important;
+  background: #367bec;
+  color: #f1f1f1;
+  border: 0;
+}
+.elfinder input:not([type="checkbox"])::-webkit-input-placeholder, .elfinder select::-webkit-input-placeholder, .elfinder textarea::-webkit-input-placeholder {
+  color: #f1f1f1;
+}
+.elfinder input:not([type="checkbox"])::placeholder,
+.elfinder select::placeholder,
+.elfinder textarea::placeholder {
+  color: #f1f1f1;
 }
 .elfinder input[type="checkbox"] {
   background: transparent;
   position: relative;
-  border: none;
+  border: 0;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
-  cursor: pointer;
-  padding: 0;
   margin: -2px 3px 0 0;
   vertical-align: middle;
-}
-.elfinder input[type="checkbox"].ui-state-hover {
-  background: none !important;
 }
 .elfinder input[type="checkbox"]:focus {
   outline: none;
 }
 .elfinder input[type="checkbox"]:focus:after {
-  border-color: #2196f3;
+  border-color: #367bec;
 }
 .elfinder input[type="checkbox"]:after {
   content: "";
@@ -1441,9 +1398,7 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
 .elfinder input[type="checkbox"]:checked:before {
   content: "";
   position: absolute;
-  top: 0;
   left: 4px;
-  display: table;
   width: 3px;
   height: 9px;
   border: 2px solid #fff;
@@ -1453,310 +1408,286 @@ div.elfinder-cwd-wrapper-list .ui-icon-grip-dotted-vertical {
           transform: rotate(45deg);
 }
 .elfinder input[type="checkbox"]:checked:after {
-  background-color: #2196f3;
-  border-color: #2196f3;
+  background-color: #367bec;
+  border-color: #367bec;
 }
-/**
- * Buttons
- */
+.elfinder button,
 .elfinder .ui-button,
-.elfinder .ui-button:active,
-.elfinder .ui-button.ui-state-default {
-  display: inline-block;
-  font-weight: normal;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  white-space: nowrap;
-  border-radius: 3px;
+.ace_optionsMenuEntry button {
+  border-radius: 2px;
+  border: 0;
   text-transform: uppercase;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4) !important;
-  transition: all 0.4s;
-  background: #ddd;
-  color: #222;
-  border: none;
-  padding: 7px 6px;
+  background: #367bec;
+  color: #fff;
+  padding: 5px 7px;
 }
-.elfinder .ui-button .ui-icon,
-.elfinder .ui-button:active .ui-icon,
-.elfinder .ui-button.ui-state-default .ui-icon {
-  color: #222;
-}
+.elfinder button:hover,
 .elfinder .ui-button:hover,
-.elfinder a.ui-button:active,
-.elfinder .ui-button:active,
-.elfinder .ui-button:focus,
+.elfinder button.ui-state-hover,
 .elfinder .ui-button.ui-state-hover,
-.elfinder .ui-button.ui-state-active {
-  background: #3498db !important;
-  color: #fff !important;
-  border: none;
-}
-.elfinder .ui-button:hover .ui-icon,
-.elfinder a.ui-button:active .ui-icon,
-.elfinder .ui-button:active .ui-icon,
-.elfinder .ui-button:focus .ui-icon,
-.elfinder .ui-button.ui-state-hover .ui-icon,
-.elfinder .ui-button.ui-state-active .ui-icon {
+.ace_optionsMenuEntry button:hover {
+  background: #236fea;
   color: #fff;
-}
-.elfinder .ui-button.ui-state-active:hover {
-  background: #217dbb;
-  color: #fff;
-  border: none;
-}
-.elfinder .ui-button:focus {
-  outline: none !important;
-}
-.elfinder .ui-controlgroup-horizontal .ui-button {
-  border-radius: 0;
   border: 0;
 }
-.elfinder input:not([type="checkbox"]),
-.elfinder .elfinder-resize-preset-container .ui-button {
-  height: 21px;
+.elfinder button.ui-state-active,
+.elfinder .ui-button.ui-state-active,
+.ace_optionsMenuEntry button[ace_selected_button=true] {
+  background: #649af1;
+}
+.elfinder .ui-slider-horizontal {
+  height: 3px;
+  background-color: #367bec !important;
+}
+.elfinder .ui-slider-horizontal .ui-slider-handle {
+  background-color: #1f6cea;
+  border-radius: 100%;
+  border: 0;
+  margin-top: -3px;
 }
 /**
  * Context Menu
  */
 .elfinder .elfinder-contextmenu,
-.elfinder .elfinder-contextmenu-sub {
-  border-radius: 2px;
+.elfinder .elfinder-contextmenu-sub,
+.elfinder-button-menu {
+  border-radius: 0;
+  border: 0 !important;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-  border: none;
-  background-color: #172839;
+  background: #051837;
+}
+.elfinder .elfinder-contextmenu-item,
+.elfinder .elfinder-contextmenu-sub-item,
+.elfinder-button-menu-item {
+  color: #d9e6fb;
+}
+.elfinder .elfinder-contextmenu-item.ui-state-hover,
+.elfinder .elfinder-contextmenu-sub-item.ui-state-hover,
+.elfinder-button-menu-item.ui-state-hover,
+.elfinder .elfinder-contextmenu-item.ui-state-active,
+.elfinder .elfinder-contextmenu-sub-item.ui-state-active,
+.elfinder-button-menu-item.ui-state-active {
+  color: #d9e6fb;
+  background: rgba(0, 0, 0, 0.5);
+}
+.elfinder .elfinder-contextmenu-item .elfinder-button-icon,
+.elfinder .elfinder-contextmenu-sub-item .elfinder-button-icon,
+.elfinder-button-menu-item .elfinder-button-icon {
+  font-size: 14px !important;
+  color: #d9e6fb;
+}
+.elfinder .elfinder-contextmenu-item .elfinder-button-icon.ui-state-disabled,
+.elfinder .elfinder-contextmenu-sub-item .elfinder-button-icon.ui-state-disabled,
+.elfinder-button-menu-item .elfinder-button-icon.ui-state-disabled {
+  background-image: none;
+}
+.elfinder .elfinder-contextmenu .ui-icon,
+.elfinder .elfinder-contextmenu-sub .ui-icon {
+  margin-top: -5px;
 }
 .elfinder .elfinder-contextmenu-separator,
-.elfinder .elfinder-contextmenu-sub-separator {
-  border-top: 1px solid #141a28;
+.elfinder-button-menu-item-separated,
+.elfinder-button-menu-item-separated.ui-state-hover {
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
-.elfinder .elfinder-contextmenu-item {
-  color: #f5f5f5;
-  padding: 5px 30px;
+.elfinder-contextmenu-header {
+  border-radius: 0;
+  border: 0;
+  background: none;
+  color: #d9e6fb;
 }
-.elfinder .elfinder-contextmenu-item.ui-state-hover {
-  background-color: #1a3346;
-  color: #f5f5f5;
+.elfinder .elfinder-contextmenu-extra-icon {
+  width: 16px;
 }
-.elfinder .elfinder-contextmenu-item.ui-state-active {
-  background-color: #2196f3;
-  color: #fff;
+.elfinder .elfinder-contextmenu-extra-icon a {
+  display: block;
+}
+.elfinder .elfinder-contextmenu-extra-icon a,
+.elfinder .elfinder-contextmenu-extra-icon span {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+}
+.elfinder .elfinder-contextmenu-extra-icon.elfinder-button-icon span:before {
+  color: #d9e6fb;
+  line-height: 2;
+}
+.elfinder .elfinder-contextmenu-arrow {
+  background-image: none;
+  font-size: 9px !important;
+  top: 15px;
+}
+.elfinder .elfinder-contextmenu-ltr .elfinder-contextmenu-arrow {
+  right: 2px;
+}
+.elfinder-contextsubmenu-item-icon .elfinder-contextmenu-icon {
+  width: 16px;
+  height: 16px;
 }
 /**
  * Dialogs
  */
-.elfinder .elfinder-dialog {
-  border-radius: 0;
-  border: 0;
-  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
-  background-color: #172839;
-}
-.elfinder .elfinder-dialog .ui-dialog-content[id*="edit-elfinder-elfinder-"] {
-  padding: 0;
-}
-.elfinder .elfinder-dialog .ui-tabs {
-  border-radius: 0;
-  border: 0;
-  padding: 0;
-  background-color: transparent;
-}
-.elfinder .elfinder-dialog .ui-tabs-nav {
-  border-radius: 0;
-  border: 0;
-  background: transparent;
-  padding: 4px 2px;
-}
-.elfinder .elfinder-dialog .ui-tabs-nav li {
-  border: 0;
-  font-weight: normal;
-  background: transparent;
-  margin: 0;
-  padding: 0;
-}
-.elfinder .elfinder-dialog .ui-tabs-nav li a {
-  padding: 3px 5px;
-}
-.elfinder .elfinder-dialog .ui-tabs-nav .ui-tabs-selected a,
-.elfinder .elfinder-dialog .ui-tabs-nav .ui-state-active a,
-.elfinder .elfinder-dialog .ui-tabs-nav .ui-state-hover a {
-  box-shadow: inset 0 -2px 0 #3498db;
-  color: #3498db;
-}
-.elfinder .elfinder-dialog .ui-tabs .elfinder-tabstop.ui-state-hover {
-  background: transparent;
-  box-shadow: inset 0 -2px 0 #3498db;
-  color: #3498db;
-}
-.elfinder .elfinder-dialog label.ui-state-hover {
-  background: transparent;
-  color: #e7e7e7;
-}
-.elfinder .elfinder-dialog .ui-resizable-se {
-  color: #000000 !important;
-}
-.elfinder .elfinder-dialog .elfinder-info-tb {
-  margin: 0;
-}
-.elfinder .elfinder-dialog .elfinder-info-title {
-  margin-bottom: 5px;
-}
-.std42-dialog .ui-dialog-titlebar {
-  background: #0f1f2f;
-  border-radius: 0;
-  border: 0;
-}
-.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-button .ui-icon {
-  border-color: inherit;
-  transition: 0.2s ease-out;
-  opacity: 0.8;
-  color: #fff;
-  width: auto;
-  height: auto;
-  font-size: 12px;
-  padding: 3px;
-}
-.std42-dialog .elfinder-cwd-icon:before {
-  color: #e3e3e3;
-}
-.std42-dialog .ui-dialog-buttonpane button {
-  margin: -1px 2px 2px;
-  padding: 7px 6px;
-}
-.std42-dialog .ui-dialog-buttonpane button span.ui-icon {
-  padding: 0;
-}
-.std42-dialog .ui-dialog-buttonpane .ui-dialog-buttonset.elfinder-edit-extras select {
-  margin-top: 0;
-}
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
-.std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon {
-  background-color: #f44336;
-}
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full .ui-icon,
-.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full:hover .ui-icon {
-  background-color: #4caf50;
-}
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize .ui-icon,
-.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize:hover .ui-icon {
-  background-color: #ff9800;
-}
-.elfinder-dialog-title {
-  color: #f1f1f1;
-}
-.elfinder .ui-widget-content {
-  background: #172839;
-  color: #e7e7e7;
-}
-.elfinder .ui-widget-content a {
-  color: #dddddd;
-}
-.elfinder-upload-dialog-wrapper .elfinder-upload-dirselect {
-  width: inherit;
-  height: inherit;
-  padding: 5px;
-  margin-left: 5px;
-  color: #222;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-  background: #fff;
-  bottom: 4px;
-  border-radius: 2px;
-}
-.elfinder-upload-dialog-wrapper .elfinder-upload-dirselect.ui-state-hover {
-  background: #3498db !important;
-  color: #fff !important;
-  outline: none;
-}
-.elfinder-upload-dialog-wrapper .elfinder-upload-dirselect .elfinder-button-icon {
-  font-size: 1em;
-}
-.elfinder-upload-dialog-wrapper .ui-button {
-  padding: 0.4em 3px;
-  margin: 0 -15px 0 19px;
-}
-.elfinder-upload-dropbox {
-  border: 2px dashed #bbb;
-}
-.elfinder-upload-dropbox:focus {
-  outline: none;
-}
-.elfinder-upload-dropbox.ui-state-hover {
-  background: #1e354b;
-  border: 2px dashed #bbb;
-}
-.elfinder-dialog-resize .elfinder-resize-control-panel {
-  margin-left: -5px;
-}
-.elfinder-dialog-resize .elfinder-resize-control-panel .ui-button {
-  height: inherit;
-  margin-bottom: 5px;
-}
-.elfinder-help .elfinder-help-shortcuts {
-  border: 0;
-  background-color: transparent;
-}
-.elfinder .ui-slider.ui-slider-horizontal {
-  height: 2px;
-  border: 0;
-  background-color: #bababa !important;
-}
-.elfinder .ui-slider .ui-slider-handle {
-  background-image: none;
-  background-color: #5d5858;
-  border-radius: 50%;
-  border: 0;
-  margin-top: -3px;
-}
-.elfinder .ui-slider .ui-slider-handle.ui-state-hover {
-  background: #5d5858 !important;
-  box-shadow: none !important;
-  border-radius: 50%;
-  cursor: pointer;
-}
-/**
- * Quick Look
- */
+.elfinder-dialog,
 .elfinder-quicklook {
-  background: #232323;
-  border-radius: 2px;
+  border-radius: 0;
+  border: 0 !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  background: #051837;
+  color: #d9e6fb;
 }
-.elfinder-quicklook-navbar {
-  height: 27px;
+.elfinder-dialog a,
+.elfinder-quicklook a {
+  color: #c2d7f9;
 }
-.elfinder-quicklook-titlebar {
-  background: inherit;
+.elfinder-dialog .ui-dialog-titlebar,
+.elfinder-quicklook .ui-dialog-titlebar {
+  border-radius: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #d9e6fb;
 }
-.elfinder-quicklook-titlebar-icon,
-.elfinder-quicklook-titlebar-icon .ui-icon {
+.elfinder-dialog .ui-widget-content,
+.elfinder-quicklook .ui-widget-content {
+  border-radius: 0;
+  border: 0;
   background: transparent;
-  color: #fff;
+  color: #d9e6fb;
 }
-.elfinder-quicklook-fullscreen .elfinder-quicklook-navbar {
-  border: inherit;
-  opacity: inherit;
-  border-radius: 4px;
-  background: rgba(66, 66, 66, 0.73);
+.elfinder-dialog .elfinder-titlebar-button,
+.elfinder-quicklook .elfinder-titlebar-button {
+  background: none;
+}
+.elfinder-dialog .elfinder-titlebar-button .ui-icon,
+.elfinder-quicklook .elfinder-titlebar-button .ui-icon {
+  border: 0;
+  color: #d9e6fb;
+  width: unset !important;
+  height: unset !important;
+}
+.elfinder-dialog .elfinder-titlebar-button .ui-icon:hover,
+.elfinder-quicklook .elfinder-titlebar-button .ui-icon:hover {
+  opacity: 80;
+}
+.elfinder-dialog .elfinder-cwd-icon:before,
+.elfinder-quicklook .elfinder-cwd-icon:before {
+  left: 50% !important;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+.elfinder-dialog .elfinder-cwd-icon:after,
+.elfinder-quicklook .elfinder-cwd-icon:after {
+  left: 50% !important;
+}
+.elfinder-dialog .ui-dialog-titlebar-close .ui-icon:hover,
+.elfinder-titlebar-button .elfinder-icon-close:hover {
+  color: #f44336;
+}
+.elfinder-dialog .elfinder-titlebar-minimize .ui-icon:hover,
+.elfinder-titlebar-button .elfinder-icon-minimize:hover {
+  color: #ff9800;
+}
+.elfinder-dialog .elfinder-titlebar-full .ui-icon:hover,
+.elfinder-titlebar-button .elfinder-icon-full:hover {
+  color: #4caf50;
+}
+.elfinder-dialog .ui-tabs .ui-tabs-nav {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #93b8f5;
+  padding: 0;
+}
+.elfinder-dialog .ui-tabs .ui-tabs-tab {
+  background: none;
+  border-radius: 0;
+  border: 0;
+}
+.elfinder-dialog .ui-tabs .ui-tabs-tab a {
+  color: #93b8f5;
+  margin-bottom: -1px;
+}
+.elfinder-dialog .ui-tabs .ui-tabs-tab.ui-state-hover a {
+  color: #649af1;
+}
+.elfinder-dialog .ui-tabs .ui-tabs-tab.ui-state-active a {
+  color: #367bec;
+  border-bottom: 3px solid #367bec;
+}
+.elfinder-dialog .elfinder-dialog-icon {
+  background: none;
+  font-size: 32px;
+  margin-top: -23px;
+}
+.elfinder-dialog .elfinder-info-tb {
+  margin: 1em 0;
+}
+.elfinder-dialog .elfinder-edit-editor {
+  padding: 0;
+}
+.elfinder-dialog .elfinder-edit-editor textarea {
+  border-radius: 0;
+  box-shadow: none;
+  background: #484848;
+  padding: unset;
+}
+.elfinder-dialog .ui-dialog-buttonpane select,
+.elfinder-dialog .ui-dialog-buttonpane .ui-button {
+  margin-top: 0 !important;
+  margin-bottom: 0;
+  padding: 5px 6px;
+}
+.elfinder-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+  padding-top: 0;
+}
+.elfinder-dialog .ui-dialog-buttonpane .ui-dialog-buttonset.elfinder-edit-extras {
+  margin: 0 0.4em;
+}
+.elfinder-dialog .ui-dialog-buttonpane .ui-dialog-buttonset.elfinder-edit-extras select {
+  padding: 5.2px 5px;
+}
+.elfinder-dialog .ui-dialog-buttonpane .ui-button-icon {
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  margin-top: 0;
+  margin-left: 0;
+}
+.elfinder-dialog .elfinder-upload-dropbox {
+  border-color: rgba(0, 0, 0, 0.5);
+}
+.elfinder-dialog .elfinder-upload-dropbox.ui-state-hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+.elfinder-dialog .elfinder-upload-dirselect {
+  background: none;
+}
+.elfinder-dialog.elfinder-dialog-resize .ui-button {
+  margin: 3px;
 }
 .elfinder .elfinder-navdock {
   border: 0;
 }
-.std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:hover .ui-icon,
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon,
-.elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-close:hover,
-.elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-close,
-.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize:hover .ui-icon,
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-minimize .ui-icon,
-.elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-minimize:hover,
-.elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-minimize,
-.std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full:hover .ui-icon,
-.elfinder-mobile .std42-dialog .ui-dialog-titlebar .elfinder-titlebar-full .ui-icon,
-.elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-full:hover,
-.elfinder-mobile .elfinder-quicklook-titlebar-icon .ui-icon.elfinder-icon-full {
-  background-image: none;
-}
-.elfinder-preference-checkboxes label {
-  margin: 4px;
-}
 .elfinder-notify-cancel .ui-state-hover {
-  background: transparent;
-  color: #fff;
+  background: none;
+  color: #ffffff;
+}
+.elfinder-quicklook-navbar-icon {
+  background: none;
+  font-size: 24px;
+}
+.elfinder-quicklook-info-data {
+  color: #d9e6fb;
+}
+.elfinder-quicklook-preview-text-wrapper {
+  background: #c4c4c4;
+}
+/**
+ * Ace Editor
+ */
+#ace_settingsmenu {
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
+  background-color: #041229;
+  color: #c2d7f9;
+}
+.ace_optionsMenuEntry:hover {
+  background-color: transparent;
 }

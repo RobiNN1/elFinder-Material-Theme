@@ -2,28 +2,88 @@
  * Context Menu
  */
 .elfinder .elfinder-contextmenu,
-.elfinder .elfinder-contextmenu-sub {
-    border-radius: 2px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-    border: none;
-    background-color: @context-menu-bg;
+.elfinder .elfinder-contextmenu-sub,
+.elfinder-button-menu {
+    border-radius: 0;
+    border: 0 !important;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, .3);
+    background: @context-menu-bg;
 
-    &-separator {
-        border-top: 1px solid @context-menu-separator;
+    &-item {
+        color: @context-menu-item-color;
+
+        &.ui-state-hover,
+        &.ui-state-active {
+            color: @context-menu-item-color;
+            background: @context-menu-item-bg-hover;
+        }
+
+        .elfinder-button-icon {
+            font-size: 14px !important;
+            color: @context-menu-item-color;
+
+            &.ui-state-disabled {
+                background-image: none;
+            }
+        }
     }
 }
 
-.elfinder .elfinder-contextmenu-item {
-    color: @context-menu-item-color;
-    padding: 5px 30px;
+.elfinder .elfinder-contextmenu,
+.elfinder .elfinder-contextmenu-sub {
+    .ui-icon {
+        margin-top: -5px;
+    }
+}
 
-    &.ui-state-hover {
-        background-color: @context-menu-item-bg-hover;
-        color: @context-menu-item-color-hover;
+.elfinder .elfinder-contextmenu-separator,
+.elfinder-button-menu-item-separated,
+.elfinder-button-menu-item-separated.ui-state-hover {
+    border-top: 1px solid rgba(0, 0, 0, .4);
+}
+
+.elfinder-contextmenu-header {
+    .remove-borders;
+    background: none;
+    color: @context-menu-item-color;
+}
+
+.elfinder .elfinder-contextmenu-extra-icon {
+    width: 16px;
+
+    a {
+        display: block;
     }
 
-    &.ui-state-active {
-        background-color: #2196f3;
-        color: #fff;
+    a,
+    span {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+    }
+
+    &.elfinder-button-icon {
+        span:before {
+            color: @context-menu-item-color;
+            line-height: 2;
+        }
+    }
+}
+
+.elfinder .elfinder-contextmenu-arrow {
+    background-image: none;
+    font-size: 9px !important;
+    top: 15px;
+}
+
+.elfinder .elfinder-contextmenu-ltr .elfinder-contextmenu-arrow {
+    right: 2px;
+}
+
+.elfinder-contextsubmenu-item-icon {
+    // Keep icons for 3rd party editors
+    .elfinder-contextmenu-icon {
+        width: 16px;
+        height: 16px;
     }
 }

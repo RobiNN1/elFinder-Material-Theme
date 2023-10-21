@@ -10,40 +10,58 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    * {
+        outline: 0 !important;
+    }
+
+    // Remove background image from jQuery UI
+    .ui-button, .ui-icon, .ui-widget-overlay, .ui-widget-shadow,
+    .ui-widget-header, .ui-widget-header .ui-icon, .ui-widget-content, .ui-widget-content .ui-icon,
+    .ui-state-default, .ui-state-default .ui-icon, .ui-widget-header .ui-state-default, .ui-widget-content .ui-state-default,
+    .ui-state-hover, .ui-state-hover .ui-icon, .ui-widget-header .ui-state-hover, .ui-widget-content .ui-state-hover,
+    .ui-state-active, .ui-state-active .ui-icon, .ui-widget-header .ui-state-active, .ui-widget-content .ui-state-active,
+    .ui-state-focus, .ui-state-focus .ui-icon, .ui-widget-header .ui-state-focus, .ui-widget-content .ui-state-focus {
+        background-image: none;
+    }
+
     &.ui-widget.ui-widget-content {
         font-family: @base-font;
-        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+        box-shadow: 0 1px 8px rgba(0, 0, 0, .6);
         .remove-borders;
     }
 
-    * {
-        outline: 0 !important;
+    fieldset {
+        border-color: rgba(0, 0, 0, .4) !important;
     }
 }
 
 /**
  * Loading
  */
+@keyframes rotate-animation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .elfinder-info-spinner,
 .elfinder-navbar-spinner,
 .elfinder-button-icon-spinner {
-    background: url("@{images}loading.svg") center center no-repeat !important;
-    width: 16px;
-    height: 16px;
+    font-size: 16px;
+    background: none;
+
+    &:before {
+        display: inline-block;
+        animation: rotate-animation 1s linear infinite;
+    }
 }
 
 /**
  * Progress Bar
  */
-@-webkit-keyframes progress-animation {
-    from {
-        background-position: 1rem 0;
-    }
-    to {
-        background-position: 0 0;
-    }
-}
-
 @keyframes progress-animation {
     from {
         background-position: 1rem 0;
@@ -54,19 +72,14 @@
 }
 
 .elfinder-notify-progressbar {
-    border: 0;
+    .remove-borders;
+    background: rgba(0, 0, 0, .6);
 }
 
-.elfinder-notify-progress,
-.elfinder-notify-progressbar {
-    border-radius: 0;
-}
-
-.elfinder-notify-progress,
-.elfinder-resize-spinner {
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+.elfinder-notify-progress {
+    .remove-borders;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
     background-size: 1rem 1rem;
-    -webkit-animation: progress-animation 1s linear infinite;
     animation: progress-animation 1s linear infinite;
     background-color: #0275d8;
     height: 1rem;
@@ -75,89 +88,33 @@
 /**
  * Toast Notification
  */
+.toast-variant(@name, @color) {
+    > .toast-@{name} {
+        background-image: none !important;
+        background-color: @color;
+
+        button.ui-button {
+            background-color: lighten(@color, 15%);
+        }
+    }
+}
+
 .elfinder .elfinder-toast {
     > div {
-        background-color: #323232 !important;
-        color: #d6d6d6;
         box-shadow: none;
-        opacity: inherit;
-        padding: 10px 60px;
-
-        button.ui-button {
-            color: #fff;
-        }
+        opacity: unset;
+        color: #fff;
 
         &:before {
-            font-size: 37px;
+            font-size: 24px;
             position: absolute;
-            left: 5px;
-            top: 0;
+            left: 10px;
+            line-height: 20px;
         }
     }
 
-    > .toast-info {
-        button.ui-button {
-            background-color: @color-info;
-        }
-    }
-
-    > .toast-error {
-        button.ui-button {
-            background-color: @color-error;
-        }
-    }
-
-    > .toast-success {
-        button.ui-button {
-            background-color: @color-success;
-        }
-    }
-
-    > .toast-warning {
-        button.ui-button {
-            background-color: @color-warning;
-        }
-    }
-}
-
-.elfinder-toast-msg {
-    font-family: @base-font;
-    font-size: 17px;
-}
-
-/**
- * For Ace Editor
- */
-#ace_settingsmenu {
-    font-family: @base-font;
-    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6) !important;
-    background-color: #1d2736 !important;
-    color: #e6e6e6 !important;
-}
-
-#ace_settingsmenu,
-#kbshortcutmenu {
-    padding: 0;
-}
-
-.ace_optionsMenuEntry {
-    padding: 5px 10px;
-}
-
-.ace_optionsMenuEntry:hover {
-    background-color: rgb(17, 23, 33);
-}
-
-.ace_optionsMenuEntry label {
-    font-size: 13px;
-}
-
-#ace_settingsmenu input[type="text"],
-#ace_settingsmenu select {
-    margin: 1px 2px 2px;
-    padding: 2px 5px;
-    border-radius: 3px;
-    border: 0;
-    background: rgba(9, 53, 121, 0.75);
-    color: white !important;
+    .toast-variant(info, #0d47a1);
+    .toast-variant(error, #b71c1c);
+    .toast-variant(success, #1b5e20);
+    .toast-variant(warning, #f57f17);
 }

@@ -6,195 +6,159 @@
 }
 
 .elfinder-cwd-file {
-    color: @cwd-file-color;
+    color: @file-color;
+
+    .elfinder-cwd-file-wrapper,
+    .elfinder-cwd-filename {
+        background: none;
+        color: @file-color;
+    }
+
+    .elfinder-cwd-filename textarea {
+        height: 15px !important;
+    }
 
     &.ui-state-hover,
     &.ui-selected.ui-state-hover {
-        background: @cwd-file-hover-bg;
-        color: @cwd-file-hover-color;
+        background: @file-bg-hover;
+        color: @file-color-hover;
+
+        .elfinder-cwd-filename {
+            color: @file-color-hover;
+        }
     }
 
     &.ui-selected {
-        background: darken(@cwd-file-hover-bg, 3%);
-        color: @cwd-file-color;
-    }
-}
+        background: darken(@file-bg-hover, 3%);
 
-.elfinder-cwd-filename {
-    input,
-    textarea {
-        padding: 2px;
-        border-radius: 2px !important;
-        background: #fff;
-        color: #222;
-
-        &:focus {
-            outline: none;
-            border: 1px solid #555;
+        .elfinder-cwd-filename {
+            color: @file-color-hover;
         }
     }
-}
 
-.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-hover,
-.elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
-.elfinder-disabled .elfinder-cwd-view-icons .elfinder-cwd-file .elfinder-cwd-filename.ui-state-hover,
-.elfinder-disabled .elfinder-cwd table td.ui-state-hover,
-.elfinder-cwd-view-icons .elfinder-cwd-file .ui-state-active {
-    background: transparent;
-    color: @cwd-file-hover-color;
+    .ui-state-hover,
+    .ui-state-active {
+        background: none !important;
+        color: @file-color-hover;
+    }
+
+    .elfinder-lock {
+        color: #4caf50;
+    }
+
+    .elfinder-perms,
+    .elfinder-symlink {
+        color: lighten(@file-color, 20%);
+        opacity: unset;
+    }
 }
 
 .elfinder-cwd {
     table {
         padding: 0;
+        border: 0 !important;
 
         thead {
+            tr {
+                background: none !important;
+            }
+
             td {
                 padding: 5px 14px !important;
+                background: @thead-bg;
+                color: @thead-color;
+
+                &.ui-state-hover,
+                &.ui-state-active {
+                    background: darken(@thead-bg, 10%) !important;
+                    color: @thead-color;
+                }
             }
         }
 
-        tr {
-            border: 0 !important;
-
-            &.ui-state-default,
-            &.ui-widget-content .ui-state-default {
-                background: none;
-            }
-
-            .ui-state-hover {
-                background: @cwd-file-hover-bg;
-                color: @cwd-file-hover-color;
-            }
+        .elfinder-lock {
+            margin-top: 0;
+            opacity: unset;
+            font-size: 12px;
         }
-    }
 
-    &.elfinder-table-header-sticky table {
-        border: 0;
-    }
-
-    .elfinder-lock,
-    .elfinder-perms,
-    .elfinder-symlink {
-        color: @cwd-icons-color;
+        .elfinder-perms,
+        .elfinder-symlink {
+            font-size: 11px;
+        }
     }
 }
 
-.elfinder-cwd-view-icons {
-    .elfinder-lock {
-        top: 0;
+.elfinder-cwd-wrapper-list tr.ui-state-default td span.ui-icon {
+    font-size: 8px;
+    top: 7px !important;
+    right: 7px !important;
+}
+
+.elfinder-cwd-view-list thead td {
+    .ui-resizable-e {
+        font-size: 9px;
+        top: 8px;
+        right: 0;
     }
 }
 
-.elfinder-cwd-view-list {
-    thead td .ui-resizable-handle {
-        top: 6px;
+.elfinder-cwd-view-icons .elfinder-cwd-file-wrapper {
+    width: unset;
+    height: unset;
+}
+
+.elfinder-cwd-icon {
+    background-image: none;
+    position: relative;
+
+    &:before {
+        font-size: 48px;
+        line-height: unset;
+        width: 48px;
+        height: 48px;
+        position: relative;
+        padding: unset;
+        margin-top: -7px;
+        display: inline-block !important;
+        top: 50% !important;
+        transform: translateY(-50%);
     }
 
-    .elfinder-lock,
-    .elfinder-perms,
-    .elfinder-symlink {
-        font-size: 14px/1;
-        opacity: .7;
+    &:after {
+        color: #fff;
+        font-size: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
     }
 
-    .elfinder-perms {
-        left: inherit;
+    &.elfinder-cwd-bgurl {
+        &:before {
+            content: none;
+        }
     }
 }
 
-#elfinder-elfinder-cwd-thead,
-.elfinder-cwd-wrapper-empty .elfinder-cwd-view-list {
-    td {
-        background: @cwd-thead;
-        color: @cwd-thead-color !important;
-        height: 18px;
+.elfinder-cwd-view-list td .elfinder-cwd-icon {
+    background-image: none;
 
-        &.ui-state-hover,
-        &.ui-state-active {
-            background: darken(@cwd-thead, 5%) !important;
-        }
+    &:before {
+        font-size: 16px;
+        width: 16px;
+        height: 16px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
 
-        &.ui-state-active.ui-state-hover {
-            background: darken(@cwd-thead, 3%) !important;
-        }
+    &:after {
+        font-size: 8.5px;
+        margin-top: 1px;
     }
 }
 
 .ui-selectable-helper {
-    border: 1px solid @selectable-border;
     background-color: @selectable-bg;
-}
-
-.elfinder-cwd-wrapper.elfinder-cwd-wrapper-trash {
-    background-color: @workzone-trash-bg;
-
-    .elfinder-cwd-file {
-        color: @workzone-trash-color;
-
-        &.ui-state-hover,
-        &.ui-selected.ui-state-hover {
-            background: @cwd-file-hover-bg;
-            color: @cwd-file-hover-color;
-        }
-
-        &.ui-selected {
-            background: darken(@cwd-file-hover-bg, 3%);
-            color: @cwd-file-color;
-        }
-    }
-}
-
-.elfinder-info-title .elfinder-cwd-icon {
-    &:before {
-        top: 32px;
-        display: block;
-        margin: 0 auto;
-    }
-
-    &.elfinder-cwd-bgurl:before {
-        background-color: #313131 !important;
-    }
-}
-
-.elfinder-cwd-view-icons .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-    left: inherit;
-    background-color: #313131;
-}
-
-.elfinder-cwd-icon:before,
-.elfinder-quicklook .elfinder-cwd-icon:before,
-.elfinder-cwd-size1 .elfinder-cwd-icon:before,
-.elfinder-cwd-size2 .elfinder-cwd-icon:before,
-.elfinder-cwd-size3 .elfinder-cwd-icon:before,
-.elfinder-cwd-size1 .elfinder-cwd-icon.elfinder-cwd-bgurl:before,
-.elfinder-cwd-size2 .elfinder-cwd-icon.elfinder-cwd-bgurl:before,
-.elfinder-cwd-size3 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-    top: 35px;
-    left: 50% !important;
-    position: relative !important;
-    display: block !important;
-    transform: translateX(-50%);
-    max-width: 52px;
-    color: #fff;
-}
-
-.elfinder .elfinder-cwd-view-icons .elfinder-cwd-bgurl:after,
-.elfinder .elfinder-quicklook-info-wrapper .elfinder-cwd-bgurl:after {
-    display: none;
-}
-
-.elfinder-cwd-size1 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-    top: 53px;
-    transform: scale(1.32) translateX(-50%);
-}
-
-.elfinder-cwd-size2 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-    top: 74px;
-    transform: scale(1.53) translateX(-50%);
-}
-
-.elfinder-cwd-size3 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
-    top: 87px;
-    transform: scale(2.22) translateX(-50%);
+    border: 1px solid @selectable-border;
 }

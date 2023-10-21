@@ -1,4 +1,7 @@
+.idea
 .github
+node_modules
+src
 .gitattributes
-src export-ignore
-gulpfile.js export-ignore
+gulpfile.js
+package-lock.json

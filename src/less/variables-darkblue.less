@@ -4,80 +4,63 @@
 
 // Colors
 // ----------------------------------------------
-@color-info: #3498db;
-@color-error: #f44336;
-@color-success: #4caf50;
-@color-warning: #ff9800;
-@body-color: #546e7a;
 @color-scheme: dark;
+@main-color: #030e20;
+@body-color: lighten(@main-color, 80%);
 
 // Toolbar
 // ----------------------------------------------
-@toolbar-bg: #061325;
-@toolbar-color: #e4e4e4;
-@toolbar-icon-color: #ddd;
-@search-bg: rgba(22, 43, 76, 0.75);
+@toolbar-bg: darken(@main-color, 4%);
+@search-bg: fade(lighten(@main-color, 10%), 75%);
 
 // Navbar
 // ----------------------------------------------
-@navbar-bg: #2a384d;
-@navbar-dir-bg-active: #1b2533;
-@navbar-dir-color-active: #e8e8e8;
-@navbar-dir-color: #e6e6e6;
-@navbar-dir-color-hover: #e6e6e6;
-@navbar-dir-icon-color: #fff;
-@navbar-dir-icon-color-hover: #fff;
-@navbar-perms-icon-color: #000;
+@navbar-bg: darken(@main-color, 2%);
+@navbar-dir-bg: lighten(@navbar-bg, 5%);
+@navbar-dir-color: lighten(@main-color, 80%);
+@navbar-dir-color-hover: lighten(@main-color, 80%);
 
 // Workzone
 // ----------------------------------------------
-@workzone-bg: #0e1827;
-@workzone-trash-bg: lighten(@workzone-bg, 5%);
-@workzone-trash-color: #ddd;
-@selectable-border: #022861;
-@selectable-bg: rgba(3, 62, 150, 0.38);
-@cwd-file-color: #ddd;
-@cwd-file-hover-color: #ddd;
-@cwd-file-hover-bg: #1a283c;
-@cwd-thead: #010e21;
-@cwd-thead-color: #ddd;
-@cwd-icons-color: #d8d8d8;
+@workzone-bg: @main-color;
+@file-color: lighten(@main-color, 80%);
+@file-bg-hover: lighten(@main-color, 10%);
+@file-color-hover: lighten(@main-color, 80%);
+@thead-bg: lighten(@workzone-bg, 3%);
+@thead-color: lighten(@main-color, 80%);
+@selectable-border: lighten(@main-color, 40%);
+@selectable-bg: fade(@selectable-border, 38);
 
 // Status Bar
 // ----------------------------------------------
-@statusbar-bg: #061325;
-@statusbar-color: #cfd2d4;
+@statusbar-bg: darken(@main-color, 4%);
+@statusbar-color: lighten(@main-color, 80%);
 
-// Buttons
+// Forms
 // ----------------------------------------------
-@buttons-bg: #ddd;
-@buttons-color: #222;
-@buttons-bg-hover: @color-info;
-@buttons-color-hover: #fff;
-
-// Dialogs
-// ----------------------------------------------
-@dialog-head-bg: #0f1f2f;
-@dialog-head-color: #f1f1f1;
-@dialog-tab-color: @color-info;
-@dialog-body-bg: #172839;
-@dialog-body-color: #e7e7e7;
-@dialog-body-link-color: darken(@dialog-body-color, 4%);
-@dialog-icon-color: #e3e3e3;
-@dialog-upload-dropbox-bg-hover: lighten(@dialog-body-bg, 5%);
+@input-bg: lighten(@main-color, 50%);
+@input-color: #f1f1f1;
+@checkbox-bg: lighten(@main-color, 50%);
+@checkbox-border: #666;
+@checkbox-icon: #fff;
+@button-bg: lighten(@main-color, 50%);
+@button-color: #fff;
+@slider-bg: lighten(@main-color, 50%);
+@slider-handle-bg: darken(@slider-bg, 5%);
 
 // Context menu
 // ----------------------------------------------
-@context-menu-bg: #172839;
-@context-menu-separator: #141a28;
-@context-menu-item-color: #f5f5f5;
-@context-menu-item-bg-hover: #1a3346;
-@context-menu-item-color-hover: #f5f5f5;
+@context-menu-bg: lighten(@main-color, 5%);
+@context-menu-item-color: lighten(@main-color, 85%);
+@context-menu-item-bg-hover: rgba(0, 0, 0, .5);
 
-// Button menu
+// Dialogs
 // ----------------------------------------------
-@button-menu-bg: #172839;
-@button-menu-separator: #141a28;
-@button-menu-item-color: #f5f5f5;
-@button-menu-item-bg-hover: #1a3346;
-@button-menu-item-color-hover: #f5f5f5;
+@dialog-header-bg: rgba(0, 0, 0, .4);
+@dialog-header-color: lighten(@main-color, 85%);
+@dialog-bg: lighten(@main-color, 5%);
+@dialog-color: lighten(@main-color, 85%);
+@tabs-border: lighten(@main-color, 70%);
+@tab-color: lighten(@main-color, 70%);
+@tab-color-active: lighten(@main-color, 50%);
+@quicklook-text-preview-bg: #c4c4c4;
