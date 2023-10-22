@@ -5,12 +5,12 @@
 // inner 40x40px, outer 48x48
 @font-face {
     font-family: @icon-font;
-    src: url("@{font}material.eot?{timestamp}");
-    src: url("@{font}material.eot?{timestamp}#iefix") format("embedded-opentype"),
-    url("@{font}material.woff2?{timestamp}") format("woff2"),
-    url("@{font}material.woff?{timestamp}") format("woff"),
-    url("@{font}material.ttf?{timestamp}") format("truetype"),
-    url("@{font}material.svg?{timestamp}#material") format("svg");
+    src: url("@{font}material.eot?{version}");
+    src: url("@{font}material.eot?{version}#iefix") format("embedded-opentype"),
+    url("@{font}material.woff2?{version}") format("woff2"),
+    url("@{font}material.woff?{version}") format("woff"),
+    url("@{font}material.ttf?{version}") format("truetype"),
+    url("@{font}material.svg?{version}#material") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -648,7 +648,7 @@
     color: #0d47a1;
 
     &:not(.elfinder-cwd-bgurl):before {
-        content: '\e803'; // bug fix, file icon doesn't have extra padding like other svgs
+        content: '\e803';
     }
 
     &.elfinder-cwd-bgurl:after {

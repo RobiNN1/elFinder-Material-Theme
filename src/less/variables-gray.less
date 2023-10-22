@@ -5,24 +5,24 @@
 // Colors
 // ----------------------------------------------
 @color-scheme: dark;
-@main-color: #37474F;
+@main-color: #3b4047;
 @body-color: lighten(@main-color, 80%);
 
 // Toolbar
 // ----------------------------------------------
-@toolbar-bg: darken(@main-color, 10%);
+@toolbar-bg: @main-color;
 @search-bg: fade(lighten(@main-color, 10%), 75%);
 
 // Navbar
 // ----------------------------------------------
-@navbar-bg: darken(@main-color, 5%);
+@navbar-bg: lighten(@main-color, 10%);
 @navbar-dir-bg: lighten(@navbar-bg, 5%);
 @navbar-dir-color: lighten(@main-color, 80%);
 @navbar-dir-color-hover: lighten(@main-color, 80%);
 
 // Workzone
 // ----------------------------------------------
-@workzone-bg: lighten(@main-color, 50%);
+@workzone-bg: lighten(@main-color, 60%);
 @file-color: darken(@main-color, 80%);
 @file-bg-hover: lighten(@main-color, 10%);
 @file-color-hover: lighten(@main-color, 80%);
@@ -33,7 +33,7 @@
 
 // Status Bar
 // ----------------------------------------------
-@statusbar-bg: darken(@main-color, 10%);
+@statusbar-bg: @main-color;
 @statusbar-color: lighten(@main-color, 80%);
 
 // Forms

@@ -166,8 +166,8 @@
  */
 @font-face {
   font-family: material;
-  src: url("../font/material.eot?1697925435667");
-  src: url("../font/material.eot?1697925435667#iefix") format("embedded-opentype"), url("../font/material.woff2?1697925435667") format("woff2"), url("../font/material.woff?1697925435667") format("woff"), url("../font/material.ttf?1697925435667") format("truetype"), url("../font/material.svg?1697925435667#material") format("svg");
+  src: url("../font/material.eot?3.0.0");
+  src: url("../font/material.eot?3.0.0#iefix") format("embedded-opentype"), url("../font/material.woff2?3.0.0") format("woff2"), url("../font/material.woff?3.0.0") format("woff"), url("../font/material.ttf?3.0.0") format("truetype"), url("../font/material.svg?3.0.0#material") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1085,7 +1085,7 @@
  * Toolbar
  */
 .elfinder-toolbar {
-  background: #222c31;
+  background: #3b4047;
   border-radius: 0;
   border: 0;
   padding: 3px 20px;
@@ -1106,12 +1106,12 @@
   overflow: unset;
 }
 .elfinder .elfinder-button:not(.elfinder-button-search).ui-state-hover .elfinder-button-icon {
-  color: #d6dee2;
+  color: #f2f3f5;
 }
 .elfinder-button-icon {
   background: none;
   font-size: 20px !important;
-  color: #f4f6f7;
+  color: #ffffff;
   overflow: unset;
 }
 .elfinder-button-text {
@@ -1131,7 +1131,7 @@
 .elfinder .elfinder-button-search input[type=text] {
   border-radius: 2px;
   border: 0;
-  background: rgba(76, 98, 109, 0.75);
+  background: rgba(82, 89, 99, 0.75);
   font-size: 0.71em;
   line-height: unset;
   height: unset;
@@ -1150,7 +1150,7 @@
  * Navbar
  */
 .elfinder .elfinder-navbar {
-  background: #2d3940;
+  background: #525963;
   border-radius: 0;
   border: 0;
 }
@@ -1174,7 +1174,7 @@
 }
 .elfinder-navbar-dir.ui-state-hover,
 .elfinder-navbar-dir.ui-state-active {
-  background: #37474f;
+  background: #5e6671;
   color: #ffffff;
   border: 0;
 }
@@ -1196,7 +1196,7 @@
  * Workzone
  */
 .elfinder-workzone {
-  background: #b8c6cd;
+  background: #d7d9dd;
 }
 .elfinder-cwd-file {
   color: #000000;
@@ -1211,7 +1211,7 @@
 }
 .elfinder-cwd-file.ui-state-hover,
 .elfinder-cwd-file.ui-selected.ui-state-hover {
-  background: #4c626d;
+  background: #525963;
   color: #ffffff;
 }
 .elfinder-cwd-file.ui-state-hover .elfinder-cwd-filename,
@@ -1219,7 +1219,7 @@
   color: #ffffff;
 }
 .elfinder-cwd-file.ui-selected {
-  background: #465a64;
+  background: #4b525a;
 }
 .elfinder-cwd-file.ui-selected .elfinder-cwd-filename {
   color: #ffffff;
@@ -1246,12 +1246,12 @@
 }
 .elfinder-cwd table thead td {
   padding: 5px 14px !important;
-  background: #c1cdd4;
+  background: #dfe1e4;
   color: #ffffff;
 }
 .elfinder-cwd table thead td.ui-state-hover,
 .elfinder-cwd table thead td.ui-state-active {
-  background: #a3b5bf !important;
+  background: #c3c7cd !important;
   color: #ffffff;
 }
 .elfinder-cwd table .elfinder-lock {
@@ -1322,8 +1322,8 @@
   margin-top: 1px;
 }
 .ui-selectable-helper {
-  background-color: rgba(154, 174, 184, 0.38);
-  border: 1px solid #9aaeb8;
+  background-color: rgba(159, 166, 175, 0.38);
+  border: 1px solid #9fa6af;
 }
 /**
  * Status Bar
@@ -1331,10 +1331,10 @@
 .elfinder .elfinder-statusbar {
   border-radius: 0;
   border: 0;
-  background: #222c31;
+  background: #3b4047;
   color: #ffffff;
   padding: 5px 20px;
-  border-bottom: 1px solid #222c31;
+  border-bottom: 1px solid #3b4047;
 }
 /**
  * Forms
@@ -1347,7 +1347,7 @@
 .elfinder select,
 .elfinder textarea {
   color: #f1f1f1;
-  background: #181e22;
+  background: #181a1d;
   border-radius: 2px;
   border: 0;
   padding: 5px 4px;
@@ -1359,7 +1359,7 @@
 .elfinder input:not([type="checkbox"]):focus,
 .elfinder select:focus,
 .elfinder textarea:focus {
-  background: #181e22;
+  background: #181a1d;
   color: #f1f1f1;
   border: 0;
 }
@@ -1374,42 +1374,31 @@
 .elfinder input[type="checkbox"] {
   background: transparent;
   position: relative;
-  border: 0;
   -webkit-appearance: none;
           appearance: none;
   margin: -2px 3px 0 0;
   vertical-align: middle;
-}
-.elfinder input[type="checkbox"]:focus {
-  outline: none;
-}
-.elfinder input[type="checkbox"]:focus:after {
-  border-color: #181e22;
-}
-.elfinder input[type="checkbox"]:after {
-  content: "";
-  display: block;
   width: 10px;
   height: 10px;
   border: 2px solid #666;
   border-radius: 2px;
-  transition: 240ms;
+}
+.elfinder input[type="checkbox"]:checked {
+  background-color: #181a1d;
+  border-color: #181a1d;
 }
 .elfinder input[type="checkbox"]:checked:before {
   content: "";
   position: absolute;
-  left: 4px;
   width: 3px;
-  height: 9px;
+  height: 8px;
   border: 2px solid #fff;
   border-top-width: 0;
   border-left-width: 0;
+  top: 0;
+  left: 3px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-}
-.elfinder input[type="checkbox"]:checked:after {
-  background-color: #181e22;
-  border-color: #181e22;
 }
 .elfinder button,
 .elfinder .ui-button,
@@ -1417,7 +1406,7 @@
   border-radius: 2px;
   border: 0;
   text-transform: uppercase;
-  background: #181e22;
+  background: #181a1d;
   color: #fff;
   padding: 5px 7px;
 }
@@ -1426,21 +1415,21 @@
 .elfinder button.ui-state-hover,
 .elfinder .ui-button.ui-state-hover,
 .ace_optionsMenuEntry button:hover {
-  background: #0f1416;
+  background: #0f1012;
   color: #fff;
   border: 0;
 }
 .elfinder button.ui-state-active,
 .elfinder .ui-button.ui-state-active,
 .ace_optionsMenuEntry button[ace_selected_button=true] {
-  background: #2d3940;
+  background: #2f3339;
 }
 .elfinder .ui-slider-horizontal {
   height: 3px;
-  background-color: #181e22 !important;
+  background-color: #181a1d !important;
 }
 .elfinder .ui-slider-horizontal .ui-slider-handle {
-  background-color: #0d1113;
+  background-color: #0d0e0f;
   border-radius: 100%;
   border: 0;
   margin-top: -3px;
@@ -1454,7 +1443,7 @@
   border-radius: 0;
   border: 0 !important;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-  background: #41555e;
+  background: #474d55;
 }
 .elfinder .elfinder-contextmenu-item,
 .elfinder .elfinder-contextmenu-sub-item,
@@ -1532,7 +1521,7 @@
   border-radius: 0;
   border: 0 !important;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-  background: #41555e;
+  background: #474d55;
   color: #ffffff;
 }
 .elfinder-dialog a,
@@ -1594,7 +1583,7 @@
 .elfinder-dialog .ui-tabs .ui-tabs-nav {
   background: none;
   border: 0;
-  border-bottom: 1px solid #f4f6f7;
+  border-bottom: 1px solid #f2f3f5;
   padding: 0;
 }
 .elfinder-dialog .ui-tabs .ui-tabs-tab {
@@ -1603,15 +1592,15 @@
   border: 0;
 }
 .elfinder-dialog .ui-tabs .ui-tabs-tab a {
-  color: #f4f6f7;
+  color: #f2f3f5;
   margin-bottom: -1px;
 }
 .elfinder-dialog .ui-tabs .ui-tabs-tab.ui-state-hover a {
-  color: #d6dee2;
+  color: #d7d9dd;
 }
 .elfinder-dialog .ui-tabs .ui-tabs-tab.ui-state-active a {
-  color: #b8c6cd;
-  border-bottom: 3px solid #b8c6cd;
+  color: #bbc0c6;
+  border-bottom: 3px solid #bbc0c6;
 }
 .elfinder-dialog .elfinder-dialog-icon {
   background: none;
@@ -1685,7 +1674,7 @@
  */
 #ace_settingsmenu {
   box-shadow: 0 1px 30px rgba(0, 0, 0, 0.6);
-  background-color: #becbd2;
+  background-color: #dcdfe2;
   color: #ffffff;
 }
 .ace_optionsMenuEntry:hover {

@@ -32,44 +32,30 @@
     input[type="checkbox"] {
         background: transparent;
         position: relative;
-        border: 0;
         appearance: none;
         margin: -2px 3px 0 0;
         vertical-align: middle;
+        width: 10px;
+        height: 10px;
+        border: 2px solid @checkbox-border;
+        border-radius: 2px;
 
-        &:focus {
-            outline: none;
-
-            &:after {
-                border-color: @checkbox-bg;
-            }
-        }
-
-        &:after {
-            content: "";
-            display: block;
-            width: 10px;
-            height: 10px;
-            border: 2px solid @checkbox-border;
-            border-radius: 2px;
-            transition: 240ms;
-        }
-
-        &:checked:before {
-            content: "";
-            position: absolute;
-            left: 4px;
-            width: 3px;
-            height: 9px;
-            border: 2px solid @checkbox-icon;
-            border-top-width: 0;
-            border-left-width: 0;
-            transform: rotate(45deg);
-        }
-
-        &:checked:after {
+        &:checked {
             background-color: @checkbox-bg;
             border-color: @checkbox-bg;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 8px;
+                border: 2px solid @checkbox-icon;
+                border-top-width: 0;
+                border-left-width: 0;
+                top: 0;
+                left: 3px;
+                transform: rotate(45deg);
+            }
         }
     }
 

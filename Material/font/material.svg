@@ -11,7 +11,7 @@
 
 <glyph glyph-name="forward" unicode="&#xe802;" d="M500 663l-54-55 219-218h-477v-80h475l-219-218 56-54 313 312-313 313z" horiz-adv-x="1000" />
 
-<glyph glyph-name="file" unicode="&#xe803;" d="M548 850h-488c-31 0-60-21-60-48v-898c0-29 29-54 60-54h653c27 0 47 25 47 54v746l-212 200z" horiz-adv-x="760" />
+<glyph glyph-name="file" unicode="&#xe803;" d="M640 767h-407c-25 0-50-17-50-40v-748c0-25 25-46 50-46h544c23 0 40 21 40 46v621l-177 167z" horiz-adv-x="1000" />
 
 <glyph glyph-name="dir" unicode="&#xe804;" d="M417 683h-250c-46 0-84-37-84-83l0-500c0-46 38-83 84-83h666c46 0 84 37 84 83v417c0 46-38 83-84 83h-333l-83 83z" horiz-adv-x="1000" />
 

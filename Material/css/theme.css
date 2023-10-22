@@ -166,8 +166,8 @@
  */
 @font-face {
   font-family: material;
-  src: url("../font/material.eot?1697925435667");
-  src: url("../font/material.eot?1697925435667#iefix") format("embedded-opentype"), url("../font/material.woff2?1697925435667") format("woff2"), url("../font/material.woff?1697925435667") format("woff"), url("../font/material.ttf?1697925435667") format("truetype"), url("../font/material.svg?1697925435667#material") format("svg");
+  src: url("../font/material.eot?3.0.0");
+  src: url("../font/material.eot?3.0.0#iefix") format("embedded-opentype"), url("../font/material.woff2?3.0.0") format("woff2"), url("../font/material.woff?3.0.0") format("woff"), url("../font/material.ttf?3.0.0") format("truetype"), url("../font/material.svg?3.0.0#material") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -1374,42 +1374,31 @@
 .elfinder input[type="checkbox"] {
   background: transparent;
   position: relative;
-  border: 0;
   -webkit-appearance: none;
           appearance: none;
   margin: -2px 3px 0 0;
   vertical-align: middle;
-}
-.elfinder input[type="checkbox"]:focus {
-  outline: none;
-}
-.elfinder input[type="checkbox"]:focus:after {
-  border-color: #367bec;
-}
-.elfinder input[type="checkbox"]:after {
-  content: "";
-  display: block;
   width: 10px;
   height: 10px;
   border: 2px solid #666;
   border-radius: 2px;
-  transition: 240ms;
+}
+.elfinder input[type="checkbox"]:checked {
+  background-color: #367bec;
+  border-color: #367bec;
 }
 .elfinder input[type="checkbox"]:checked:before {
   content: "";
   position: absolute;
-  left: 4px;
   width: 3px;
-  height: 9px;
+  height: 8px;
   border: 2px solid #fff;
   border-top-width: 0;
   border-left-width: 0;
+  top: 0;
+  left: 3px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-}
-.elfinder input[type="checkbox"]:checked:after {
-  background-color: #367bec;
-  border-color: #367bec;
 }
 .elfinder button,
 .elfinder .ui-button,
