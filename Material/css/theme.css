@@ -72,12 +72,14 @@
             transform: rotate(360deg);
   }
 }
+.elfinder-spinner,
 .elfinder-info-spinner,
 .elfinder-navbar-spinner,
 .elfinder-button-icon-spinner {
   font-size: 16px;
   background: none;
 }
+.elfinder-spinner:before,
 .elfinder-info-spinner:before,
 .elfinder-navbar-spinner:before,
 .elfinder-button-icon-spinner:before {
@@ -1090,6 +1092,9 @@
   border: 0;
   padding: 3px 20px;
 }
+.elfinder-toolbar .elfinder-button-icon {
+  color: #afcbf8;
+}
 .elfinder-buttonset {
   border-radius: 0;
   border: 0;
@@ -1111,7 +1116,6 @@
 .elfinder-button-icon {
   background: none;
   font-size: 20px !important;
-  color: #afcbf8;
   overflow: unset;
 }
 .elfinder-button-text {
@@ -1272,10 +1276,6 @@
   font-size: 9px;
   top: 8px;
   right: 0;
-}
-.elfinder-cwd-view-icons .elfinder-cwd-file-wrapper {
-  width: unset;
-  height: unset;
 }
 .elfinder-cwd-icon {
   background-image: none;
@@ -1585,6 +1585,7 @@
   border: 0;
   border-bottom: 1px solid #93b8f5;
   padding: 0;
+  border-radius: 0;
 }
 .elfinder-dialog .ui-tabs .ui-tabs-tab {
   background: none;
@@ -1612,12 +1613,16 @@
 }
 .elfinder-dialog .elfinder-edit-editor {
   padding: 0;
+  background-color: #051837 !important;
 }
 .elfinder-dialog .elfinder-edit-editor textarea {
   border-radius: 0;
   box-shadow: none;
   background: #484848;
   padding: unset;
+}
+.elfinder-dialog .elfinder-edit-editor .elfinder-button-icon {
+  vertical-align: unset;
 }
 .elfinder-dialog .ui-dialog-buttonpane select,
 .elfinder-dialog .ui-dialog-buttonpane .ui-button {
@@ -1679,4 +1684,7 @@
 }
 .ace_optionsMenuEntry:hover {
   background-color: transparent;
+}
+.ace_optionsMenuEntry button[ace_selected_button=true] {
+  box-shadow: none;
 }

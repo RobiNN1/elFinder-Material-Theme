@@ -76,6 +76,7 @@
             border: 0;
             border-bottom: 1px solid @tabs-border;
             padding: 0;
+            border-radius: 0;
         }
 
         .ui-tabs-tab {
@@ -114,12 +115,17 @@
 
     .elfinder-edit-editor {
         padding: 0;
+        background-color: @dialog-bg !important;
 
         textarea {
             border-radius: 0;
             box-shadow: none;
             background: #484848;
             padding: unset;
+        }
+
+        .elfinder-button-icon {
+            vertical-align: unset;
         }
     }
 
@@ -198,7 +204,7 @@
  */
 #ace_settingsmenu {
     box-shadow: 0 1px 30px rgba(0, 0, 0, .6);
-    background-color: lighten(@workzone-bg, 2%);
+    background-color: @ace-editor-settings;
     color: @body-color;
 }
 
@@ -215,6 +221,7 @@
         }
 
         &[ace_selected_button=true] {
+            box-shadow: none;
             &:extend(.elfinder .ui-button.ui-state-active);
         }
     }
