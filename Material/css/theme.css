@@ -1,5 +1,5 @@
 /*!
- * elFinder-Material-Theme (Dark Blue) v3.0.0 (https://github.com/RobiNN1/elFinder-Material-Theme)
+ * elFinder-Material-Theme (Dark Blue) v3.0.1 (https://github.com/RobiNN1/elFinder-Material-Theme)
  * Copyright 2016-2023 Róbert Kelčák
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
@@ -52,24 +52,12 @@
 /**
  * Loading
  */
-@-webkit-keyframes rotate-animation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 @keyframes rotate-animation {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 .elfinder-spinner,
@@ -84,20 +72,11 @@
 .elfinder-navbar-spinner:before,
 .elfinder-button-icon-spinner:before {
   display: inline-block;
-  -webkit-animation: rotate-animation 1s linear infinite;
-          animation: rotate-animation 1s linear infinite;
+  animation: rotate-animation 1s linear infinite;
 }
 /**
  * Progress Bar
  */
-@-webkit-keyframes progress-animation {
-  from {
-    background-position: 1rem 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
 @keyframes progress-animation {
   from {
     background-position: 1rem 0;
@@ -116,8 +95,7 @@
   border: 0;
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-size: 1rem 1rem;
-  -webkit-animation: progress-animation 1s linear infinite;
-          animation: progress-animation 1s linear infinite;
+  animation: progress-animation 1s linear infinite;
   background-color: #0275d8;
   height: 1rem;
 }
@@ -168,8 +146,8 @@
  */
 @font-face {
   font-family: material;
-  src: url("../font/material.eot?3.0.0");
-  src: url("../font/material.eot?3.0.0#iefix") format("embedded-opentype"), url("../font/material.woff2?3.0.0") format("woff2"), url("../font/material.woff?3.0.0") format("woff"), url("../font/material.ttf?3.0.0") format("truetype"), url("../font/material.svg?3.0.0#material") format("svg");
+  src: url("../font/material.eot?3.0.1");
+  src: url("../font/material.eot?3.0.1#iefix") format("embedded-opentype"), url("../font/material.woff2?3.0.1") format("woff2"), url("../font/material.woff?3.0.1") format("woff"), url("../font/material.ttf?3.0.1") format("truetype"), url("../font/material.svg?3.0.1#material") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -306,8 +284,7 @@
 }
 .elfinder-button-icon-rotate-l:before {
   content: '\e821';
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 .elfinder-button-icon-netmount:before {
   content: '\e823';
@@ -344,8 +321,7 @@
 }
 .elfinder-button-icon-redo:before {
   content: '\e82d';
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 .elfinder-button-icon-preference:before {
   content: '\e82f';
@@ -548,8 +524,7 @@
 }
 .elfinder-dialog-icon-redo:before {
   content: '\e82d';
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 .elfinder-contextmenu .elfinder-contextmenu-item .elfinder-contextmenu-icon {
   background-image: none;
@@ -563,8 +538,7 @@
 }
 .elfinder-quicklook-navbar-icon-next:before {
   content: '\e848';
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 .elfinder-quicklook-navbar-icon-fullscreen:before {
   content: '\e84a';
@@ -686,15 +660,13 @@
   content: '\e824';
 }
 .elfinder-drag-helper-move .elfinder-drag-helper-icon-status {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .elfinder-drag-helper-move .elfinder-drag-helper-icon-status:before {
   content: '\e854';
 }
 .elfinder-drag-helper-plus .elfinder-drag-helper-icon-status {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 .elfinder-drag-helper-plus .elfinder-drag-helper-icon-status:before {
   content: '\e84c';
@@ -1166,8 +1138,7 @@
 .elfinder .elfinder-navbar .ui-resizable-handle:before {
   position: absolute;
   top: 50% !important;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 .elfinder-navbar-dir {
   color: #c2d7f9;
@@ -1291,8 +1262,7 @@
   margin-top: -7px;
   display: inline-block !important;
   top: 50% !important;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 .elfinder-cwd-icon:after {
   color: #fff;
@@ -1300,8 +1270,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
 }
 .elfinder-cwd-icon.elfinder-cwd-bgurl:before {
   content: none;
@@ -1314,8 +1283,7 @@
   width: 16px;
   height: 16px;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 .elfinder-cwd-view-list td .elfinder-cwd-icon:after {
   font-size: 8.5px;
@@ -1397,8 +1365,7 @@
   border-left-width: 0;
   top: 0;
   left: 3px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .elfinder button,
 .elfinder .ui-button,
@@ -1561,8 +1528,7 @@
 .elfinder-quicklook .elfinder-cwd-icon:before {
   left: 50% !important;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
 }
 .elfinder-dialog .elfinder-cwd-icon:after,
 .elfinder-quicklook .elfinder-cwd-icon:after {
@@ -1640,8 +1606,7 @@
   padding: 5.2px 5px;
 }
 .elfinder-dialog .ui-dialog-buttonpane .ui-button-icon {
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
   margin-top: 0;
   margin-left: 0;
 }
