@@ -1,10 +1,10 @@
-const gulp = require('gulp');
-const less = require('gulp-less');
-const autoprefixer = require('gulp-autoprefixer');
-const clean_css = require('gulp-clean-css');
-const replace = require('gulp-replace');
-const rename = require('gulp-rename');
-const package_json = require('./package.json');
+import gulp from 'gulp';
+import less from 'gulp-less';
+import autoprefixer from 'gulp-autoprefixer';
+import clean_css from 'gulp-clean-css';
+import replace from 'gulp-replace';
+import rename from 'gulp-rename';
+import package_json from './package.json' with {type: 'json'};
 
 const paths = {
     less: 'src/less/*.less',
@@ -29,6 +29,5 @@ const watch = () => {
     gulp.watch(paths.less, build);
 };
 
-exports.build = build;
-exports.watch = watch;
-exports.default = gulp.series(build, watch);
+export {build, watch};
+export default gulp.series(build, watch);

@@ -2,6 +2,7 @@
   "name": "elfinder-material-theme",
   "version": "3.0.1",
   "description": "A theme for the elFinder web file manager inspired by Google Material design.",
+  "type": "module",
   "scripts": {
     "build": "gulp build",
     "watch": "gulp watch"
@@ -29,7 +30,7 @@
   ],
   "devDependencies": {
     "gulp": "^5.0",
-    "gulp-autoprefixer": "^8.0",
+    "gulp-autoprefixer": "^9.0",
     "gulp-clean-css": "^4.3",
     "gulp-less": "^5.0",
     "gulp-rename": "^2.0",
