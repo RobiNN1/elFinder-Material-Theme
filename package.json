@@ -28,7 +28,7 @@
     "not dead"
   ],
   "devDependencies": {
-    "gulp": "^4.0",
+    "gulp": "^5.0",
     "gulp-autoprefixer": "^8.0",
     "gulp-clean-css": "^4.3",
     "gulp-less": "^5.0",
