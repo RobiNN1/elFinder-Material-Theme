@@ -1,6 +1,6 @@
 /*!
  * elFinder-Material-Theme (Dark Blue) v3.0.1 (https://github.com/RobiNN1/elFinder-Material-Theme)
- * Copyright 2016-2024 Róbert Kelčák
+ * Copyright 2016-2025 Róbert Kelčák
  * Licensed under MIT (https://github.com/RobiNN1/elFinder-Material-Theme/blob/master/LICENSE)
  */
 .elfinder {
@@ -1331,9 +1331,6 @@
   color: #f1f1f1;
   border: 0;
 }
-.elfinder input:not([type="checkbox"])::-moz-placeholder, .elfinder select::-moz-placeholder, .elfinder textarea::-moz-placeholder {
-  color: #f1f1f1;
-}
 .elfinder input:not([type="checkbox"])::placeholder,
 .elfinder select::placeholder,
 .elfinder textarea::placeholder {
@@ -1343,7 +1340,6 @@
   background: transparent;
   position: relative;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   margin: -2px 3px 0 0;
   vertical-align: middle;
